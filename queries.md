@@ -22,24 +22,45 @@ project: {name: 1, founded_year: 1}
 
 ### 4. All the companies that had an IPO of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-query: {"ipo.valuation_amount":100000000, founded_year: {$gte:2010}}
+query: {'ipo.valuation_amount': {$gt: 100000000},founded_year: {$lte: 2010}}
 project: {ipo:1 , name:1}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
+query: {number_of_employees: {$lte: 1000}, founded_year:{$lte:2005}}
+limit: 10
+sort: {number_of_employees: 1}
+
 ### 6. All the companies that don't include the `partners` field.
+
+query: {partners:{$exists: false}}
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
+query: {category_code:null}
+
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
+
+query: {number_of_employees: {$gte: 100, $lte: 1000}}
+project: {name:1, number_of_employees:1}
 
 ### 9. Order all the companies by their IPO price descendently.
 
+sort: {'ipo.valuation_amount': -1}
+
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
+
+limit:10
+sort: {number_of_employees: -1}
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
+query: {founded_month:{$gte:6, $lte:12}}
+limit: 1000
+
 ### 12. All the companies that have been 'deadpooled' after the third year.
+
+
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
