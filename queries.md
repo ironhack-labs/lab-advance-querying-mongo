@@ -3,20 +3,54 @@
 # Answers
 
 ### 1. All the companies that it's name match 'Babelgum'. Retrieve only their `name` field.
+** FILTER **    {name: "Babelgum"}
+** PROJECT **   {name:1,_id:0}
+** SORT **  
+** LIMIT **         
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
+** FILTER **    {number_of_employees:{$gte:5000}}
+** PROJECT **   
+** SORT **      {number_of_employees:1}
+** LIMIT **     20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fileds.
+** FILTER **    {founded_year:{$gte:2000,$lte:2005}}
+** PROJECT **   {name:1,founded_year:1,_id:0}
+** SORT **      
+** LIMIT **     
 
 ### 4. All the companies that had an IPO of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
+** FILTER **    {$and:[{'ipo.valuation_amount':{$gt:100000000}},{founded_year:{$lt:2010}}]}
+** PROJECT **   {name:1,ipo:1,_id:0}
+** SORT **      
+** LIMIT ** 
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
+** FILTER **    {$and:[{'number_of_employees':{$lt:1000}},{'founded_year':{$lt:2005}}]}
+** PROJECT **   
+** SORT **      {number_of_employees:1}
+** LIMIT **     10
+
 
 ### 6. All the companies that don't include the `partners` field.
+** FILTER **    {'partners':{$exists:false}}
+** PROJECT **   
+** SORT **      
+** LIMIT **     
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
+** FILTER **    {'category_code':null}
+** PROJECT **   
+** SORT **      
+** LIMIT **     
+
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
+** FILTER **    {'category_code':null}
+** PROJECT **   
+** SORT **      
+** LIMIT **
 
 ### 9. Order all the companies by their IPO price descendently.
 
