@@ -3,17 +3,24 @@
 # Answers
 
 ### 1. All the companies that it's name match 'Babelgum'. Retrieve only their `name` field.
-
+filter: {name:"Babelgum"}
+project: {name:1}
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
-
+filter: {number_of_employees:{$gt:5000}}
+sort: {number_of_employees:1}
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fileds.
-
+filter: {founded_year:{$gt:2000,$lt:2005}}
+project: {name:1, founded_year:1}
+limit:20
 ### 4. All the companies that had an IPO of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
-
+filter: {'ipo.valuation_amount':{$gte:100000000}},{"ipo.pub_year":{$lte:2010}}
+project: {ipo:1,name:1}
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
-
+filter: {number_of_employees:{$lt:1000},founded_year:{$lte:2005}}
+sort: {number_of_employees:-1}
+limit: 10
 ### 6. All the companies that don't include the `partners` field.
-
+filter: {partners:{$exists:false}} //no existe ninguna que no tenga partners
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
