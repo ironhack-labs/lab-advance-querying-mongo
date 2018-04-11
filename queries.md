@@ -77,5 +77,5 @@
  - **`projection`**: {name: 1, acquisition: 1, _id: 0}
  - **`limit`**: 10
 
-### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011. - **`query`**: 
- - **`projection`**: {$and: [ {founded_year: {$gt: 2000}}, {founded_year: {$lt: 2010}}, {'acquisition.acquired_year': {$ne: 2011}} ] }
+### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
+- **`query`**: {$and: [ {founded_year: {$gt: 2000}}, {founded_year: {$lt: 2010}}, {'acquisition.acquired_year': {$ne: 2011}} ] }
