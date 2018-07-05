@@ -44,7 +44,7 @@ Query:{founded_month: {$gte: 7}}
 limit: 1000
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-Query: {$or: [{$and: [{deadpooled_year: {$gte: 3}}, {deadpooled_day: {lt: 1000}}]}, {$and: [{$where:"this.deadpooled_year - this.founded_year > 3"}, {deadpooled_year: {$ne: null}}]}]}
+Query: {$or: [{$and: [{deadpooled_year: {$gte: 3}}, {deadpooled_day: {$exists: false}}]}, {$and: [{$where:"this.deadpooled_year - this.founded_year > 3"}, {deadpooled_year: {$ne: null}}]}]}
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 Query: {$and: [{founded_year: {$lt: 2000}}, {'acquisition.price_amount': {$gt: 10000000}}]}
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
