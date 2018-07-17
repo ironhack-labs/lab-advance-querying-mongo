@@ -49,7 +49,7 @@ db.companies.find( { $and: [ { founded_month: { $gt: 6 } },{ founded_month: { $l
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-Idk what is "deadpooled"
+db.companies.find({"deadpooled_year":{$gte:3}})
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
