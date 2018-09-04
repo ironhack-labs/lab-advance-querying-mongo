@@ -75,9 +75,17 @@ limit: 1000
 db.companies.find({founded_month: {$gte: 6, $lte: 12}}),limit(10)
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
-query:  {"deadpooled_year": {$gte: 3}}
+const query = {
+  $expr: {
+    $eq: [{
+       $subtract: ['$deadpooled_year', '$founded_year']
+      },
+      3
+    ]
+  }
+}
 
-        this is wrong <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+db.companies.find(query, {founded_year:1, deadpooled_year:1}).pretty()
 
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
