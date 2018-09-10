@@ -11,9 +11,9 @@ We have learned some super useful query operators, that will helps us to make mu
 
 ## Deliverables
 
-Since we will be querying our database from Mongo Compass, you will need to copy/paste the `query`, `projection`, `sort`, `skip` and `limit` you entered on Mongo Compass. On the `queries.md` file, you will find the instructions about the queries you need to do, and a field to fill the answers.
+Since we will be querying our database from Mongo Compass, you will need to copy/paste the `query`, `projection`, `sort`, `skip` and `limit` you entered on Mongo Compass. In the `queries.md` file, you will find the instructions about the queries you need to do, and a field to fill the answers.
 
-### Example 
+### Example
 
 1. This is an example
  - **`query`**: /*You should copy/paste the query in here*/
@@ -25,8 +25,6 @@ Since we will be querying our database from Mongo Compass, you will need to copy
 ## Instructions
 
 ### Iteration 1
-
-We already imported the database for the last exercise, but just in case you didn't, follow the instructions. In case you already have the database, jump to the second iteration.
 
 First, we need to import the database we will be using for the `lab`. We will use the Crunchbase database. Crunchbase is the premier destination for discovering industry trends, investments, and news about hundreds of thousands of companies globally. From startups to Fortune 500s, Crunchbase is recognized as the primary source of company intelligence by millions of users globally.
 
@@ -42,11 +40,12 @@ $ mongoimport --db companies --collection companies --file companies.json
 ```
 4. Check on Mongo Compass if everything goes ok:
 
+:::info >
+When running the `mongoimport` you should be located in the same folder as the `companies.json` file.
+:::
+
 ![image](https://user-images.githubusercontent.com/23629340/36534191-1f1bc5ec-17c6-11e8-9463-4945679b98c0.png)
 
-:::info
-When running the `mongoimport` you should be located in the same folder the `companies.json` file.
-:::
 
 ### Iteration 2
 
@@ -55,7 +54,7 @@ You already know how this goes, so let's start working:
 1. All the companies that it's name match 'Babelgum'. Retrieve only their `name` field.
 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fileds.
-4. All the companies that had an IPO of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
+4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 6. All the companies that don't include the `partners` field.
 7. All the companies that have a null type of value on the `category_code` field.
@@ -75,6 +74,3 @@ You already know how this goes, so let's start working:
 
 
 Good luck! :wink:
-
-
-
