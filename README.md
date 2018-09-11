@@ -16,7 +16,7 @@ Since we will be querying our database from Mongo Compass, you will need to copy
 ### Example 
 
 1. This is an example
- - **`query`**: /*You should copy/paste the query in here*/
+ - **`query`**: {name:'Babelgum'}
  - **`projection`**: /*You should copy/paste the projection in here*/
  - **`sort`**: /*You should copy/paste the sort in here*/
  - **`skip`**: /*You should copy/paste the skip in here*/
