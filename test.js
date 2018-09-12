@@ -1,0 +1,1 @@
+ db.companies.find( { $and: [{founded_year: {$gte: 2000}}, {founded_year: {$lte: 2005}}]}, {name: 1, founded_year: 1})
