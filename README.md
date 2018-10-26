@@ -1,4 +1,4 @@
-![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
 # MongoDB | Compass CRUD
 
@@ -7,6 +7,23 @@
 We are back with our queries! :wink:
 
 We have learned some super useful query operators, that will helps us to make much better queries to retrieve the data we need. We will continue using the **Crunchbase** database we used on the last exercise.
+
+
+## Requirements
+
+- [Fork this repo](https://guides.github.com/activities/forking/)
+- Then clone this repo.
+
+
+## Submission
+
+- Upon completion, run the following commands
+```
+$ git add .
+$ git commit -m "done"
+$ git push origin master
+```
+- Create Pull Request so your TAs can check up your work.
 
 
 ## Deliverables
@@ -73,4 +90,4 @@ You already know how this goes, so let's start working:
 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 
-Good luck! :wink:
+Happy Coding! :heart:
