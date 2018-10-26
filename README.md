@@ -11,8 +11,8 @@ We have learned some super useful query operators, that will helps us to make mu
 
 ## Requirements
 
-- [Fork this repo](https://guides.github.com/activities/forking/)
-- Then clone this repo.
+- Fork this repo
+- Clone this repo.
 
 
 ## Submission
