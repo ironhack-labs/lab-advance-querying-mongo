@@ -9,6 +9,23 @@ We are back with our queries! :wink:
 We have learned some super useful query operators, that will helps us to make much better queries to retrieve the data we need. We will continue using the **Crunchbase** database we used on the last exercise.
 
 
+## Requirements
+
+- [Fork this repo](https://guides.github.com/activities/forking/)
+- Then clone this repo.
+
+
+## Submission
+
+- Upon completion, run the following commands
+```
+$ git add .
+$ git commit -m "done"
+$ git push origin master
+```
+- Create Pull Request so your TAs can check up your work.
+
+
 ## Deliverables
 
 Since we will be querying our database from Mongo Compass, you will need to copy/paste the `query`, `projection`, `sort`, `skip` and `limit` you entered on Mongo Compass. In the `queries.md` file, you will find the instructions about the queries you need to do, and a field to fill the answers.
@@ -73,4 +90,4 @@ You already know how this goes, so let's start working:
 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 
-Good luck! :wink:
+Happy Coding! :heart:
