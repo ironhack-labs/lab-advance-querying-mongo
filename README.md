@@ -12,7 +12,7 @@ We have learned some super useful query operators, that will helps us to make mu
 ## Requirements
 
 - Fork this repo
-- Clone this repo.
+- Clone this repo
 
 
 ## Submission
