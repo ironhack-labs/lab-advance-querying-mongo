@@ -25,7 +25,7 @@ filter: {$and: [{ number_of_employees:  {$lt:1000 }}, {founded_year: {$lt: 2005}
 
 limit: 20
 ### 6. All the companies that don't include the `partners` field.
-{partners: {$exists: false}}
+filter: {partners: {$exists: false}}
 
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
@@ -38,7 +38,7 @@ filter: {$and: [{ number_of_employees:  {$gte:100 }}, { number_of_employees:  {$
 project:  {name:1, number_of_employees:1}
 ### 9. Order all the companies by their IPO price descendently.
 
- {"ipo.valuation_amount": -1}
+sort  {"ipo.valuation_amount": -1}
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
