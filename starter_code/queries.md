@@ -77,6 +77,7 @@ sort  {founded_year:-1}
 
 filter { founded_day: { $lt: 8 } }
 sort {"acquisition.price_amount":-1}
+limit 10
 
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
