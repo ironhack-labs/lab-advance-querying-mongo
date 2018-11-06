@@ -39,10 +39,12 @@ db.companies.find({$and: [ {number_of_employees:{$lte:1000}} , {founded_year:{$l
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 <!-- Your Code Goes Here -->
+db.companies.find({category_code: {$type: 'null'} })
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
 <!-- Your Code Goes Here -->
+db.companies.find({$and: [{ number_of_employees:  {$gte:100 }}, { number_of_employees:  {$lt:1000 }}]}).sort({name:1, number_of_employees:1})
 
 ### 9. Order all the companies by their IPO price descendently.
 
