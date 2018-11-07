@@ -73,7 +73,28 @@
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-- **`query`**: tried to solve, i'm going to bed for now
+- **`query`**: {$where: "this.deadpooled_year > this.founded_year + 2"}
+- **`query`**: {$where: "this.deadpooled_year - this.founded_year >= 3"}
+
+
+<!-- TESTING -->
+<!-- db.records.aggregate([
+  {"$project": {
+    "life": {$subtract: ["$deadpooled_year", "$founded_year"]}
+  }},
+  {"$match": { "life": { "$gte": 3 } }}
+]) -->
+<!-- {$and: [{{"$project": {"life": {$subtract: ["$deadpooled_year", "$founded_year"]}}}, {"$match": { "life": { "$gte": 3 } }}]} -->
+<!-- {$project: {$expr: {$gte: [{$subtract: ["$deadpooled_year", "$founded_year"]}, 3]}}} -->
+<!-- {$group: {$expr: {$gte: [{$subtract: ["$deadpooled_year", "$founded_year"]}, 3]}}} -->
+<!-- {$group: {$gte: [{$subtract: ["$deadpooled_year", "$founded_year"]}, 3]}} -->
+<!-- {$expr: {$gte: [{$subtract: [deadpooled_year, founded_year]}, 3]}} -->
+<!-- {$expr: {$gte: [{$subtract: ["deadpooled_year", "founded_year"]}, 3]}} -->
+<!-- {$expr: {$gte: [{$subtract: ["$deadpooled_year", "$founded_year"]}, 3]}} -->
+<!-- {$expr:{{$subtract: ["$deadpooled_year", "$founded_year"]}: {$gte: 3}}} -->
+<!-- { $where: () => { return (deadpooled_year - founded_year) > 3 }} -->
+<!-- { $where: function () { return this.deadpooled_year - this.founded_year > 3 }} -->
+<!-- {deadpooled_year: {$gt: 3}} -->
 
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
