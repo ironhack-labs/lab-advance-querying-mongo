@@ -48,8 +48,7 @@
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-<!-- Only substracting the deadpooled and founding year -->
->db.companies.aggregate([{$match: {deadpooled_year: {$gt: 1000}}}, {"$project": {"company_duration": {"$subtract": ["$deadpooled_year", "$founded_year"]}}}]).sort({company_duration: 1})
+>db.companies.aggregate([{$match: {deadpooled_year: {$gt: 1000}}}, {"$project": {"company_duration": {"$subtract": ["$deadpooled_year", "$founded_year"]}}}, {$match: {company_duration: {$gt: 3}}}])
 
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
