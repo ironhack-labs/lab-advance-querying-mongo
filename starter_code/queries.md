@@ -57,7 +57,7 @@ limit 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-filter {deadpooled_year: { $gt: 3 }}
+filter {$where:"(this.deadpooled_year -this.founded_year >3)&&(this.founded_year!=null)"}
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
@@ -77,6 +77,7 @@ sort  {founded_year:-1}
 
 filter { founded_day: { $lt: 8 } }
 sort {"acquisition.price_amount":-1}
+limit 10
 
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
