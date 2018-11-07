@@ -73,7 +73,7 @@ db.companies.find({$and:[{category_code: 'web'} , {number_of_employees: {$gt: 40
 
 ### 18. All the companies which their acquisition amount is more than 10.000.000, and currency are 'EUR'.
 
-{$and:[{category_code: 'web'} , {number_of_employees: {$gt: 4000}}]
+db.companies.find({$and:[{category_code: 'web'} , {number_of_employees: {$gt: 4000}}]);
 
 ### 19. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
@@ -81,4 +81,5 @@ db.companies.find({$and:[{category_code: 'web'} , {number_of_employees: {$gt: 40
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+db.companies.find({$and:[{founded_year:{$gte:2000}},{founded_year:{$lte:2010}},{'acquisition.acquired_year':{$lt:2011}}]}).pretty();
+
