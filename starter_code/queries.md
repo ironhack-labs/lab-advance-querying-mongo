@@ -73,8 +73,8 @@
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-- **`query`**: {$where: "this.deadpooled_year > this.founded_year + 2"}
-- **`query`**: {$where: "this.deadpooled_year - this.founded_year >= 3"}
+- **`query`**: {$where: "this.deadpooled_year > this.founded_year + 2 && this.founded_year!=null"}
+- **`query`**: {$where: "this.deadpooled_year - this.founded_year >= 3 && this.founded_year!=null"}
 
 
 <!-- TESTING -->
