@@ -44,7 +44,7 @@ limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
-query: 
+query: {partners: { $exists: false }}
 projection: 
 sort: 
 skip: 
@@ -52,7 +52,7 @@ limit:
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-query: 
+query: { category_code: { $type: [ 'null' ] } }
 projection: 
 sort: 
 skip: 
@@ -60,8 +60,8 @@ limit:
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-query: 
-projection: 
+query: {number_of_employees : {$gte: 100, $lt: 1000}}
+projection: {name: 1, number_of_employees: 1, _id: 0}
 sort: 
 skip: 
 limit: 
@@ -70,7 +70,7 @@ limit:
 
 query: 
 projection: 
-sort: 
+sort: {'ipo.valuation_amount': -1}
 skip: 
 limit: 
 
@@ -78,21 +78,22 @@ limit:
 
 query: 
 projection: 
-sort: 
+sort: {number_of_employees: -1}
 skip: 
-limit: 
+limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-query: 
+query: {founded_month: {$gt: 6}}
 projection: 
 sort: 
 skip: 
-limit: 
+limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-query: 
+query: {deadpooled_year: {$gte: [$sum: {'$founded_year', '3'}]}}
+{$where: function(){ return (this.founded_year == 2004)}}
 projection: 
 sort: 
 skip: 
@@ -100,7 +101,7 @@ limit:
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
-query: 
+query: {$and: [{"acquisition.price_amount": {$gt: 10000000}}, {founded_year: {$lt: 2000}}] }
 projection: 
 sort: 
 skip: 
@@ -108,27 +109,27 @@ limit:
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
-query: 
-projection: 
-sort: 
+query: {"acquisition.acquired_year": {$gt: 2015}}
+projection: {name: 1, acquisition: 1, _id: 0}
+sort: {"acquisition.price_amount": -1}
 skip: 
 limit: 
 
 ### 15. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
 query: 
-projection: 
-sort: 
+projection: {name: 1, founded_year: 1, _id: 0}
+sort: {founded_year: 1}
 skip: 
 limit: 
 
 ### 16. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `aquisition price` descendently. Limit the search to 10 documents.
 
-query: 
+query: {founded_day: {$lte: 7}}
 projection: 
-sort: 
+sort: {'acquisition.price_amount': -1}
 skip: 
-limit: 
+limit: 10
 
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
