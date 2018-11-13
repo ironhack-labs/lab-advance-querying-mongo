@@ -72,7 +72,9 @@ LIMIT: 1000
 
 ### 15. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
-<!-- Your Code Goes Here -->
+{founded_year: {$ne: undefined}}
+{name:1, founded_year: 1, _id: 0}
+{founded_year: 1}
 
 ### 16. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `aquisition price` descendently. Limit the search to 10 documents.
 
