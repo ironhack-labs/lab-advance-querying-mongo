@@ -58,7 +58,7 @@ LIMIT: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-<!-- Your Code Goes Here -->
+{$where: "(this.deadpooled_year - this.founded_year) > 3"}
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
@@ -99,4 +99,4 @@ LIMIT: 10
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+{$and: [{founded_year: {$gte: 2000, $lte: 2010}},{"acquisition.acquired_year": {$gt: 2011}}]}
