@@ -44,7 +44,7 @@ LIMIT: 10
 
 ### 9. Order all the companies by their IPO price descendently.
 
-{"ipo.valuation_amount": 1}
+{"ipo.valuation_amount": -1}
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
@@ -78,7 +78,9 @@ LIMIT: 1000
 
 ### 16. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `aquisition price` descendently. Limit the search to 10 documents.
 
-<!-- Your Code Goes Here -->
+{founded_day: {$gte: 1, $lte: 7}}
+{"acquisition.price_amount": -1}
+LIMIT: 10
 
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
