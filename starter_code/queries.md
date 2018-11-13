@@ -89,7 +89,7 @@ LIMIT: 10
 
 ### 18. All the companies which their acquisition amount is more than 10.000.000, and currency are 'EUR'.
 
-<!-- Your Code Goes Here -->
+{$and: [{"acquisition.price_amount": {$gt: 10000000}},{"acquisitions.price_currency_code": "EUR"}]}
 
 ### 19. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
