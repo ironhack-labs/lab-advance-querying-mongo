@@ -66,7 +66,9 @@ LIMIT: 1000
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
-<!-- Your Code Goes Here -->
+{"acquisition.acquired_year": {$gt: 2012}}
+{name: 1, acquisition: 1, _id:0}
+{"acquisition.price_amount": 1}
 
 ### 15. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
