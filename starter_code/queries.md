@@ -80,10 +80,15 @@ db.companies.find({$and:[{"deadpooled_year":{$exists:true, $nin:[null]}},{$subst
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
 <!-- Your Code Goes Here -->
+db.companies.find({$and:[{"founded_year":{$lte:2000}},{"acquisition.price_amount":{$gte:10000}}]}).pretty()
+
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
 <!-- Your Code Goes Here -->
+
+
+
 
 ### 15. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
