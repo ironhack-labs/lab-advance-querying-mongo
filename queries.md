@@ -39,7 +39,7 @@ Skip :
 Limit : 10
 
 6.
-Filter : 
+Filter : {partners :{$exists:false}}
 Project : 
 Sort : 
 Collation : 
