@@ -9,7 +9,7 @@
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
 Query: {number_of_employees: {$gt: 5000}}
-Sort: {number_of_employees: -1}
+Sort: {number_of_employees: 1}
 Limit: 20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fileds.
@@ -30,7 +30,7 @@ Limit : 10
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- Your Code Goes Here -->
+{partners: {$exists: false}}
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
@@ -38,19 +38,24 @@ Query: {category_code: {$eq: null}}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+Query: {number_of_employees: {$gte: 100, $lt: 1000}}
+Sort : {name: 1, number_of_employees:1}
 
 ### 9. Order all the companies by their IPO price descendently.
 
-<!-- Your Code Goes Here -->
+Project : {name:1, ipo:1}
+Sort: {ipo: -1}
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+Project: {name:1, number_of_employees:1}
+Sort: {number_of_employees: -1}
+Limit : 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
+Query: {founded_month: {$gt: 6}}
+Limit : 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
