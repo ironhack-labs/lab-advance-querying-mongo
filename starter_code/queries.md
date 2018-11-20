@@ -50,8 +50,7 @@ db.company.find({founded_year: {$gte: 2015}}, {name: 1, "founded_year": 1}).sort
 db.company.find({founded_year: {$gte: 2015}}, {name: 1, "founded_year": 1}).sort({"ipo.valuation_amount": 1}).limit(10)
 
 ### 16. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `aquisition price` descendently. Limit the search to 10 documents.
-
-<!-- Your Code Goes Here -->
+db.company.find({founded_day: {$gte:6}}).sort({“ipo.valuation_amount”:1}).limit(10).pretty()
 
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
