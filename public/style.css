@@ -1,0 +1,47 @@
+body {
+    background-color: antiquewhite;
+    font-size: 14px;
+    color: rgb(58, 75, 28);
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.login {
+    background-color: white;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+input {
+    margin: 10px;
+}
+.input {
+    text-align: center;
+    padding: 20px;
+}
+
+.list {
+    padding: 20px;
+    padding-left: 40px;
+    background-color: blanchedalmond;
+    width: 40%; 
+    display:inline-block;
+    margin:  0 auto; 
+}
+li {
+    padding: 4px;
+}
+
+button {
+    display: block;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+}
