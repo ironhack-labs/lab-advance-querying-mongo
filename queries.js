@@ -5,7 +5,7 @@ db.companies.find({
             $nin: [null]
         }
     }, {
-        $substract: [{
+        $subtract: [{
             "deadpooled_year",
             "founded_year"
         }]: {
