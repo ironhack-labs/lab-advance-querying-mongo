@@ -92,7 +92,7 @@ limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-query:  
+query:  {$and: [{deadpooled_year: {$gt: 3}}, {deadpooled_year: {$nin: [null]}} ]}
 projection: 
 sort: 
 skip: 
