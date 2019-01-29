@@ -40,11 +40,11 @@
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
-<!--  -->
+<!-- db.companies.find().sort({number_of_emplyees: 1}).limit(10) -->
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
+<!-- db.companies.find({founded_month: {$gt: 3}, founded_month: {$lte: 6}}).limit(1000) -->
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
