@@ -24,7 +24,7 @@
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- db.companies.find({partners : null}) -->
+<!-- db.companies.find({partners : {$exists: null}) -->
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
@@ -36,11 +36,11 @@
 
 ### 9. Order all the companies by their IPO price descendently.
 
-<!-- Your Code Goes Here -->
+<!--  db.companies.find({ipo: {$ne: null}}).sort({"ipo.valuation_amount": -1}) -->
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+<!--  -->
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
