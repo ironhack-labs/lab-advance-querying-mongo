@@ -48,7 +48,7 @@ db.companies.find({founded_month: {$gt: 6}}).limit(1000).pretty()
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-db.companies.find({deadpooled_year: {$gt: 3}}).pretty()
+db.companies.find({deadpooled_year: {$gt: 3}, deadpooled_year:  {$lt: 1000}}).pretty()
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
