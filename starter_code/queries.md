@@ -83,8 +83,9 @@ db.companies.find({"acquisition.price_amount": {$gt:10000000}, "acquisition.pric
 
 ### 19. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-<!-- Your Code Goes Here -->
+db.companies.find({"acquisition":{$exists:true, $ne: null}, "acquisition.acquired_month":{$gte:1,$lte:3}}, {"name" : 1, "_id": 0, "acquisition": 1}).limit(10)
+
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+db.companies.find({"founded_year":{$gte:2000,$lte:2010}, "acquisition.acquired_year":{$gte:2011}}, {"name" : 1, "_id": 0, "founded_year": 1})
