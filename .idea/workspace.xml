@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ea8b043-a51c-43d8-ad2b-3222459cb1fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starter_code/queries.md" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/queries.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +19,8 @@
         <entry file="file://$PROJECT_DIR$/starter_code/queries.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="316">
-                <caret line="70" column="90" selection-start-line="70" selection-start-column="90" selection-end-line="70" selection-end-column="90" />
+              <first_editor relative-caret-position="1814">
+                <caret line="105" column="121" selection-start-line="105" selection-start-column="121" selection-end-line="105" selection-end-column="121" />
               </first_editor>
               <second_editor />
             </state>
@@ -95,12 +94,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549391595474</updated>
-      <workItem from="1549391597934" duration="3397000" />
+      <workItem from="1549391597934" duration="4103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3397000" />
+    <option name="totallyTimeSpent" value="4103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -111,7 +110,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.04761905" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.042016808" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -132,8 +131,8 @@
     <entry file="file://$PROJECT_DIR$/starter_code/queries.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="316">
-            <caret line="70" column="90" selection-start-line="70" selection-start-column="90" selection-end-line="70" selection-end-column="90" />
+          <first_editor relative-caret-position="1814">
+            <caret line="105" column="121" selection-start-line="105" selection-start-column="121" selection-end-line="105" selection-end-column="121" />
           </first_editor>
           <second_editor />
         </state>

@@ -38,11 +38,8 @@ query: {category_code:{$eq:null}}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {$and: [{number_of_employees: {$lt:1000}},{number_of_employees: {$gte:100}}]}
+projection: {name: 1, number_of_employees: 1, _id:0}
 
 ### 9. Order all the companies by their IPO price descendently.
 
@@ -94,11 +91,7 @@ sort: {number_of_employees: 1}
 
 ### 18. All the companies which their acquisition amount is more than 10.000.000, and currency are 'EUR'.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {$and: [{"acquisition.price_amount":{$gt: 10000000}}, {"acquisition.price_currency_code": {$eq: "EUR"}} ]}
 
 ### 19. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
@@ -107,8 +100,4 @@ projection: {name: 1, acquisition: 1, _id:0}
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {$and: [{founded_year: {$gte: 2000}}, {founded_year: {$lte: 2010}}, {"acquisition.acquired_year": {$gte: 2011}} ]}
