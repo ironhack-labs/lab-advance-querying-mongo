@@ -6,45 +6,83 @@
 
 <!-- Your Code Goes Here -->
 
+query: {name:"Babelgum"}
+projection: {name:1,\_id:0}
+sort:  
+skip:
+limit:
+
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
 <!-- Your Code Goes Here -->
+
+query: {number_of_employees:{\$gt:5000}}
+projection: {number_of_employees:1}
+sort: {number_of_employees:1}
+skip:
+limit: 20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fileds.
 
 <!-- Your Code Goes Here -->
 
+query: { $and: [ {founded_year: {$gt:1999 }}, {founded_year:{\$lt:2006 }} ] }
+projection:{founded_year:1,name:1}
+
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
 <!-- Your Code Goes Here -->
+
+query:{ $and: [ {"ipo.valuation_amount": {$gt:100000000 }}, {founded_year:{\$lt:2011 }} ] }
+projection:{name:1,founded_year:1,"ipo.valuation_amount":1}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
 <!-- Your Code Goes Here -->
 
+query:{ $and: [ {number_of_employees: {$lt:100}}, {founded_year:{\$lt:2007}} ] }
+sort: {number_of_employees:1}
+limit:10
+
 ### 6. All the companies that don't include the `partners` field.
 
 <!-- Your Code Goes Here -->
+
+query:{ partners: { \$exists: false } }
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 <!-- Your Code Goes Here -->
 
+query:{category_code:{\$eq: null}}
+
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
 <!-- Your Code Goes Here -->
+
+query: { $and: [ {number_of_employees:{$gt:99}}, {number_of_employees: {\$lt:1001 } } ] }
+projection: {name:1,number_of_employees:1}
 
 ### 9. Order all the companies by their IPO price descendently.
 
 <!-- Your Code Goes Here -->
 
+sort:{"ipo.valuation_amount":-1}
+
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
 <!-- Your Code Goes Here -->
 
+query: {number_of_employees:{\$ne:null}}
+sort: {number_of_employees:1}
+skip: 8879
+
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
 <!-- Your Code Goes Here -->
+
+query :{founded_month:{\$gte:6}}
+limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
@@ -54,9 +92,15 @@
 
 <!-- Your Code Goes Here -->
 
+query : {$and:[{founded_year:{$lte:2000}},{"acquisition.price_amount":{\$gte:10000000}}]}
+
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
 <!-- Your Code Goes Here -->
+
+query : {"acquisition.acquired_year":{\$lte:2015}}
+projection:{name:1, acquisiton:1}
+sort: {"acquisition.price_amount":1}
 
 ### 15. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
