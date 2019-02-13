@@ -1,13 +1,16 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# MongoDB | Compass CRUD
+# MongoDB | Advanced Querying Mongo
 
 ## Introduction
 
 We are back with our queries! :wink:
 
-We have learned some super useful query operators, that will helps us to make much better queries to retrieve the data we need. We will continue using the **Crunchbase** database we used on the last exercise.
+We have learned some super useful query operators, that will help us to make much better queries to retrieve the data we need. For this exercise we will use the **Crunchbase** database.
 
+## Purpose of the exercise
+
+Practice and write queries to mongo using Mongo CLI.
 
 ## Requirements
 
@@ -28,16 +31,15 @@ $ git push origin master
 
 ## Deliverables
 
-Since we will be querying our database from Mongo Compass, you will need to copy/paste the `query`, `projection`, `sort`, `skip` and `limit` you entered on Mongo Compass. In the `queries.md` file, you will find the instructions about the queries you need to do, and a field to fill the answers.
+Write your answers in the file `queries.md` below each iteration.
+Test the mongoDb queries in the command line.
 
 ### Example
 
-1. This is an example
- - **`query`**: /*You should copy/paste the query in here*/
- - **`projection`**: /*You should copy/paste the projection in here*/
- - **`sort`**: /*You should copy/paste the sort in here*/
- - **`skip`**: /*You should copy/paste the skip in here*/
- - **`limit`**: /*You should copy/paste the limit in here*/
+### 1. All the companies that it's name match 'Babelgum'. Retrieve only their `name` field.
+```bash
+> db.companies.find( { name:"Babelgum" }, { name:1, _id:0 } )
+```
 
 ## Instructions
 
@@ -55,14 +57,14 @@ The database contains more than 18k documents, and each of them has a lot of inf
 ```bash
 $ mongoimport --db companies --collection companies --file companies.json
 ```
-4. Check on Mongo Compass if everything goes ok:
+⚠️ When running the `mongoimport` you should be located in the same folder as the `companies.json` file.
 
-:::info >
-When running the `mongoimport` you should be located in the same folder as the `companies.json` file.
-:::
-
-![image](https://user-images.githubusercontent.com/23629340/36534191-1f1bc5ec-17c6-11e8-9463-4945679b98c0.png)
-
+4. Check in Mongo CLI if everything goes ok:
+```bash
+> show dbs
+> use companies
+> show collections
+```
 
 ### Iteration 2
 
