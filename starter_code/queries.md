@@ -120,7 +120,7 @@ LIMIT: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-FILTER: {deadpooled_year : {$gt: 3} }
+FILTER: { $where: "this.founded_year - this.deadpooled_year == 3" }
 PROJECT:
 SORT:
 COLLATION:
