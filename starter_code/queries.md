@@ -15,7 +15,7 @@
 <!-- Your Code Goes Here -->
  - **`query`**: /*{'number_of_employees':{'$gt':5000}}*/
  - **`projection`**: /**/
- - **`sort`**: /*1 */    #ascending
+ - **`sort`**: /*{'number_of_employees':1} */    #ascending
  - **`skip`**: /**/
  - **`limit`**: /*20*/
 
