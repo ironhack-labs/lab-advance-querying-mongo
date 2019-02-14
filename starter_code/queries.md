@@ -3,9 +3,8 @@
 # Answers
 
 ### 1. All the companies that it's name match 'Babelgum'. Retrieve only their `name` field.
-
-<!-- Your Code Goes Here -->
-
+Filter={"name":"Babelgum"} 
+  
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
 <!-- Your Code Goes Here -->
