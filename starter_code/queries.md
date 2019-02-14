@@ -22,7 +22,7 @@ limit:
 
 query: {"number_of_employees":{"$gte": 5000 }}
 projection: 
-sort: {"number_of_employees": 1}
+sort: {"number_of_employees": -1} #descending order
 skip: 
 limit: 20
 
@@ -42,7 +42,7 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: {"$and":[{"ipo.valuation_amount":{"$gt":100000000}}, {founded_year:{"$lt":2010}}]}
+query: {"$and": [{"ipo.valuation_amount":{"$gt":100000000}}, {"founded_year":{"$lt":2010}}]}
 projection: {"ipo": 1, "name": 1}
 sort: 
 skip: 
@@ -52,17 +52,17 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {"$and": [{"number_of_employees": {"$lt": 1000}}, {"founded_year": {"$lt": 2005}}]}
 projection: 
-sort: 
+sort: {"number_of_employees": -1} #descending order
 skip: 
-limit: 
+limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {"partners": {"$exists": false}}
 projection: 
 sort: 
 skip: 
@@ -72,7 +72,7 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {"category_code": null}
 projection: 
 sort: 
 skip: 
@@ -82,8 +82,8 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: 
-projection: 
+query: {"number_of_employees":{$gte:100, $lte: 1000}}
+projection: {"name": 1, "number_of_employees": 1}
 sort: 
 skip: 
 limit: 
@@ -94,7 +94,7 @@ limit:
 
 query: 
 projection: 
-sort: 
+sort: {"ipo.valuation_amount": -1}
 skip: 
 limit: 
 
@@ -104,25 +104,25 @@ limit:
 
 query: 
 projection: 
-sort: 
+sort: {"number_of_employees": -1}
 skip: 
-limit: 
+limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {"founded_month": {$gt: 6}}
 projection: 
 sort: 
 skip: 
-limit: 
+limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {"$project": {"$substract": {["deadpooled_year", "founded_year"]: {$lte: 3}}}}
 projection: 
 sort: 
 skip: 
@@ -132,7 +132,7 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {$and: [{"founded_year": {$lt: 2000}}, {"acquisition.price_amount": {$gt: 10000000}}]}
 projection: 
 sort: 
 skip: 
@@ -142,9 +142,9 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: 
-projection: 
-sort: 
+query: {"acquisition.acquired_year": {$gt: 2015}}
+projection:  {"name": 1 , "acquisition": 1}
+sort: {"acquisition.price_amount": 1}
 skip: 
 limit: 
 
@@ -153,8 +153,8 @@ limit:
 <!-- Your Code Goes Here -->
 
 query: 
-projection: 
-sort: 
+projection: {"name": 1, "founded_year": 1}
+sort: {"founded_year": -1}
 skip: 
 limit: 
 
@@ -162,19 +162,19 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {"founded_day": {$lte: 7}}
 projection: 
-sort: 
+sort: {"acquisition.price_amount": 1}
 skip: 
-limit: 
+limit: 10
 
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {$and: [{"category_code": /web/}, {"number_of_employees": {$gte: 4000}}]}
 projection: 
-sort: 
+sort: {"number_of_employees": 1}
 skip: 
 limit: 
 
@@ -182,7 +182,7 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {$and: [{"acquisition.price_amount": {$gte: 10000000}}, {"acquisition.price_currency_code": /EUR/}]}
 projection: 
 sort: 
 skip: 
@@ -192,17 +192,17 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: 
-projection: 
+query: {"acquisition.acquired_month": {$lte: 4}}
+projection: {"name": 1, "acquisition": 1}
 sort: 
 skip: 
-limit: 
+limit: 10
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {$and: [{"founded_year":{$gte:2000, $lte: 2010}}, {"acquisition.acquired_year": {$gte: 2011}}]}
 projection: 
 sort: 
 skip: 
