@@ -141,7 +141,7 @@
 
     query: { "acquisitions.acquired_year" : {$gt: 2015} }
     projection: {"name": 1, "acquisition.price_amount": 1, "_id": 0}
-    sort: {"acquisition.price_amount": -1}
+    sort: {"name : 1, acquisition.price_amount": -1}
     skip: 
     limit: 
 
@@ -169,9 +169,9 @@
 
 <!-- Your Code Goes Here -->
 
-    query: 
+    query: {$and: [ { category_code: "web"} , { number_of_employees: { $gt: 4000 } } ] }
     projection: 
-    sort: 
+    sort: {number_of_employees:1}
     skip: 
     limit: 
 
@@ -179,7 +179,7 @@
 
 <!-- Your Code Goes Here -->
 
-    query: 
+    query: {$and: [ { "acquisition.price_amount": 10000000} , { "acquisition.price_currency_code" : "EUR" } ]}  
     projection: 
     sort: 
     skip: 
@@ -189,17 +189,17 @@
 
 <!-- Your Code Goes Here -->
 
-    query: 
-    projection: 
+    query: {"acquisition.acquired_month": {$lt:-4}}
+    projection: {"name : 1, acquisition.price_amount": -1}
     sort: 
     skip: 
-    limit: 
+    limit: 10
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
 
-    query: 
+    query: {$and: [ { founded_year: {$gte: 2000} },{ founded_year: {$lte: 2010}}, { "acquisition.acquired_year": {$not: { $gt: 2011 }} }]  }
     projection: 
     sort: 
     skip: 
