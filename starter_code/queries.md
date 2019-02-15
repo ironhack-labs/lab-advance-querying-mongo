@@ -92,7 +92,7 @@ limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 <!-- Your Code Goes Here -->
-query: {$where:{(deadpooled_year)-(founded_year)==0} #no funciona...
+query: {$and: [{"deadpooled_year":{$gte:3}},{$where: "this.deadpooled_year - this.founded_year > 3"}]}
 projection:
 sort:
 skip:
