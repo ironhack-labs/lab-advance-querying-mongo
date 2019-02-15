@@ -42,7 +42,7 @@
 <!-- Your Code Goes Here -->
  - **`query`**: /*{'$and': [{'number_of_employees':{'$lt':1000}}, {'founded_year':{'$lt':2005}}]}*/
  - **`projection`**: /**/
- - **`sort`**: /*{'number_of_employees':1}*/
+ - **`sort`**: /*{'number_of_employees':-1}*/
  - **`skip`**: /**/
  - **`limit`**: /*10*/
 
