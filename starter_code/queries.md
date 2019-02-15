@@ -122,7 +122,9 @@ limit: 1000
 
 <!-- Your Code Goes Here -->
 
-query: {"$project": {"$substract": {["deadpooled_year", "founded_year"]: {$lte: 3}}}}
+### Usando un $where
+
+query: {$and: [{"deadpooled_year":{$gte:3}},{$where: "this.deadpooled_year - this.founded_year > 3"}]}
 projection: 
 sort: 
 skip: 
