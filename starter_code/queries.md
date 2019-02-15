@@ -119,7 +119,10 @@
 
 <!-- Your Code Goes Here -->
 
-    query: { $or: [{deadpooled_year: {$gt: { $add: [founded_year, 3 ] } } }, { deadpooled_year: {$gt: 3} } ] }
+    query1: { $or: [{{ $toInt: "$deadpooled_year" }: {$gt: { $add: [{ $toInt: "$founded_year" }, 3 ] } } }, { deadpooled_year: {$gt: 3} } ] }
+    
+    query2: { $or: [{{cmpTo3: { $cmp: [ { $subtract: [ deadpooled_year, founded_year ] }, 3 ] }}: {$gt: 0} }, { deadpooled_year: {$gt: 3} } ] }
+    
     projection: 
     sort: 
     skip: 
@@ -139,7 +142,7 @@
 
 <!-- Your Code Goes Here -->
 
-    query: { "acquisitions.acquired_year" : {$gt: 2015} }
+    query: { "acquisition.acquired_year" : {$gt: 2015} }
     projection: {"name": 1, "acquisition.price_amount": 1, "_id": 0}
     sort: {"acquisition.price_amount": -1}
     skip: 
