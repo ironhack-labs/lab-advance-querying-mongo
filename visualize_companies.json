@@ -1,0 +1,348 @@
+{"Company\/ Class":"Twitter \/Big Corp0","Coordinates":{"type":"Point","coordinates":[-122.4169244,37.7768052]}}
+{"Company\/ Class":"Facebook \/Big Corp0","Coordinates":{"type":"Point","coordinates":[-122.151801,37.41605]}}
+{"Company\/ Class":"Facebook \/Big Corp1","Coordinates":{"type":"Point","coordinates":[-6.267494,53.344104]}}
+{"Company\/ Class":"Facebook \/Big Corp2","Coordinates":{"type":"Point","coordinates":[-73.9792469,40.7557162]}}
+{"Company\/ Class":"Plaxo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-6.267494,53.344104]}}
+{"Company\/ Class":"Meetup \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-73.9792469,40.7557162]}}
+{"Company\/ Class":"SideStep \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.055197,37.387845]}}
+{"Company\/ Class":"Meebo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-73.995722,40.72604]}}
+{"Company\/ Class":"Meebo \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-121.977853,37.374998]}}
+{"Company\/ Class":"Meebo \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-122.079017,37.393679]}}
+{"Company\/ Class":"Meebo \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-122.39071,37.779507]}}
+{"Company\/ Class":"Meebo \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-122.073635,37.423258]}}
+{"Company\/ Class":"Eventbrite \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.977853,37.374998]}}
+{"Company\/ Class":"LinkedIn \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.079017,37.393679]}}
+{"Company\/ Class":"Zvents \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.39071,37.779507]}}
+{"Company\/ Class":"Eventful \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.073635,37.423258]}}
+{"Company\/ Class":"Eventful \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.301534,37.553121]}}
+{"Company\/ Class":"oDesk \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.301534,37.553121]}}
+{"Company\/ Class":"Flixster \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-117.206292,32.872081]}}
+{"Company\/ Class":"spigit \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.178557,37.479952]}}
+{"Company\/ Class":"spigit \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.406676,37.766909]}}
+{"Company\/ Class":"spigit \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-121.8731805,37.6637279]}}
+{"Company\/ Class":"Bazaarvoice \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.406676,37.766909]}}
+{"Company\/ Class":"Tagged \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.8731805,37.6637279]}}
+{"Company\/ Class":"PayScale \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-77.3592746,38.9590083]}}
+{"Company\/ Class":"IMVU \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-0.1394759,51.5170385]}}
+{"Company\/ Class":"Dropbox \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-97.717667,30.407545]}}
+{"Company\/ Class":"Dropbox \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.4186,37.7753]}}
+{"Company\/ Class":"Yola \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.4186,37.7753]}}
+{"Company\/ Class":"Yola \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.3276962,47.5999337]}}
+{"Company\/ Class":"BitTorrent \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.3276962,47.5999337]}}
+{"Company\/ Class":"Digitalsmiths \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.0727749,37.3927975]}}
+{"Company\/ Class":"Zappos \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.4084994,37.7909427]}}
+{"Company\/ Class":"Zappos \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.3954751,37.7911148]}}
+{"Company\/ Class":"Friendster \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.3954751,37.7911148]}}
+{"Company\/ Class":"Jive Software \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.394668,37.790998]}}
+{"Company\/ Class":"Jive Software \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-115.064859,36.032976]}}
+{"Company\/ Class":"Jive Software \/Otherwise2","Coordinates":{"type":"Point","coordinates":[101.686855,3.139003]}}
+{"Company\/ Class":"Jive Software \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-122.083487,37.386175]}}
+{"Company\/ Class":"Jive Software \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-122.421344,37.744274]}}
+{"Company\/ Class":"WooMe \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-115.064859,36.032976]}}
+{"Company\/ Class":"Kaltura \/Otherwise0","Coordinates":{"type":"Point","coordinates":[101.686855,3.139003]}}
+{"Company\/ Class":"Polyvore \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.083487,37.386175]}}
+{"Company\/ Class":"Automattic \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.421344,37.744274]}}
+{"Company\/ Class":"Wix \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-77.091025,38.963492]}}
+{"Company\/ Class":"Wix \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.160671,37.445326]}}
+{"Company\/ Class":"JackBe \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.160671,37.445326]}}
+{"Company\/ Class":"JackBe \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-71.52679,42.288291]}}
+{"Company\/ Class":"EchoSign \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.52679,42.288291]}}
+{"Company\/ Class":"uTest \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.006539,37.332271]}}
+{"Company\/ Class":"uTest \/Otherwise1","Coordinates":{"type":"Point","coordinates":[12.571492,55.6839208]}}
+{"Company\/ Class":"Baynote \/Otherwise0","Coordinates":{"type":"Point","coordinates":[12.571492,55.6839208]}}
+{"Company\/ Class":"Zmags \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-0.1247662,51.5111369]}}
+{"Company\/ Class":"Zmags \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-121.97895,37.399208]}}
+{"Company\/ Class":"Zmags \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-117.175733,32.903248]}}
+{"Company\/ Class":"Vobile \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-117.175733,32.903248]}}
+{"Company\/ Class":"Verimatrix \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.390945,37.78274]}}
+{"Company\/ Class":"Splunk \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.118487,42.375392]}}
+{"Company\/ Class":"HubSpot \/Otherwise0","Coordinates":{"type":"Point","coordinates":[2.3304161,48.8747064]}}
+{"Company\/ Class":"Viadeo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-118.495981,34.01052]}}
+{"Company\/ Class":"Goodreads \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-78.902115,35.996157]}}
+{"Company\/ Class":"Goodreads \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-78.8986,35.9939]}}
+{"Company\/ Class":"Shoeboxed \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-78.8986,35.9939]}}
+{"Company\/ Class":"Shoeboxed \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-121.9479223,37.3208403]}}
+{"Company\/ Class":"Shoeboxed \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-118.256305,34.051368]}}
+{"Company\/ Class":"Bunchball \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.9479223,37.3208403]}}
+{"Company\/ Class":"Oversee \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-118.256305,34.051368]}}
+{"Company\/ Class":"Badoo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.918319,37.383844]}}
+{"Company\/ Class":"Badoo \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-73.988477,40.752325]}}
+{"Company\/ Class":"Badoo \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-74.006196,40.725883]}}
+{"Company\/ Class":"Mixbook \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-73.988477,40.752325]}}
+{"Company\/ Class":"HealthcareMagic \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-74.006196,40.725883]}}
+{"Company\/ Class":"Oddcast \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-82.3230981,29.6502461]}}
+{"Company\/ Class":"Clicks2Customers \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.987661,37.386774]}}
+{"Company\/ Class":"TheLadders \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.307887,37.54763]}}
+{"Company\/ Class":"Grooveshark \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-73.7258199,40.8587524]}}
+{"Company\/ Class":"Evernote \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-73.985878,40.739794]}}
+{"Company\/ Class":"SugarSync \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-87.750643,42.040851]}}
+{"Company\/ Class":"OLX \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-117.8587,33.676444]}}
+{"Company\/ Class":"Phreesia \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-111.7276347,40.3310529]}}
+{"Company\/ Class":"Ifbyphone \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.328401,37.536044]}}
+{"Company\/ Class":"Kareo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-73.983626,40.743808]}}
+{"Company\/ Class":"Footnote \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.2709868,37.5596277]}}
+{"Company\/ Class":"Sabrix \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.0872274,37.4203945]}}
+{"Company\/ Class":"Clarizen \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-111.889137,40.762412]}}
+{"Company\/ Class":"Clarizen \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-121.971487,37.381034]}}
+{"Company\/ Class":"Next New Networks \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.971487,37.381034]}}
+{"Company\/ Class":"Zuora \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.369676,37.592584]}}
+{"Company\/ Class":"ShareThis \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-77.227525,38.923453]}}
+{"Company\/ Class":"Infopia \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.008549,37.322385]}}
+{"Company\/ Class":"InMage Systems \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-77.220048,38.912791]}}
+{"Company\/ Class":"ScanCafe \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-118.153136,34.146436]}}
+{"Company\/ Class":"Cvent \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.500111,37.868002]}}
+{"Company\/ Class":"Gecad Technologies \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.301385,37.5583]}}
+{"Company\/ Class":"Zend Technologies \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-80.296794,25.782058]}}
+{"Company\/ Class":"Parature \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.395289,37.778613]}}
+{"Company\/ Class":"WebCollage \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-73.983754,40.761855]}}
+{"Company\/ Class":"Perfect Market \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-88.073008,41.808458]}}
+{"Company\/ Class":"Perfect Market \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.419204,37.775196]}}
+{"Company\/ Class":"Glassdoor \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.419204,37.775196]}}
+{"Company\/ Class":"Marketo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-58.3708904,-34.5967236]}}
+{"Company\/ Class":"Avisena \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.5174869,42.2261823]}}
+{"Company\/ Class":"GuardianEdge Technologies \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-0.0952197,51.5205095]}}
+{"Company\/ Class":"Cellfish \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.4041764,37.7819286]}}
+{"Company\/ Class":"SearchForce \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-46.6816579,-23.5606195]}}
+{"Company\/ Class":"SearchForce \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-74.0632101,4.7595921]}}
+{"Company\/ Class":"Univa UD \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-74.0632101,4.7595921]}}
+{"Company\/ Class":"GitHub \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-56.1819444,-34.8836111]}}
+{"Company\/ Class":"Globant \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-58.3840599,-34.6776448]}}
+{"Company\/ Class":"Globant \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-59.1340915,-37.3281072]}}
+{"Company\/ Class":"Globant \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-58.9871056,-27.4533887]}}
+{"Company\/ Class":"Globant \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-65.3024825,-26.8007888]}}
+{"Company\/ Class":"Globant \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-62.2690974,-38.7211371]}}
+{"Company\/ Class":"Globant \/Otherwise5","Coordinates":{"type":"Point","coordinates":[-119.306607,37.269175]}}
+{"Company\/ Class":"Globant \/Otherwise6","Coordinates":{"type":"Point","coordinates":[-118.3952969,33.9192583]}}
+{"Company\/ Class":"Globant \/Otherwise7","Coordinates":{"type":"Point","coordinates":[-111.658656,40.234451]}}
+{"Company\/ Class":"Globant \/Otherwise8","Coordinates":{"type":"Point","coordinates":[-118.33334,34.101578]}}
+{"Company\/ Class":"Globant \/Otherwise9","Coordinates":{"type":"Point","coordinates":[-58.417309,-34.611781]}}
+{"Company\/ Class":"Globant \/Otherwise10","Coordinates":{"type":"Point","coordinates":[-122.1192743,37.8919079]}}
+{"Company\/ Class":"Globant \/Otherwise11","Coordinates":{"type":"Point","coordinates":[-122.227765,37.492685]}}
+{"Company\/ Class":"Globant \/Otherwise12","Coordinates":{"type":"Point","coordinates":[-122.1797053,37.4520239]}}
+{"Company\/ Class":"Globant \/Otherwise13","Coordinates":{"type":"Point","coordinates":[-122.080843,37.390918]}}
+{"Company\/ Class":"EQAL \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-59.1340915,-37.3281072]}}
+{"Company\/ Class":"New Relic \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-58.9871056,-27.4533887]}}
+{"Company\/ Class":"Velocify \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-65.3024825,-26.8007888]}}
+{"Company\/ Class":"Zinch \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-62.2690974,-38.7211371]}}
+{"Company\/ Class":"Zinch \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-119.306607,37.269175]}}
+{"Company\/ Class":"Zinch \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-118.3952969,33.9192583]}}
+{"Company\/ Class":"SilkRoad Technology \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-119.306607,37.269175]}}
+{"Company\/ Class":"deviantART \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-118.3952969,33.9192583]}}
+{"Company\/ Class":"Sonico \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-111.658656,40.234451]}}
+{"Company\/ Class":"Sonico \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-118.33334,34.101578]}}
+{"Company\/ Class":"Sonico \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-58.417309,-34.611781]}}
+{"Company\/ Class":"Votigo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-118.33334,34.101578]}}
+{"Company\/ Class":"Votigo \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-58.417309,-34.611781]}}
+{"Company\/ Class":"GreenNote \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-58.417309,-34.611781]}}
+{"Company\/ Class":"OpenAir \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.1192743,37.8919079]}}
+{"Company\/ Class":"Medallia \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.227765,37.492685]}}
+{"Company\/ Class":"WSO2 \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.1797053,37.4520239]}}
+{"Company\/ Class":"WSO2 \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.080843,37.390918]}}
+{"Company\/ Class":"WSO2 \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-0.919424,50.8472228]}}
+{"Company\/ Class":"Infusionsoft \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.080843,37.390918]}}
+{"Company\/ Class":"TOA Technologies \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-0.919424,50.8472228]}}
+{"Company\/ Class":"TOA Technologies \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-111.8871813,33.2871748]}}
+{"Company\/ Class":"TOA Technologies \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-77.220028,38.912827]}}
+{"Company\/ Class":"Appian \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-111.8871813,33.2871748]}}
+{"Company\/ Class":"Appian \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-77.220028,38.912827]}}
+{"Company\/ Class":"Appian \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-0.094384,51.513122]}}
+{"Company\/ Class":"Appian \/Otherwise3","Coordinates":{"type":"Point","coordinates":[7.853767,47.997186]}}
+{"Company\/ Class":"Appian \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-122.332085,47.601803]}}
+{"Company\/ Class":"Jedox \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-77.220028,38.912827]}}
+{"Company\/ Class":"Jedox \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-0.094384,51.513122]}}
+{"Company\/ Class":"Jedox \/Otherwise2","Coordinates":{"type":"Point","coordinates":[7.853767,47.997186]}}
+{"Company\/ Class":"Photobucket \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-0.094384,51.513122]}}
+{"Company\/ Class":"Ounce Labs \/Otherwise0","Coordinates":{"type":"Point","coordinates":[7.853767,47.997186]}}
+{"Company\/ Class":"thePlatform \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.332085,47.601803]}}
+{"Company\/ Class":"Zendesk \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.255855,42.393662]}}
+{"Company\/ Class":"SAVO \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.356027,47.617838]}}
+{"Company\/ Class":"Douban \/Otherwise0","Coordinates":{"type":"Point","coordinates":[12.568116,55.676294]}}
+{"Company\/ Class":"Qumu \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-87.640458,41.87675]}}
+{"Company\/ Class":"Black Duck Software \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.422113,37.630551]}}
+{"Company\/ Class":"Black Duck Software \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-71.253998,42.398916]}}
+{"Company\/ Class":"Black Duck Software \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-122.281484,37.556152]}}
+{"Company\/ Class":"Black Duck Software \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-2.258714,53.524419]}}
+{"Company\/ Class":"Huddler \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.253998,42.398916]}}
+{"Company\/ Class":"Prezi \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.281484,37.556152]}}
+{"Company\/ Class":"Prezi \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-2.258714,53.524419]}}
+{"Company\/ Class":"SpringSource \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-2.258714,53.524419]}}
+{"Company\/ Class":"SpringSource \/Otherwise1","Coordinates":{"type":"Point","coordinates":[4.870312,52.340609]}}
+{"Company\/ Class":"Xero \/Otherwise0","Coordinates":{"type":"Point","coordinates":[4.870312,52.340609]}}
+{"Company\/ Class":"Xero \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.4013624,37.7893215]}}
+{"Company\/ Class":"Xero \/Otherwise2","Coordinates":{"type":"Point","coordinates":[19.059078,47.490346]}}
+{"Company\/ Class":"Xero \/Otherwise3","Coordinates":{"type":"Point","coordinates":[116.395833,39.905556]}}
+{"Company\/ Class":"Xero \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-122.135282,47.582658]}}
+{"Company\/ Class":"Xero \/Otherwise5","Coordinates":{"type":"Point","coordinates":[-74.0353787,40.7481039]}}
+{"Company\/ Class":"Xero \/Otherwise6","Coordinates":{"type":"Point","coordinates":[-122.2016685,47.6174533]}}
+{"Company\/ Class":"Koolanoo Group \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.4013624,37.7893215]}}
+{"Company\/ Class":"Likewise Software \/Otherwise0","Coordinates":{"type":"Point","coordinates":[19.059078,47.490346]}}
+{"Company\/ Class":"Integrate \/Otherwise0","Coordinates":{"type":"Point","coordinates":[116.395833,39.905556]}}
+{"Company\/ Class":"Integrate \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.135282,47.582658]}}
+{"Company\/ Class":"Integrate \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-74.0353787,40.7481039]}}
+{"Company\/ Class":"Integrate \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-122.2016685,47.6174533]}}
+{"Company\/ Class":"Stack Exchange \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.135282,47.582658]}}
+{"Company\/ Class":"Atigeo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-74.0353787,40.7481039]}}
+{"Company\/ Class":"UBmatrix \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.2016685,47.6174533]}}
+{"Company\/ Class":"Lyft \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.258139,37.522281]}}
+{"Company\/ Class":"Swype \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.4007846,37.7899027]}}
+{"Company\/ Class":"Lolapps \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.3497956,47.6495905]}}
+{"Company\/ Class":"Koolanoo Group \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.3999719,37.7870923]}}
+{"Company\/ Class":"Likewise Software \/Otherwise0","Coordinates":{"type":"Point","coordinates":[116.395833,39.905556]}}
+{"Company\/ Class":"Integrate \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.135282,47.582658]}}
+{"Company\/ Class":"Integrate \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-74.0353787,40.7481039]}}
+{"Company\/ Class":"Integrate \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-122.2016685,47.6174533]}}
+{"Company\/ Class":"Integrate \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-122.258139,37.522281]}}
+{"Company\/ Class":"Stack Exchange \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-74.0353787,40.7481039]}}
+{"Company\/ Class":"Atigeo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.2016685,47.6174533]}}
+{"Company\/ Class":"UBmatrix \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.258139,37.522281]}}
+{"Company\/ Class":"Lyft \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.4007846,37.7899027]}}
+{"Company\/ Class":"Swype \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.3497956,47.6495905]}}
+{"Company\/ Class":"Lolapps \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.3999719,37.7870923]}}
+{"Company\/ Class":"Groupon \/Big Corp0","Coordinates":{"type":"Point","coordinates":[-87.643622,41.8965162]}}
+{"Company\/ Class":"Groupon \/Big Corp1","Coordinates":{"type":"Point","coordinates":[-111.643179,40.250096]}}
+{"Company\/ Class":"Groupon \/Big Corp2","Coordinates":{"type":"Point","coordinates":[-122.161287,37.444098]}}
+{"Company\/ Class":"Groupon \/Big Corp3","Coordinates":{"type":"Point","coordinates":[13.3842605,52.5308516]}}
+{"Company\/ Class":"FamilyLink \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-111.643179,40.250096]}}
+{"Company\/ Class":"Nexenta Systems \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.161287,37.444098]}}
+{"Company\/ Class":"ResearchGate \/Otherwise0","Coordinates":{"type":"Point","coordinates":[13.3842605,52.5308516]}}
+{"Company\/ Class":"ReverbNation \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-78.904075,36.002893]}}
+{"Company\/ Class":"ReverbNation \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-74.001169,40.718888]}}
+{"Company\/ Class":"Nexaweb Technologies \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-74.001169,40.718888]}}
+{"Company\/ Class":"Nexaweb Technologies \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-71.194268,42.483826]}}
+{"Company\/ Class":"Nexaweb Technologies \/Otherwise2","Coordinates":{"type":"Point","coordinates":[4.904251,52.390168]}}
+{"Company\/ Class":"Squarespace \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.194268,42.483826]}}
+{"Company\/ Class":"Open-Xchange \/Otherwise0","Coordinates":{"type":"Point","coordinates":[4.904251,52.390168]}}
+{"Company\/ Class":"Open-Xchange \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-73.8625452,41.0662835]}}
+{"Company\/ Class":"Open-Xchange \/Otherwise2","Coordinates":{"type":"Point","coordinates":[7.850863,51.029415]}}
+{"Company\/ Class":"Trustpilot \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-73.8625452,41.0662835]}}
+{"Company\/ Class":"Clearleap \/Otherwise0","Coordinates":{"type":"Point","coordinates":[7.850863,51.029415]}}
+{"Company\/ Class":"Nuxeo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[11.0823953,49.4605351]}}
+{"Company\/ Class":"Nuxeo \/Otherwise1","Coordinates":{"type":"Point","coordinates":[12.5605372,55.6739617]}}
+{"Company\/ Class":"Nuxeo \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-84.058708,34.070164]}}
+{"Company\/ Class":"ZeroTurnaround \/Otherwise0","Coordinates":{"type":"Point","coordinates":[12.5605372,55.6739617]}}
+{"Company\/ Class":"ZeroTurnaround \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-84.058708,34.070164]}}
+{"Company\/ Class":"ZeroTurnaround \/Otherwise2","Coordinates":{"type":"Point","coordinates":[2.392119,48.8656319]}}
+{"Company\/ Class":"ZeroTurnaround \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-71.1423056,42.3904729]}}
+{"Company\/ Class":"Synthesio \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-84.058708,34.070164]}}
+{"Company\/ Class":"Synthesio \/Otherwise1","Coordinates":{"type":"Point","coordinates":[2.392119,48.8656319]}}
+{"Company\/ Class":"Synthesio \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-71.1423056,42.3904729]}}
+{"Company\/ Class":"Synthesio \/Otherwise3","Coordinates":{"type":"Point","coordinates":[26.731054,58.3820542]}}
+{"Company\/ Class":"authorGEN \/Otherwise0","Coordinates":{"type":"Point","coordinates":[2.392119,48.8656319]}}
+{"Company\/ Class":"authorGEN \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-71.1423056,42.3904729]}}
+{"Company\/ Class":"AppLabs \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.1423056,42.3904729]}}
+{"Company\/ Class":"Tableau Software \/Otherwise0","Coordinates":{"type":"Point","coordinates":[26.731054,58.3820542]}}
+{"Company\/ Class":"ScienceLogic \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-73.9935011,40.7431836]}}
+{"Company\/ Class":"ScienceLogic \/Otherwise1","Coordinates":{"type":"Point","coordinates":[4.7694829,44.6672372]}}
+{"Company\/ Class":"SolarWinds \/Otherwise0","Coordinates":{"type":"Point","coordinates":[4.7694829,44.6672372]}}
+{"Company\/ Class":"Green Apple Media \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.3545086,47.6504518]}}
+{"Company\/ Class":"CouponCabin \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-97.805621,30.245535]}}
+{"Company\/ Class":"ClickSquared \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-6.2689465,53.3438298]}}
+{"Company\/ Class":"Klout \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-88.144397,42.052004]}}
+{"Company\/ Class":"Packet Design \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.2709869,42.3913892]}}
+{"Company\/ Class":"Iken Solutions \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-118.2474287,34.0497638]}}
+{"Company\/ Class":"Iken Solutions \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-121.970505,37.3821368]}}
+{"Company\/ Class":"Double Fusion \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.970505,37.3821368]}}
+{"Company\/ Class":"Mantara \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-58.5511077,-34.4942649]}}
+{"Company\/ Class":"SundaySky \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.3927145,37.7887135]}}
+{"Company\/ Class":"SundaySky \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-74.032177,40.726517]}}
+{"Company\/ Class":"Adaptive Planning \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-74.032177,40.726517]}}
+{"Company\/ Class":"WebLayers \/Otherwise0","Coordinates":{"type":"Point","coordinates":[34.8388443,32.1115098]}}
+{"Company\/ Class":"Vocalocity \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.0887097,37.4192309]}}
+{"Company\/ Class":"SparkBase \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.149057,42.377535]}}
+{"Company\/ Class":"Skout \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-84.3675617,33.7812614]}}
+{"Company\/ Class":"Skout \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-81.666101,41.513652]}}
+{"Company\/ Class":"Skout \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-122.3912492,37.7800539]}}
+{"Company\/ Class":"DemandTec \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-81.666101,41.513652]}}
+{"Company\/ Class":"DemandTec \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.3912492,37.7800539]}}
+{"Company\/ Class":"Signiant \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.3912492,37.7800539]}}
+{"Company\/ Class":"Naseeb Networks \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.239815,37.498842]}}
+{"Company\/ Class":"Quantum Secure \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-0.1249337,51.5069206]}}
+{"Company\/ Class":"Ginger Software \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.221878,42.48366]}}
+{"Company\/ Class":"Medio \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.9303616,37.3015115]}}
+{"Company\/ Class":"WANdisco \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.915594,37.367838]}}
+{"Company\/ Class":"WANdisco \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-71.2344601,42.4352222]}}
+{"Company\/ Class":"TopCoder \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.2344601,42.4352222]}}
+{"Company\/ Class":"AppZero \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.331308,47.611827]}}
+{"Company\/ Class":"IGLOO Software \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.966395,37.769205]}}
+{"Company\/ Class":"Jama Software \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-1.4629301,53.3800107]}}
+{"Company\/ Class":"Cornerstone OnDemand \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-72.618958,41.722414]}}
+{"Company\/ Class":"picoChip \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.1469003,42.6751888]}}
+{"Company\/ Class":"picoChip \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-80.487328,43.4496954]}}
+{"Company\/ Class":"picoChip \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-122.68038,45.5309644]}}
+{"Company\/ Class":"picoChip \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-118.472577,34.028182]}}
+{"Company\/ Class":"picoChip \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-121.9235529,37.3709977]}}
+{"Company\/ Class":"Infobright \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-80.487328,43.4496954]}}
+{"Company\/ Class":"Infobright \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.68038,45.5309644]}}
+{"Company\/ Class":"Nimsoft \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.68038,45.5309644]}}
+{"Company\/ Class":"Nimsoft \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-118.472577,34.028182]}}
+{"Company\/ Class":"Openbravo \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-118.472577,34.028182]}}
+{"Company\/ Class":"Openbravo \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-121.9235529,37.3709977]}}
+{"Company\/ Class":"MetricStream \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.9235529,37.3709977]}}
+{"Company\/ Class":"HootSuite \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-79.3749698,43.6490631]}}
+{"Company\/ Class":"Basho Technologies \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.401307,42.377467]}}
+{"Company\/ Class":"Basho Technologies \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.257185,37.524851]}}
+{"Company\/ Class":"Basho Technologies \/Otherwise2","Coordinates":{"type":"Point","coordinates":[2.1660785,41.3935324]}}
+{"Company\/ Class":"Basho Technologies \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-122.118794,37.446535]}}
+{"Company\/ Class":"Basho Technologies \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-123.0952381,49.2851733]}}
+{"Company\/ Class":"Teradici \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.257185,37.524851]}}
+{"Company\/ Class":"Bomgar \/Otherwise0","Coordinates":{"type":"Point","coordinates":[2.1660785,41.3935324]}}
+{"Company\/ Class":"Bomgar \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.118794,37.446535]}}
+{"Company\/ Class":"Bomgar \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-123.0952381,49.2851733]}}
+{"Company\/ Class":"Bomgar \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-71.092285,42.365867]}}
+{"Company\/ Class":"Bomgar \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-90.1633006,32.416174]}}
+{"Company\/ Class":"SurveyMonkey \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.118794,37.446535]}}
+{"Company\/ Class":"SurveyMonkey \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-123.0952381,49.2851733]}}
+{"Company\/ Class":"SurveyMonkey \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-71.092285,42.365867]}}
+{"Company\/ Class":"Eglue Business Technologies \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-123.0952381,49.2851733]}}
+{"Company\/ Class":"Eglue Business Technologies \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-71.092285,42.365867]}}
+{"Company\/ Class":"Razorsight \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-71.092285,42.365867]}}
+{"Company\/ Class":"Rhapso \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-90.1633006,32.416174]}}
+{"Company\/ Class":"Veeva \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-84.17173,34.057519]}}
+{"Company\/ Class":"Veeva \/Otherwise1","Coordinates":{"type":"Point","coordinates":[2.2983373,48.8752305]}}
+{"Company\/ Class":"Veeva \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-122.398126,37.791128]}}
+{"Company\/ Class":"Veeva \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-77.3563279,38.9594124]}}
+{"Company\/ Class":"My-Hammer \/Otherwise0","Coordinates":{"type":"Point","coordinates":[2.2983373,48.8752305]}}
+{"Company\/ Class":"AVST \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.398126,37.791128]}}
+{"Company\/ Class":"AVST \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-77.3563279,38.9594124]}}
+{"Company\/ Class":"AVST \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-122.676129,45.522105]}}
+{"Company\/ Class":"AVST \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-122.185141,37.453952]}}
+{"Company\/ Class":"Electric Cloud \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-77.3563279,38.9594124]}}
+{"Company\/ Class":"Electric Cloud \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.676129,45.522105]}}
+{"Company\/ Class":"isango! \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.676129,45.522105]}}
+{"Company\/ Class":"Tribold \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.185141,37.453952]}}
+{"Company\/ Class":"MD-IT \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-74.02977,40.736222]}}
+{"Company\/ Class":"Vizerra \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-0.1392765,51.5115309]}}
+{"Company\/ Class":"Pontis \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-77.367981,38.872668]}}
+{"Company\/ Class":"Pontis \/Otherwise1","Coordinates":{"type":"Point","coordinates":[2.2639015,48.7191043]}}
+{"Company\/ Class":"Varonis Systems \/Otherwise0","Coordinates":{"type":"Point","coordinates":[2.2639015,48.7191043]}}
+{"Company\/ Class":"Varonis Systems \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-121.900722,37.69249]}}
+{"Company\/ Class":"Varonis Systems \/Otherwise2","Coordinates":{"type":"Point","coordinates":[13.3883606,52.5092312]}}
+{"Company\/ Class":"Varonis Systems \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-122.0325963,37.3903639]}}
+{"Company\/ Class":"Schoolwires \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-121.900722,37.69249]}}
+{"Company\/ Class":"Layer 7 Technologies \/Otherwise0","Coordinates":{"type":"Point","coordinates":[13.3883606,52.5092312]}}
+{"Company\/ Class":"Layer 7 Technologies \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-122.0325963,37.3903639]}}
+{"Company\/ Class":"Layer 7 Technologies \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-0.1361616,51.519816]}}
+{"Company\/ Class":"Layer 7 Technologies \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-0.1424094,51.5209358]}}
+{"Company\/ Class":"FireScope \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-122.0325963,37.3903639]}}
+{"Company\/ Class":"FireScope \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-0.1361616,51.519816]}}
+{"Company\/ Class":"FireScope \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-0.1424094,51.5209358]}}
+{"Company\/ Class":"FireScope \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-105.236011,40.020421]}}
+{"Company\/ Class":"StreamBase Systems \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-0.1361616,51.519816]}}
+{"Company\/ Class":"Telogis \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-0.1424094,51.5209358]}}
+{"Company\/ Class":"StyleCaster \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-105.236011,40.020421]}}
+{"Company\/ Class":"FleetMatics \/Otherwise0","Coordinates":{"type":"Point","coordinates":[34.8824253,32.1980455]}}
+{"Company\/ Class":"FleetMatics \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-58.4541925,-34.5631882]}}
+{"Company\/ Class":"FleetMatics \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-77.8268382,40.7872915]}}
+{"Company\/ Class":"FleetMatics \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-77.028561,38.897976]}}
+{"Company\/ Class":"FleetMatics \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-123.1220081,49.2864769]}}
+{"Company\/ Class":"FleetMatics \/Otherwise5","Coordinates":{"type":"Point","coordinates":[-0.5813902,51.2357089]}}
+{"Company\/ Class":"FleetMatics \/Otherwise6","Coordinates":{"type":"Point","coordinates":[-118.012553,33.664705]}}
+{"Company\/ Class":"Testplant \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-58.4541925,-34.5631882]}}
+{"Company\/ Class":"Testplant \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-77.8268382,40.7872915]}}
+{"Company\/ Class":"800APP \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-77.8268382,40.7872915]}}
+{"Company\/ Class":"smartFOCUS \/Otherwise0","Coordinates":{"type":"Point","coordinates":[-77.028561,38.897976]}}
+{"Company\/ Class":"smartFOCUS \/Otherwise1","Coordinates":{"type":"Point","coordinates":[-123.1220081,49.2864769]}}
+{"Company\/ Class":"smartFOCUS \/Otherwise2","Coordinates":{"type":"Point","coordinates":[-0.5813902,51.2357089]}}
+{"Company\/ Class":"smartFOCUS \/Otherwise3","Coordinates":{"type":"Point","coordinates":[-118.012553,33.664705]}}
+{"Company\/ Class":"smartFOCUS \/Otherwise4","Coordinates":{"type":"Point","coordinates":[-96.9274,33.0353]}}
+{"Company\/ Class":"smartFOCUS \/Otherwise5","Coordinates":{"type":"Point","coordinates":[151.207114,-33.867139]}}
