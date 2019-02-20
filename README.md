@@ -69,6 +69,9 @@ When running the `mongoimport` you should be located in the same folder as the `
 You already know how this goes, so let's start working:
 
 1. All the companies that it's name match 'Babelgum'. Retrieve only their `name` field.
+
+{filter: {name: {$eq: 'Babelgum'},project: {name: 1,_id: 0}}
+
 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fileds.
 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
