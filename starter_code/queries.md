@@ -60,7 +60,9 @@ query : {founded_month:{$gt:6}}
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-<!-- Your Code Goes Here -->
+{$or:[{$and:[{deadpooled_year:{$gt:3}},{deadpooled_year:{$lt:500}}]},{$where: "this.deadpooled_year-this.founded_year>3"}]}
+
+In fact it works exactly the same in this db just using -> {$where: "this.deadpooled_year-this.founded_year>3"}
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
