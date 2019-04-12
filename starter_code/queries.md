@@ -23,7 +23,7 @@ projection: { name: 1, _id: 0, founded_year: 1 }
 query: { $and: [ { "ipo.valuation_amount" : { $gte: 100000000 } }, { founded_year: { $lt : 2010 } } ] }
 projection: {name: 1, "ipo.valuation_amount": 1, _id: 0}
 
-### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
+### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.=
 
 query: { $and: [ { number_of_employees : { $lt: 1000 } }, { founded_year: { $lt : 2005 } } ] }
 sort: { number_of_employees : 1 }
@@ -104,4 +104,3 @@ limit: 10
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 query: { $and: [ { founded_year: { $gt: 2000 } }, { founded_year: {$lt: 2010} }, {"acquisitions.acquired_year": {$gt: 2011}} ] }
-
