@@ -72,12 +72,12 @@
 
 ### 18. All the companies which their acquisition amount is more than 10.000.000, and currency are 'EUR'.
 
-<!-- Your Code Goes Here -->
+>db.companies.find({"acquisition.price_amount": {$gt: 10000000}, "acquisition.price_currency_code": "EUR"}).pretty()
 
 ### 19. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-<!-- Your Code Goes Here -->
+>db.companies.find({"founded_month": {$lt: 4}},{"name": 1, "acquisition": 1, "_id":0}).limit(10).pretty()
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+>db.companies.find({"founded_year": {$gt: 2000, $lt:2010}, "acquisition.acquired_year": {$lte: 2011}}).pretty()
