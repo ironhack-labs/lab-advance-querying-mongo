@@ -52,11 +52,11 @@
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
->db.companies.find({"founded_year": {$gt: 2000}, "acquisition.price_amount": {$gt: 10000000}}).pretty()
+>db.companies.find({"founded_year": {$lt: 2000}, "acquisition.price_amount": {$gt: 10000000}}).pretty()
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
->db.companies.find({"acquisition.acquired_year": {$lt: 2015}}, {"name": 1, "acquisition": 1, "_id": 0}).sort({"acquisition.price_amount": -1}).pretty()
+>db.companies.find({"acquisition.acquired_year": {$gt: 2015}}, {"name": 1, "acquisition": 1, "_id": 0}).sort({"acquisition.price_amount": -1}).pretty()
 
 ### 15. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
@@ -80,4 +80,4 @@
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
->db.companies.find({"founded_year": {$gt: 2000, $lt:2010}, "acquisition.acquired_year": {$lte: 2011}}).pretty()
+>db.companies.find({"founded_year": {$gt: 2000, $lt:2010}, "acquisition.acquired_year": {$lt: 2011}}).pretty()
