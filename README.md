@@ -120,7 +120,7 @@ db.companies.find({$and: [{founded_year: {$lt: 2000}}, {'acquisition.price_amoun
 
 
 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
-
+`db.companies.find({'acquisition.acquired_year':{$gt: 2015}},{_id: 0, name: 1, acquisition: 1}).sort({'acquisition.price_amount': 1})
 
 
 15. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
