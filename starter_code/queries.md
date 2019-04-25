@@ -30,9 +30,19 @@
 
 <!-- Your Code Goes Here -->
 
+> Filter : `{$and : [ {'ipo.valuation_amount' : { $gte : 100000000}}, { founded_year : {$lte : 2010}} ]}`
+
+> Project : `{ ipo : 1, name:1 }`
+
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
 <!-- Your Code Goes Here -->
+
+> Filter : `{ number_of_employees: { $gt: 5000 } }`
+
+> Project : `{ ipo : 1, name:1 }`
+
+> Limit : `20`
 
 ### 6. All the companies that don't include the `partners` field.
 
