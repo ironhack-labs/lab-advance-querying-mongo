@@ -30,7 +30,7 @@
 
 <!-- Your Code Goes Here -->
 
-> Filter : `{$and : [ {'ipo.valuation_amount' : { $gte : 100000000}}, { founded_year : {$lte : 2010}} ]}`
+> Filter : `{$and : [ { 'ipo.valuation_amount' : { $gte : 100000000 } }, { founded_year : { $lte : 2010 } } ] }`
 
 > Project : `{ ipo : 1, name:1 }`
 
@@ -38,23 +38,33 @@
 
 <!-- Your Code Goes Here -->
 
-> Filter : `{ number_of_employees: { $gt: 5000 } }`
+> Filter : `{ $and : [ { number_of_employees : { $lt : 1000 } }, { founded_year : { $lte : 2005 } } ] }`
 
-> Project : `{ ipo : 1, name:1 }`
+> Project : `{ name:1 , number_of_employees : 1}`
 
-> Limit : `20`
+> SORT : `{ number_of_employees : 1 }`
+
+> Limit : `10`
 
 ### 6. All the companies that don't include the `partners` field.
 
 <!-- Your Code Goes Here -->
 
+> Filter : `{ partners: { $exists: false } }`
+
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 <!-- Your Code Goes Here -->
 
+> Filter : `{ category_code: { $eq: null } }`
+
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
 <!-- Your Code Goes Here -->
+
+> Filter : `{$and : [ {number_of_employees : {$lt : 1000}}, {number_of_employees : {$gte : 100}}] }`
+
+> Project : `{ name:1 , number_of_employees : 1}`
 
 ### 9. Order all the companies by their IPO price descendently.
 
