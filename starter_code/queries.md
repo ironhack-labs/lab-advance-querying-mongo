@@ -71,7 +71,7 @@ limit:
 
 query :
 projection:
-sort: {ipo:1}
+sort: {"ipo":1}
 skip:
 limit:
 
@@ -79,7 +79,7 @@ limit:
 
 query :
 projection:
-sort: {number_of_employees:-1}
+sort: {"number_of_employees":-1}
 skip:
 limit: 10
 
@@ -109,7 +109,7 @@ limit:
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
-query : { acquisition.acquired_year : {$gt : 2015} }
+query : { "acquisition.acquired_year" : {$gt : 2015} }
 projection: {"name": 1, "acquisition": 1, "_id":0}
 sort: {"acquisition.price_amount"}
 skip:
