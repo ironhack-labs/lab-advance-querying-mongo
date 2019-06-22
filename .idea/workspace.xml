@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94813fc1-6935-4426-9cfa-7be440ce4a4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/lab-advance-querying-mongo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crunchbase Dataset.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/queries.md" beforeDir="false" afterPath="$PROJECT_DIR$/queries.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queries.md" beforeDir="false" afterPath="$PROJECT_DIR$/queries.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,12 +26,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -49,16 +40,18 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/queries.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="315">
+                <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -69,21 +62,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/lab-advance-querying-mongo.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/queries.md" />
       </list>
     </option>
   </component>
@@ -120,7 +106,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.mongoOptions" />
     <property name="settings.editor.splitter.proportion" value="0.2407767" />
   </component>
   <component name="RunDashboard">
@@ -145,21 +132,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561167662884</updated>
-      <workItem from="1561167665953" duration="1059000" />
+      <workItem from="1561167665953" duration="1421000" />
+      <workItem from="1561169101589" duration="5045000" />
     </task>
+    <task id="LOCAL-00001" summary="inicio">
+      <created>1561168744842</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561168744842</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1059000" />
+    <option name="totallyTimeSpent" value="6466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1171" y="115" width="1323" height="1266" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" order="0" sideWeight="0.38763493" side_tool="true" weight="0.18205805" />
-      <window_info id="Database" order="1" sideWeight="0.610687" visible="true" weight="0.34679335" />
-      <window_info id="Find" order="2" sideWeight="0.38931298" side_tool="true" weight="0.20738636" />
-      <window_info id="Structure" order="3" sideWeight="0.4995103" side_tool="true" weight="0.23763648" />
+      <window_info id="Find" order="1" sideWeight="0.38931298" side_tool="true" weight="0.20738636" />
+      <window_info id="Structure" order="2" sideWeight="0.4513158" side_tool="true" visible="true" weight="0.2723674" />
+      <window_info id="Database" order="3" sideWeight="0.54868424" visible="true" weight="0.2723674" />
+      <window_info active="true" anchor="bottom" id="Command Line Tools Console" visible="true" weight="0.32921448" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="2" weight="0.4" />
@@ -168,16 +165,17 @@
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50074625" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49925372" weight="0.1703422" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49724367" visible="true" weight="0.26390114" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49724367" weight="0.26390114" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.49944875" weight="0.23878327" />
       <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.49925372" weight="0.121673" />
       <window_info anchor="bottom" id="Debug" order="13" sideWeight="0.34116542" weight="0.1634981" />
+      <window_info anchor="right" id="Mongo Explorer" />
       <window_info anchor="right" id="Remote Host" order="0" sideWeight="0.49961978" weight="0.32948643" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" sideWeight="0.7112887" visible="true" weight="0.25178146" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="3" sideWeight="0.7112887" weight="0.2557403" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.14269073" />
       <window_info anchor="right" id="Coverage" order="5" sideWeight="0.49347827" side_tool="true" weight="0.20646937" />
       <window_info anchor="right" x="0" y="0" width="310" height="1246" id="Documentation" order="6" sideWeight="0.48424843" side_tool="true" weight="0.16364953" />
@@ -187,34 +185,33 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="inicio" />
+    <option name="LAST_COMMIT_MESSAGE" value="inicio" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/starter_code/queries.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/starter_code/queries.md" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/queries.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="315">
+            <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+          </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
