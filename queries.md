@@ -130,12 +130,32 @@ db.getCollection('companies')
 
 
 ### 9. Order all the companies by their IPO price descendently.
+```
+me indica problema de ram pero esta es la solucion
 
-<!-- Your Code Goes Here -->
+db.getCollection('companies')
+    .find({
+    },{
+        name:1,
+        ipo:1
+    })
+    .sort( {"ipo.valuation_amount":-1})
+```
+    
+
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
+```
+db.getCollection('companies')
+   .find({        
+    },{
+        name:1,
+        number_of_employees:1
+    }).sort({
+        number_of_employees:-1
+    }).limit(10) 
+```    
 
-<!-- Your Code Goes Here -->
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
