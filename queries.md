@@ -255,8 +255,21 @@ db.getCollection('companies')
 ```
 
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
+```
 
-<!-- Your Code Goes Here -->
+db.getCollection('companies')
+   .find({           
+       number_of_employees: {$gt:4000},
+       category_code:{$eq:"web"}
+    },{                
+        name:1,
+        number_of_employees:1,
+        category_code:1
+    }).sort({
+          number_of_employees:-1
+    })
+```
+
 
 ### 18. All the companies which their acquisition amount is more than 10.000.000, and currency are 'EUR'.
 
