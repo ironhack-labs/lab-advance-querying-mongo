@@ -158,16 +158,55 @@ db.getCollection('companies')
 
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
+```
 
-<!-- Your Code Goes Here -->
+db.getCollection('companies')
+   .find({    
+        founded_month:{ $gte:6, $lte:12}
+    },{                
+        name:1,
+        founded_month:1
+        
+    }).sort({
+        
+    }).limit(1000)
+    
+```
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
+```
 
-<!-- Your Code Goes Here -->
+db.getCollection('companies')
+   .find({    
+        deadpooled_year:{ $eq:3}
+    },{                
+        name:1,
+        deadpooled_year:1
+        
+    }).sort({
+        
+    })
+    
+```
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+```
+
+db.getCollection('companies')
+   .find({    
+        founded_year:{ $lt:2000},
+        "acquisition.price_amount":{$gt:10000000}
+    },{                
+        name:1,
+        acquisition:1
+        
+    }).sort({
+        
+    })
+
+```
+
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
