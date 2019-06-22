@@ -48,9 +48,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/queries.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="315">
-                <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="165">
+                <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -133,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1561167662884</updated>
       <workItem from="1561167665953" duration="1421000" />
-      <workItem from="1561169101589" duration="5045000" />
+      <workItem from="1561169101589" duration="5740000" />
     </task>
     <task id="LOCAL-00001" summary="inicio">
       <created>1561168744842</created>
@@ -142,11 +142,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561168744842</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="inicio">
+      <created>1561174157758</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561174157758</updated>
+    </task>
+    <task id="LOCAL-00003" summary="reformateado correctamente md">
+      <created>1561174410012</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561174410012</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6466000" />
+    <option name="totallyTimeSpent" value="7161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1171" y="115" width="1323" height="1266" extended-state="0" />
@@ -154,9 +168,9 @@
     <layout>
       <window_info id="Gulp" order="0" sideWeight="0.38763493" side_tool="true" weight="0.18205805" />
       <window_info id="Find" order="1" sideWeight="0.38931298" side_tool="true" weight="0.20738636" />
-      <window_info id="Structure" order="2" sideWeight="0.4513158" side_tool="true" visible="true" weight="0.2723674" />
-      <window_info id="Database" order="3" sideWeight="0.54868424" visible="true" weight="0.2723674" />
-      <window_info active="true" anchor="bottom" id="Command Line Tools Console" visible="true" weight="0.32921448" />
+      <window_info id="Structure" order="2" sideWeight="0.45083934" side_tool="true" visible="true" weight="0.2723674" />
+      <window_info id="Database" order="3" sideWeight="0.54916066" visible="true" weight="0.2723674" />
+      <window_info anchor="bottom" id="Command Line Tools Console" weight="0.32921448" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="2" weight="0.4" />
@@ -165,7 +179,7 @@
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50074625" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49925372" weight="0.1703422" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49724367" weight="0.26390114" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49724367" visible="true" weight="0.26390114" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.49944875" weight="0.23878327" />
@@ -187,7 +201,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inicio" />
-    <option name="LAST_COMMIT_MESSAGE" value="inicio" />
+    <MESSAGE value="reformateado correctamente md" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformateado correctamente md" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/starter_code/queries.md" />
@@ -207,9 +222,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/queries.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="315">
-            <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>

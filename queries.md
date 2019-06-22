@@ -5,17 +5,24 @@
 ### 1. All the companies that it's name match 'Babelgum'. Retrieve only their `name` field.
 ```
 db.getCollection('companies')
-   .find({name:'Babelgum'},{name:1, _id: 0})
+   .find({
+      name:'Babelgum'
+   },{
+      name:1, 
+      _id: 0
+   })
 ```
 
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 ```
 db.getCollection('companies')
-   .find( 
-         {number_of_employees: { $gt :5000}}
-      )
-   .sort( {number_of_employees:1})
+   .find({
+      number_of_employees: { $gt :5000}
+   })
+   .sort({
+      number_of_employees:1
+   })
    .limit(20)
 ```
 
@@ -23,27 +30,27 @@ db.getCollection('companies')
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fileds.
 ```
 db.getCollection('companies')
-   .find( 
-      {founded_year: { $gte :2000, $lte:2005} },
-      {name:1, _id:0, founded_year:1}
-   )   
+   .find({
+         founded_year: { $gte :2000, $lte:2005} 
+      },{
+         name:1,
+          _id:0,
+         founded_year:1
+      })   
 ```
 
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 ```
 db.getCollection('companies')
-   .find( 
-        {
-            "ipo.valuation_amount" : { $gte : 100000} ,
-            founded_year  : { $lt: 2010} 
-        } ,
-        {
-           name:1,
-            _id:0,
-            ipo:1
-        }
-    )
+   .find({
+         "ipo.valuation_amount" : { $gte : 100000} ,
+         founded_year  : { $lt: 2010} 
+     },{
+         name:1,
+         _id:0,
+         ipo:1
+     })
 ```   
    
 
@@ -70,23 +77,19 @@ opcion 1 esto es que no existe
 db.getCollection('companies')
    .find({
         partners : {$exists:false},         
-    },
-    {
-        name:1,
-         _id:0    
-    }
-)  
+    },{
+       name:1,
+        _id:0    
+    })  
    
 opcion 2 esto es que es null    
 db.getCollection('companies')
    .find({
         partners : null         
-    },
-    {
+    },{
         name:1,
          _id:0    
-    }
-)     
+    })     
 
 opcion 3 todos los registros traen el campo, pero quereomos los que no tienen partesrr (osea length 0)   
 
@@ -94,13 +97,11 @@ db.getCollection('companies')
    .find({
         partners : {$exists:true}, 
         $where:'this.partners.length==0'
-    },
-    {
+    },{
         name:1,
          _id:0,
     partners:1   
-    }
-)  
+    })  
 ```
    
 
@@ -112,9 +113,7 @@ db.getCollection('companies')
     },{
         name:1,
         category_code:1
-    }
-   
-)  
+    })  
 ```
    
 
@@ -126,8 +125,7 @@ db.getCollection('companies')
     },{
         name:1,
         number_of_employees:1
-    }   
-)     
+    })     
 ```
 
 
