@@ -210,11 +210,33 @@ db.getCollection('companies')
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
-<!-- Your Code Goes Here -->
+```
+db.getCollection('companies')
+   .find({           
+        "acquisition.acquired_year":{$gt:2015}
+    },{                
+        name:1,
+        acquisition:1        
+    }).sort({
+         "acquisition.price_amount":1
+    })
+```
+
 
 ### 15. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
+```
 
-<!-- Your Code Goes Here -->
+db.getCollection('companies')
+   .find({           
+       
+    },{                
+        name:1,
+        founded_year:1        
+    }).sort({
+         "founded_year":1
+    })
+
+```
 
 ### 16. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `aquisition price` descendently. Limit the search to 10 documents.
 
