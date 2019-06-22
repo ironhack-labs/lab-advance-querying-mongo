@@ -307,4 +307,20 @@ db.getCollection('companies')
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+```
+
+db.getCollection('companies')
+   .find({           
+       "founded_year": {$gte:2000,$lte:2010},
+       $or : [ 
+           { "acquisition.acquired_year":null},
+           { "acquisition.acquired_year":{$gte:2011}}
+        ]
+    },{                
+        name:1,     
+        founded_year:1,  
+        acquisition:1       
+    })
+
+
+```
