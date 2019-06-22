@@ -49,8 +49,8 @@
         <entry file="file://$PROJECT_DIR$/queries.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="452">
-                <caret line="284" lean-forward="true" selection-start-line="284" selection-end-line="284" />
+              <first_editor relative-caret-position="20">
+                <caret line="300" column="7" lean-forward="true" selection-start-line="300" selection-start-column="7" selection-end-line="300" selection-end-column="7" />
               </first_editor>
               <second_editor />
             </state>
@@ -73,9 +73,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="605" />
-    <option name="y" value="40" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="571" />
+    <option name="y" value="51" />
     <option name="width" value="755" />
     <option name="height" value="576" />
   </component>
@@ -125,7 +125,7 @@
       <workItem from="1561167665953" duration="1421000" />
       <workItem from="1561169101589" duration="5803000" />
       <workItem from="1561201983004" duration="1614000" />
-      <workItem from="1561216182612" duration="4118000" />
+      <workItem from="1561216182612" duration="5687000" />
     </task>
     <task id="LOCAL-00001" summary="inicio">
       <created>1561168744842</created>
@@ -169,20 +169,26 @@
       <option name="project" value="LOCAL" />
       <updated>1561219855407</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="sigue en 18">
+      <created>1561220316581</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1561220316581</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12956000" />
+    <option name="totallyTimeSpent" value="14525000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="571" y="51" width="755" height="576" extended-state="0" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Gulp" order="0" sideWeight="0.38763493" side_tool="true" weight="0.18205805" />
       <window_info id="Find" order="1" sideWeight="0.38931298" side_tool="true" weight="0.20738636" />
-      <window_info id="Structure" order="2" sideWeight="0.45598194" side_tool="true" weight="0.27233115" />
+      <window_info active="true" id="Structure" order="2" sideWeight="0.45598194" side_tool="true" visible="true" weight="0.27194244" />
       <window_info id="Database" order="3" sideWeight="0.54401803" weight="0.27233115" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
@@ -192,7 +198,7 @@
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50074625" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49925372" weight="0.1703422" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49724367" visible="true" weight="0.1781874" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49724367" visible="true" weight="0.261851" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.49944875" weight="0.23878327" />
@@ -219,7 +225,8 @@
     <MESSAGE value="reformateado correctamente md - final sigue el 10" />
     <MESSAGE value="sigue en 16" />
     <MESSAGE value="sigue en 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="sigue en 17" />
+    <MESSAGE value="sigue en 18" />
+    <option name="LAST_COMMIT_MESSAGE" value="sigue en 18" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/starter_code/queries.md" />
@@ -240,8 +247,8 @@
     <entry file="file://$PROJECT_DIR$/queries.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="452">
-            <caret line="284" lean-forward="true" selection-start-line="284" selection-end-line="284" />
+          <first_editor relative-caret-position="20">
+            <caret line="300" column="7" lean-forward="true" selection-start-line="300" selection-start-column="7" selection-end-line="300" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
