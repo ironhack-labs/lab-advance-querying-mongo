@@ -49,8 +49,8 @@
         <entry file="file://$PROJECT_DIR$/queries.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="304">
-                <caret line="121" selection-start-line="121" selection-end-line="127" selection-end-column="7" />
+              <first_editor relative-caret-position="148">
+                <caret line="243" selection-start-line="243" selection-end-line="252" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
@@ -70,11 +70,14 @@
       </list>
     </option>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1171" />
-    <option name="y" value="115" />
-    <option name="width" value="1323" />
-    <option name="height" value="1266" />
+    <option name="x" value="605" />
+    <option name="y" value="40" />
+    <option name="width" value="755" />
+    <option name="height" value="576" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -83,24 +86,14 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lab-advance-querying-mongo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab-advance-querying-mongo" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -132,6 +125,7 @@
       <workItem from="1561167665953" duration="1421000" />
       <workItem from="1561169101589" duration="5803000" />
       <workItem from="1561201983004" duration="1614000" />
+      <workItem from="1561216182612" duration="3458000" />
     </task>
     <task id="LOCAL-00001" summary="inicio">
       <created>1561168744842</created>
@@ -161,20 +155,28 @@
       <option name="project" value="LOCAL" />
       <updated>1561174866853</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sigue en 16">
+      <created>1561219108903</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1561219108905</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8838000" />
+    <option name="totallyTimeSpent" value="12296000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1171" y="115" width="1323" height="1266" extended-state="0" />
+    <frame x="605" y="40" width="755" height="576" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="npm" side_tool="true" />
       <window_info id="Gulp" order="0" sideWeight="0.38763493" side_tool="true" weight="0.18205805" />
       <window_info id="Find" order="1" sideWeight="0.38931298" side_tool="true" weight="0.20738636" />
-      <window_info id="Structure" order="2" sideWeight="0.45189762" side_tool="true" visible="true" weight="0.2723674" />
-      <window_info id="Database" order="3" sideWeight="0.5481024" visible="true" weight="0.2723674" />
+      <window_info id="Structure" order="2" sideWeight="0.45598194" side_tool="true" weight="0.27233115" />
+      <window_info id="Database" order="3" sideWeight="0.54401803" weight="0.27233115" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="2" weight="0.4" />
@@ -183,7 +185,7 @@
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50074625" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49925372" weight="0.1703422" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49724367" weight="0.26390114" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49724367" weight="0.261851" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.49944875" weight="0.23878327" />
@@ -208,7 +210,8 @@
     <MESSAGE value="inicio" />
     <MESSAGE value="reformateado correctamente md" />
     <MESSAGE value="reformateado correctamente md - final sigue el 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformateado correctamente md - final sigue el 10" />
+    <MESSAGE value="sigue en 16" />
+    <option name="LAST_COMMIT_MESSAGE" value="sigue en 16" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/starter_code/queries.md" />
@@ -229,8 +232,8 @@
     <entry file="file://$PROJECT_DIR$/queries.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="304">
-            <caret line="121" selection-start-line="121" selection-end-line="127" selection-end-column="7" />
+          <first_editor relative-caret-position="148">
+            <caret line="243" selection-start-line="243" selection-end-line="252" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>

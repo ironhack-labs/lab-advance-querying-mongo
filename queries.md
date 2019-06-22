@@ -239,8 +239,20 @@ db.getCollection('companies')
 ```
 
 ### 16. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `aquisition price` descendently. Limit the search to 10 documents.
+```
 
-<!-- Your Code Goes Here -->
+db.getCollection('companies')
+   .find({           
+       founded_day: {$lte:7}
+    },{                
+        name:1,
+        founded_day:1,
+        acquisition:1
+    }).sort({
+          "acquisition.price_amount":-1
+    }).limit(10)
+
+```
 
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
