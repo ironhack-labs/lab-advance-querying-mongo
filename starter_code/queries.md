@@ -71,12 +71,12 @@ Limit: 1000
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
 <!-- Your Code Goes Here -->
-Filter: {deadpooled_year: {$gte: 4}}
+Filter: { founded_year: {$gt: 0},  $where: "this.deadpooled_year >= this.founded_year + 3 " }
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
 <!-- Your Code Goes Here -->
-Filter: {"acquisitions.price_amount": {$gte: 10000000}, year: {$lt: 2000}}
+Filter: {"acquisitions.price_amount": {$gte: 10000000}, founded_year: {$lt: 2000}}
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
