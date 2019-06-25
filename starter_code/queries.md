@@ -60,15 +60,19 @@ db.companies.find({founded_month:{$gt:6}}).limit(1000)
 <!-- Your Code Goes Here -->
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
+db.companies.find({"deadpooled_year":{$gt:3}})
+
 
 <!-- Your Code Goes Here -->
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
+db.companies.find( { $and:[{"founded_year":{$gt:3}},{"acquisition.price_amount":{$gt:10000000}}] })
 
 <!-- Your Code Goes Here -->
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
+db.companies.find({"acquisition.acquired_year":{$gt:2015}})
 <!-- Your Code Goes Here -->
 
 ### 15. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
