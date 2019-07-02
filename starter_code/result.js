@@ -9,7 +9,7 @@
 9. {"ipo.valuation_amount": {$exists: true}} {"ipo.valuation_amount" : -1}
 10. {number_of_employees: -1} Limit: 10
 11. {$and: [{founded_month: {$gte: 1}}, {founded_month: {$lte: 6}}]} Limit 1000
-12. {deadpooled_year: {$gte: 3}}
+12. {$and: [{founded_year: {$ne: null}}, {$where: "this.deadpooled_year > this.founded_year +3"}]}
 13. {$and: [{founded_year: {$lt: 2000}}, {"acquisitions.price_amount": {$gt: 10000000}}]}
 14. {"acquisition.acquired_year": {$gt: 2015}} {name: 1, _id: 0, acquisition: 1} {"acquisition.price_amount": 1}
 15. {founded_year: {$ne: null}} {_id: 0, name: 1, founded_year: 1} {founded_year: 1}
