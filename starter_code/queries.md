@@ -46,7 +46,8 @@ Filter: {founded_month: {$gte: 7, $lte: 12}}
 Limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
-Filter: {deadpooled_year: {$gt: 3}}
+Filter: {$and: [{founded_year: {$ne: null}}, {deadpooled_year: {$ne: null}}, {$where: "this.deadpooled_year > this.founded_year +3"}]}
+
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 Filter: {$and: [{founded_year: {$lt: 2000}}, {"acquisitions.price_amount": {$gt: 10000000}}]}
