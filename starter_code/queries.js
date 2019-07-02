@@ -39,7 +39,7 @@
 1000//limit
 
 //12
-{deadpooled_year: {$gt: 3}}//filter
+{$where : "this.deadpooled_year > this.founded_year + 3", founded_year: {$ne: null}}//filter
 
 //13
 {$and :[{founded_year:{$lt: 2000}}, {"acquisition.price_amount": {$gt: 10000000} }]}//filter
@@ -69,10 +69,3 @@
 
 //20
 {$and :[{"number_of_employees":{$lte: 1000}}, {founded_year:{$lte: 2005}}]}//filter
-
-
-
-
-
-
-
