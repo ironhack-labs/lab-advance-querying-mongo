@@ -73,7 +73,7 @@ limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-filter: {founded_month: {$in: [4,5,6]}}
+filter: {founded_month: {$gt: 6}}
 limit: 1000
 
 <!-- Your Code Goes Here -->
