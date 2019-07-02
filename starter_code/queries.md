@@ -79,7 +79,9 @@ Sort: {founded_year: 1}
 ### 16. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `aquisition price` descendently. Limit the search to 10 documents.
 
 <!-- Your Code Goes Here -->
-
+Filter: {founded_day: {$lte: 7}}
+Sort: {"acquisition.price_amount": -1}
+Limit: 10
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
 <!-- Your Code Goes Here -->
