@@ -80,7 +80,7 @@ limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-{ $where : "this.deadpooled_year > (this.founded_year-3)" }
+{ $where : "this.deadpooled_year > (this.founded_year+3)" }
 
 <!-- Your Code Goes Here -->
 
