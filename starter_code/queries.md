@@ -85,7 +85,8 @@ Limit: 10
 ### 17. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
 <!-- Your Code Goes Here -->
-
+Filter: {$and: [{category_code: "web"}, {number_of_employees: {$gt: 4000}}]}
+Sort: {number_of_employees: 1}
 ### 18. All the companies which their acquisition amount is more than 10.000.000, and currency are 'EUR'.
 
 <!-- Your Code Goes Here -->
