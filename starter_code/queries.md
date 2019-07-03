@@ -61,7 +61,7 @@ db.companies.find({$where: function() {
   } else if (this.deadpooled_year > 1000 && (this.deadpooled_year - this.founded_year > 3)) {
     return true;
   }
-  return false;}}, {'deadpooled_year': 1, 'founded_year': 1, '_id': 0})
+  return false;}})
 
 
 ### 13. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
