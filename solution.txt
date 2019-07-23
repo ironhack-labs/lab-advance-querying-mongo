@@ -9,7 +9,7 @@
 9: sort: {"ipo.valuation_amount": -1}
 10: sort: {number_of_employees: -1} limit: 10
 11: {founded_month: {$gt: 6}} limit: 1000
-12:
+12: {$where: "(this.deadpooled_year - this.founded_year) < 3"}
 13: {$and: [{founded_year: {$lt:2000}}, {"acquisition.price_amount": {$gt: 10000000}}]}
 14: {"acquisitions.acquired_year": {$gt: 2015}} project: {name: 1, acquisitions: 1} sort: {"acquisitions.price_amount": 1}
 15: project: {name: 1, founded_year: 1} sort: {founded_year: 1} 
