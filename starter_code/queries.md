@@ -52,8 +52,8 @@
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-* filter: {founded_month: {$gt:6}}
-* limit: 100
+* filter: {founded_month: {$gte:7}}
+* limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the 2010
 
@@ -94,6 +94,7 @@
 
 * filter: {'acquisition.acquired_month': {$lte: 3}}
 * project: {name:1, _id:0,acquisition:1}
+* limit: 10
 
 ### 20. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
