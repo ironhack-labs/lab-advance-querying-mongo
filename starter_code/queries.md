@@ -286,7 +286,9 @@ filter: {
    $gte: 2000,
    $lte: 2010
   },
-  'acquisition.acquired_year': 2011
+  'acquisition.acquired_year': {
+   $gte: 2011
+  }
  }
 }
 ```
