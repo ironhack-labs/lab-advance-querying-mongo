@@ -45,7 +45,7 @@ limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
-query: 
+query: {partners: {$exists: false}}
 projection: 
 sort: 
 skip: 
@@ -53,7 +53,7 @@ limit:
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-query: 
+query: {category_code: {$eq: null}}
 projection: 
 sort: 
 skip: 
@@ -61,8 +61,8 @@ limit:
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-query: 
-projection: 
+query: {$and: [{number_of_employees: {$gte: 100}}, {number_of_employees: {$lt:1000}}]}
+projection: {name:1, number_of_employees:1, _id:0}
 sort: 
 skip: 
 limit:
@@ -71,7 +71,7 @@ limit:
 
 query: 
 projection: 
-sort: 
+sort: {ipo: -1}
 skip: 
 limit:
 
@@ -79,21 +79,21 @@ limit:
 
 query: 
 projection: 
-sort: 
+sort: {number_of_employees: -1}
 skip: 
-limit:
+limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-query: 
+query: {founded_month: {$gte:6}}
 projection: 
 sort: 
 skip: 
-limit:
+limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-query: 
+query: {deadpooled_year: {$gt: 3}}
 projection: 
 sort: 
 skip: 
@@ -101,7 +101,7 @@ limit:
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
-query: 
+query: {$and: [{founded_year: {$lt: 2000}}, {'acquisition.price_amount': {$gt:10000000}}]}
 projection: 
 sort: 
 skip: 
@@ -109,9 +109,9 @@ limit:
 
 ### 14. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisiton` field.
 
-query: 
-projection: 
-sort: 
+query: {'acquisition.acquired_year': {$lt: 2015}}
+projection: {name:1, acquisition:1, _id:0}
+sort: {"acquisition.price_amount":-1}
 skip: 
 limit:
 
