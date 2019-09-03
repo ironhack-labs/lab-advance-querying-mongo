@@ -86,9 +86,9 @@
 
 ### 13. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-{ "acquisition.acquired_year": {$gte: 2015} }
+{ "acquisition.acquired_year": {$gte: 2000} }
 {
-  project: {_id: 0, name: 1, founded_year: 1},
+  project: {_id: 0, name: 1, acquisition: 1},
   sort:    { "acquisition.price_amount": -1}
 }
 
@@ -96,7 +96,7 @@
 
 { }
 {
-  project: { "acquisition.price_amount": -1},
+  project: {_id: 0, name: 1, founded_year: 1},
   sort:    { founded_year: 1}
 }
 
