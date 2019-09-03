@@ -80,7 +80,7 @@ You already know how this goes, so let's start working:
 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 12. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
-13. All the companies that have been acquired after 2015, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
+13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
