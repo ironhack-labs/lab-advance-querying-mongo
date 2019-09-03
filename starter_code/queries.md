@@ -89,7 +89,9 @@
 
 <!-- Your Code Goes Here -->
 
-### 13. All the companies that have been acquired after 2000, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
+
+### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
+
 
 <!-- Your Code Goes Here -->
 
