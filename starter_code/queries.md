@@ -15,18 +15,27 @@ limit:
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
 <!-- Your Code Goes Here -->
-filter: 
+filter: {number_of_employees:{$gt:5000}}
 projection: 
-sort: 
+sort: {number_of_employees:-1}
 skip: 
-limit: 
+limit: 20
 
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
 <!-- Your Code Goes Here -->
-filter: 
-projection: 
+filter: {founded_year:{$in:[2000, 2001, 2002, 2003, 2004, 2005]}}
+projection: {name:1, founded_year:1}
+sort: 
+skip: 
+limit: 
+
+
+OTRA FORMA:
+
+filter: {$and:[{founded_year:{$gte:2000}}, {founded_year:{$lte:2005}}]}
+projection: {name:1, founded_year:1}
 sort: 
 skip: 
 limit: 
