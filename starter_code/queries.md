@@ -180,7 +180,8 @@ skip:
 limit: 1000
 
 
-<!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
+
+12. All the companies that have been 'deadpooled' after the third year.
 
 <!-- Your Code Goes Here -->
 
