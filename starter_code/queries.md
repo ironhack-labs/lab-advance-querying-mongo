@@ -74,6 +74,8 @@ limit:1000
 
 <!-- Your Code Goes Here -->
 
+{$and:[{founded_year:{$lt:2000}},{"acquisition.price_amount":{$gt:100000000}}]}
+
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
 <!-- Your Code Goes Here -->
@@ -108,7 +110,11 @@ filter:{$and:[{"acquisition.price_amount":{$gt:10000000}},{"acquisition.price_cu
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
 <!-- Your Code Goes Here -->
+filter:{"acquisition.acquired_month":{$lte:3}}
+sort:{name:1 , acquisition:1}
+limit:10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
+filter:{$and:[{founded_year:{$gte:2000}},{founded_year:{$lte:2010}},{"acquisition.acquired_year":{$gt:2011}}]}
