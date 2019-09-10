@@ -65,9 +65,9 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-filter: 
+filter: {"ipo.valuation_amount":{$gt:100000000}, founded_year:{$lt:2010}}
 
-projection: 
+projection: {name:1, ipo:1}
 
 sort: 
 
@@ -141,9 +141,9 @@ limit:
 
 filter: 
 
-projection: 
+projection: {name:1, "ipo.valuation_amount":1}
 
-sort: no veo el IPO price ni ningún campo que se le parezca
+sort: {"ipo.valuation_amount":-1}
 
 skip: 
 
