@@ -95,21 +95,31 @@ Salen todos :)
  {'founded_year': -1}
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` descendently. Limit the search to 10 documents.
-
-<!-- Your Code Goes Here -->
-
+*Filter*
+{'founded_day': {'$lte': 7}}
+*Sort*
+{'acquisition.price_amount': -1}
+*Limit*
+10
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
-
-<!-- Your Code Goes Here -->
+*Filter*
+{'category_code': 'web', 'number_of_employees': {$gt: 4000}}
+*Sort*
+{'number_of_employees': 1}
 
 ### 17. All the companies which their acquisition amount is more than 10.000.000, and currency are 'EUR'.
 
-<!-- Your Code Goes Here -->
+*Filter*
+{'acquisition.price_amount':{$gt: 10000000}, 'acquisition.price_currency_code': 'EUR'}
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
-
-<!-- Your Code Goes Here -->
+*Filter*
+{'acquisition.acquired_month': {$lte: 3}}
+*Project*
+{'name': 1, 'acquisitions': 1, '_id': 0}
+*Limit*
+10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
-
-<!-- Your Code Goes Here -->
+*Filter*
+{'founded_year': {'$gte': 2000, $lte: 2010}, 'acquisitions.acquired_year':{$gte: 2011}}
