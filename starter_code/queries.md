@@ -26,7 +26,10 @@
 {'name':1, 'founded_year':1, '_id': 0}
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
- *No me aparece ese campo*
+ *Filter*
+{'ipo.valuation_amount':{$gte:100000000}, 'founded_year': {$lt:2010}}
+ *Project*
+{'name': 1, 'ipo': 1, '_id': 0}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 *Filter*
@@ -53,7 +56,8 @@ Salen todos :)
 
 ### 9. Order all the companies by their IPO price descendently.
 
-<!-- Your Code Goes Here -->
+*Sort*
+{'ipo.valuation_amount': -1}
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 *Sort*
@@ -62,24 +66,33 @@ Salen todos :)
 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
-
-<!-- Your Code Goes Here -->
-
+*Filter*
+{'founded_month': {$exists:true, $gte:7 }}
+*Limit*
+1000
 <!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
 
 <!-- Your Code Goes Here -->
 
 ### 12. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
+*Filter*
+{'founded_year': {$lt:2000}, 'acquisition.price_amount': {$gt: 10000000} }
 
-<!-- Your Code Goes Here -->
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
-
-<!-- Your Code Goes Here -->
+*Filter*
+{'acquisition.acquired_year': {$gt: 2010}}
+*Project*
+{'name':1, 'acquisition.price_amount': 1, '_id':0 }
+*Sort*
+{'acquisition.price_amount': -1}
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
-
-<!-- Your Code Goes Here -->
+ 
+ *Project*
+ {'name': 1, 'founded_year': 1, '_id': 0}
+ *Sort*
+ {'founded_year': -1}
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` descendently. Limit the search to 10 documents.
 
