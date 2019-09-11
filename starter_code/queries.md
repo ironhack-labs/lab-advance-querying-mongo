@@ -30,7 +30,7 @@ limit:
 
 <!-- Your Code Goes Here -->
 query: {$and: [{"ipo.valuation_amount": {$gte: 100000000}}, {founded_year : {$lte : 2010}}] }
-projection:   
+projection: {name: 1, ipo: 1, _id: 0}
 sort: 
 skip: 
 limit: 
