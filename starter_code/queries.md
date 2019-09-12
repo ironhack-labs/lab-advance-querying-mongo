@@ -6,15 +6,15 @@
 
 <!-- Your Code Goes Here -->
 
-Filter => {"name":"Babelgum"} 
+Filter => {"name":/Babelgum/} 
 
 Project => {"name":1} 
 
-Sort =>
+Sort => -
 
-Skip =>
+Skip => -
 
-Limit =>
+Limit => -
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
@@ -22,11 +22,11 @@ Limit =>
 
 Filter => {"number_of_employees":{"$gte" : 5000}}
 
-Project =>
+Project => -
 
 Sort => {number_of_employees:1}
 
-Skip =>
+Skip => -
 
 Limit => 20
 
@@ -34,23 +34,23 @@ Limit => 20
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"founded_year": {"$gte": 2000,"$lte" :2005}}
 
-Project =>
+Project => {"name":1,"founded_year":1}
 
-Sort =>
+Sort => -
 
-Skip =>
+Skip => -
 
-Limit =>
+Limit => -
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"$and": [{"ipo.valuation_amount": {"$gt": 100000000}}, {"founded_year": {"$lt":2010}}]} 
 
-Project =>
+Project => {"name": 1, "ipo": 1}
 
 Sort =>
 
@@ -62,15 +62,15 @@ Limit =>
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"$and": [{"number_of_employees": {"$lt": 100}}, {"founded_year": {"$lt":2005}}]} 
 
 Project =>
 
-Sort =>
+Sort => {"number_of_employees":1}
 
 Skip =>
 
-Limit =>
+Limit => 10
 
 ### 6. All the companies that don't include the `partners` field.
 
