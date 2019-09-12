@@ -181,11 +181,11 @@ limit: 1000
 
 
 
-12. All the companies that have been 'deadpooled' after the third year.
+### 12 (difficult) All the companies that have been 'deadpooled' after the third year.
 
 <!-- Your Code Goes Here -->
 
-filter: {$subtract:[deadpooled_year,founded_year]:{$gte:3}}   -> No está bien.
+filter: {$or: [{$and: [{founded_year : {$ne: null}},{$where: "this.deadpooled_year - this.founded_year > 3"}]}, {$and:[{deadpooled_year:{$gte:3}},{deadpooled_month:{$exists:false}}]}]}
 
 projection: 
 
