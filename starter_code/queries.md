@@ -76,21 +76,21 @@ Limit => 10
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"partners": { "$exists": false }}   !!!!!!!!!!!!!CHECK THIS ANSWER !!!!!!!!!!!!!!
 
-Project =>
+Project =>                                     !!!!!!!!!!!!!CHECK THIS ANSWER !!!!!!!!!!!!!!
 
-Sort =>
+Sort =>                                        !!!!!!!!!!!!!CHECK THIS ANSWER !!!!!!!!!!!!!!
 
-Skip =>
+Skip =>                                        !!!!!!!!!!!!!CHECK THIS ANSWER !!!!!!!!!!!!!!
 
-Limit =>
+Limit =>                                       !!!!!!!!!!!!!CHECK THIS ANSWER !!!!!!!!!!!!!!
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"category_code": null}
 
 Project =>
 
@@ -104,9 +104,9 @@ Limit =>
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"number_of_employees": {"$gte":100, "$lt":1000}}
 
-Project =>
+Project => {"name":1, "number_of_employees":1}
 
 Sort =>
 
