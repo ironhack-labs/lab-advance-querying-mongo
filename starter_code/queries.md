@@ -95,6 +95,11 @@ LIMIT = 1000
 
 <!-- Your Code Goes Here -->
 
+Aggregations
+
+$project >>> {name:1,deadpooled_year:1,"years_to_deadpool":{$subtract:["$deadpooled_year","$founded_year"]}}
+
+$match >>> {$or:[{deadpooled_year:{$gt:3,$lt:100}},{years_to_deadpool:{$gt:3}}]}
 
 
 ### 12.2 All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
