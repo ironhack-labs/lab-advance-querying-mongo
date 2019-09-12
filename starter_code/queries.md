@@ -42,23 +42,30 @@ FILTER: {partners: { $exists: false }}
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 <!-- Your Code Goes Here -->
+FILTER: {category_code: null} 
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
 <!-- Your Code Goes Here -->
+FILTER: {number_of_employees : {$gte: 100},number_of_employees : {$lt: 1000}}
+PROJECT: {name : 1, number_of_employees:1}
 
 ### 9. Order all the companies by their IPO price descendently.
 
 <!-- Your Code Goes Here -->
+SORT: {"ipo.valuation_amount":-1}
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
 <!-- Your Code Goes Here -->
+SORT: {number_of_employees:-1}
+LIMIT: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
 <!-- Your Code Goes Here -->
-
+FILTER:{founded_month:{$gt:6}}
+LIMIT: 1000
 <!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
 
 <!-- Your Code Goes Here -->
