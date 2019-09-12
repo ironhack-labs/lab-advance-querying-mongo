@@ -92,7 +92,7 @@
 - skip:
 - limit: 1000
 
-<!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
+### 12. All the companies that have been 'deadpooled' after the third year.
 
 - query: {$where:"this.deadpooled_year>this.founded_year+3"}
 - projection:
