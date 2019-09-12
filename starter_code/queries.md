@@ -82,14 +82,20 @@ project:
 sort: 
 skip: 
 limit: 1000
-<!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
+### 12. All the companies that have been 'deadpooled' after the third year. -->
 
 <!-- Your Code Goes Here -->
-filter: 
-project: 
-sort: 
-skip: 
-limit: 
+$project
+{
+ name:1, 
+ duration:
+  { $subtract: ["$deadpooled_year", "$founded_year" ] }
+}
+
+$match
+{
+  duration:{$lte:3, $gte:0}
+}
 ### 12. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
 <!-- Your Code Goes Here -->
