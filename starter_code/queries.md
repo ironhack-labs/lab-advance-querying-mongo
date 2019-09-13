@@ -122,7 +122,7 @@ Filter =>
 
 Project =>
 
-Sort =>
+Sort => {"ipo.valuation_amount":-1}
 
 Skip =>
 
@@ -136,17 +136,17 @@ Filter =>
 
 Project =>
 
-Sort =>
+Sort => {"number_of_employees":-1}
 
 Skip =>
 
-Limit =>
+Limit => 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"founded_month":{"$gt":6}}
 
 Project =>
 
@@ -154,7 +154,7 @@ Sort =>
 
 Skip =>
 
-Limit =>
+Limit => 1000
 
 <!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
 
@@ -174,11 +174,11 @@ Limit =>
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"founded_year":{"$lt":2000}, "acquisition":{"$gt":10000000}}   !!!!!!!  CHECK THIS ANSWER !!!!!!!!!!!!
 
-Project =>
+Project => 
 
-Sort =>
+Sort => 
 
 Skip =>
 
@@ -188,11 +188,11 @@ Limit =>
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"acquisition.acquired_year":{"$gt":2010}}
 
-Project =>
+Project => {"name":1, "acquisition":1}
 
-Sort =>
+Sort => {"acquisition.price_amount":1}
 
 Skip =>
 
@@ -204,9 +204,9 @@ Limit =>
 
 Filter => 
 
-Project =>
+Project => {"name":1,"founded_year":1}
 
-Sort =>
+Sort => {"founded_year":-1}
 
 Skip =>
 
@@ -216,25 +216,25 @@ Limit =>
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"founded_day":{"$lte":7}}
 
 Project =>
 
-Sort =>
+Sort => {"acquisition.price_amount":-1}
 
 Skip =>
 
-Limit =>
+Limit => 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {$and: [{"category_code": /web/}, {"number_of_employees": {$gte: 4000}}]}
 
 Project =>
 
-Sort =>
+Sort => {"number_of_employees":1}
 
 Skip =>
 
@@ -244,7 +244,7 @@ Limit =>
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {$and: [{"acquisition.price_amount": {$gte: 10000000}}, {"acquisition.price_currency_code": /EUR/}]}
 
 Project =>
 
@@ -258,7 +258,7 @@ Limit =>
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {"acquisition.acquired_month": {$lte: 3}} projection: {"name": 1, "acquisition": 1}
 
 Project =>
 
@@ -266,13 +266,13 @@ Sort =>
 
 Skip =>
 
-Limit =>
+Limit => 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
 
-Filter => 
+Filter => {$and: [{"founded_year":{$gte:2000, $lte: 2010}}, {"acquisition.acquired_year": {$gte: 2011}}]}
 
 Project =>
 
