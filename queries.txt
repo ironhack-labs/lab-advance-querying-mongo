@@ -1,0 +1,11 @@
+{name: 'Babelgum}
+{number_of_employees: {$gte: 5000} } limit option: 20
+{ $and: [{founded_year: {$gte:2000}}, {founded_year: {$lte: 2005}}]} -- name , founded_year
+{ $and: [{total_money_raised: {$gte:"1000000000"}}, {founded_year: {$lt: 2010}}]} --names, ipo
+ { $and: [{number_of_employees: {$lt:1000}}, {founded_year: {$lt: 2005}}]}
+{partners: { $exists: false } }
+{category_code: null}
+ { $and: [{number_of_employees: {$gte:100}}, {founded_year: {$lt: 2005}}]} --- {name : 'value'} {number_of_employees : 'value'}
+Sort: {"ipo.valuation_amount":-1}
+Sort: {number_of_employees:-1} --- filter: 10;
+{founded_month: 12} --- filter: 1000
