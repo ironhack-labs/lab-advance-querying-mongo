@@ -8,4 +8,12 @@
  { $and: [{number_of_employees: {$gte:100}}, {founded_year: {$lt: 2005}}]} --- {name : 'value'} {number_of_employees : 'value'}
 Sort: {"ipo.valuation_amount":-1}
 Sort: {number_of_employees:-1} --- filter: 10;
-{founded_month: 12} --- filter: 1000
+{founded_month: {$gte: 7}} --- limit: 1000
+filter: {$and: [{founded_year: {$lt: 2000}},{"acquisition.price_amount": {$gt:10000000}}]}
+filter:{"acquisition.acquired_year": {$gt: 2010}}---project: {_id:0,name:1,acquisition:1}--- sort: {"acquisition.price_amount":-1}
+project:{name:1,founded_year:1, _id:0}---sort:{founded_year:-1}
+{founded_day: {$lte:7}}---sort:{"acquisition.price_amount":-1} --- limit:10
+{$and: [{category_code: "web"},  {number_of_employees: {$gt:4000}}]}--- sort: {number_of_employees:1}
+{$and: [{"acquisition.price_amount": {$gt: 10000000}}, {"acquisition.price_currency_code": "USD"} ] }
+{"acquisition.acquired_month": {$lte:3}}---limit: 10  ---project: {name:1, acquisition:1}
+{founded_year:{$gte:2000,$lte:2010}, "acquisition.acquired_year":{$gt:2011}}
