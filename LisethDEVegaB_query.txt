@@ -1,0 +1,77 @@
+Liseth De Vega 
+
+1) 
+query: {name: "Babelgum"}
+projection: {name:1, _id:0}
+
+2)
+query: {number_of_employees: {$gt: 5000}}
+sort: {number_of_employees: 1}
+limit: 20
+
+3) 
+query: {founded_year: {$gte: 2000, $lte: 2005}}
+project: {name: 1, _id: 0, founded_year: 1} 
+sort: {founded_year: 1}
+
+4)
+query: {"ipo.valuation_amount": {$gt: 100000000},founded_year: {$lt: 2010}}
+project: {name: 1, "ipo.valuation_amount":1, _id:0}
+
+5)
+query: {number_of_employees: {$lt: 1000},founded_year: {$lt: 2005}}
+sort: {number_of_employees: 1}
+limit: 10
+
+6) 
+query: {partners: { $exists: false}}
+
+7)
+query: {category_code: null}
+
+8)
+query: {number_of_employees: {$gte: 100, $lt:1000}}
+projection: {_id:0, name:1,number_of_employees:1}
+
+9)
+sort: {ipo: -1}
+
+10)
+sort: {number_of_employees:-1}
+limit: 10
+
+11)
+query: {founded_month: {$gte:7,$lte:12}}
+limit: 1000
+
+12)
+query: {founded_year: {$lt:2000}, "acquisition.price_amount": {$gt:10000000}}
+
+13)
+query: {"acquisition.acquired_year": {$gt:2010}}
+projection: {_id:0, name:1, acquisition: 1}
+sort: {"acquisition.price_amount":1}
+
+14)
+projection: {_id:0, name:1, founded_year: 1}
+sort: {founded_year:1}
+
+15)
+query: {founded_day: {$gte:1,$lte:7}}
+sort: {"acquisition.price_amount": -1}´
+limit: 10
+
+16)
+query: {category_code:'web', number_of_employees: {$gt: 400}}
+sort: {number_of_employees: 1}
+
+17)
+query: {"acquisition.price_amount": {$gt: 10000000},"acquisition.price_currency_code": 'EUR'}
+
+18)
+query: {"acquisition.acquired_month": {$gte:1,$lte:6}}
+projection: {_id:0, name: 1, acquisition:1}
+limit: 10
+
+19)
+query: {founded_year: {$gte: 2000, $lte: 2010}, "acquisition.acquired_year": {$gt: 2011}}
