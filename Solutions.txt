@@ -65,7 +65,7 @@ sort:
 skip: 
 limit: 1000
 12
-query: {founded_year:{ $lt : 2000}, "acquisition.price_amount":{$gt: 10000000}}
+query: {$and:[{"acquisitions.price_amount": {$gt:100000000}}, {founded_year: {$lt: 2000}}]}
 projection: 
 sort: 
 skip: 
