@@ -2,7 +2,7 @@
 
 # Answers
 
-### 1. All the companies that it's name match 'Babelgum'. Retrieve only their `name` field.
+### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
 <!-- Your Code Goes Here -->
 
@@ -34,7 +34,7 @@
 
 <!-- Your Code Goes Here -->
 
-### 9. Order all the companies by their IPO price descendently.
+### 9. Order all the companies by their IPO price in a descending order.
 
 <!-- Your Code Goes Here -->
 
@@ -50,7 +50,7 @@
 
 <!-- Your Code Goes Here -->
 
-### 12. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
+### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 <!-- Your Code Goes Here -->
 
@@ -62,15 +62,15 @@
 
 <!-- Your Code Goes Here -->
 
-### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` descendently. Limit the search to 10 documents.
+### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
 <!-- Your Code Goes Here -->
 
-### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascendant order.
+### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
 <!-- Your Code Goes Here -->
 
-### 17. All the companies which their acquisition amount is more than 10.000.000, and currency are 'EUR'.
+### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
 <!-- Your Code Goes Here -->
 
