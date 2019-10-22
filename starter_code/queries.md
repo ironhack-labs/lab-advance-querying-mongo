@@ -25,8 +25,7 @@ db.companies.find({number_of_employees: {$lt: 1000}, founded_year: {$lt: 2005}},
 
 ### 6. All the companies that don't include the `partners` field.
 
-DUDA
-db.companies.find({partners: null},{name: 1, _id: 0})
+db.companies.find({partners: []},{name: 1, _id: 0, partners: 1})
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
