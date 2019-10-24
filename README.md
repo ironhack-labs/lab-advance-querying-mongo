@@ -8,23 +8,22 @@ We are back with our queries! :wink:
 
 We have learned some super useful query operators, that will helps us to make much better queries to retrieve the data we need. We will continue using the **Crunchbase** database we used on the last exercise.
 
-
 ## Requirements
 
 - Fork this repo
 - Clone this repo
 
-
 ## Submission
 
 - Upon completion, run the following commands
+
 ```
 $ git add .
 $ git commit -m "done"
 $ git push origin master
 ```
-- Create Pull Request so your TAs can check up your work.
 
+- Create Pull Request so your TAs can check up your work.
 
 ## Deliverables
 
@@ -33,11 +32,12 @@ Since we will be querying our database from Mongo Compass, you will need to copy
 ### Example
 
 1. This is an example
- - **`query`**: /*You should copy/paste the query in here*/
- - **`projection`**: /*You should copy/paste the projection in here*/
- - **`sort`**: /*You should copy/paste the sort in here*/
- - **`skip`**: /*You should copy/paste the skip in here*/
- - **`limit`**: /*You should copy/paste the limit in here*/
+
+- **`query`**: /_You should copy/paste the query in here_/
+- **`projection`**: /_You should copy/paste the projection in here_/
+- **`sort`**: /_You should copy/paste the sort in here_/
+- **`skip`**: /_You should copy/paste the skip in here_/
+- **`limit`**: /_You should copy/paste the limit in here_/
 
 ## Instructions
 
@@ -52,9 +52,11 @@ The database contains more than 18k documents, and each of them has a lot of inf
 1. You will find the `.zip` file of the Database on the **lab** folder.
 2. Unzip the file
 3. From the terminal, import the database to Mongo using the following command:
+
 ```bash
 $ mongoimport --db companies --collection companies --file companies.json
 ```
+
 4. Check on Mongo Compass if everything goes ok:
 
 :::info >
@@ -63,12 +65,11 @@ When running the `mongoimport` you should be located in the same folder as the `
 
 ![image](https://user-images.githubusercontent.com/23629340/36534191-1f1bc5ec-17c6-11e8-9463-4945679b98c0.png)
 
-
 ### Iteration 2
 
 You already know how this goes, so let's start working:
 
-1. All the companies that it's name match 'Babelgum'. Retrieve only their `name` field.
+1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
@@ -76,17 +77,16 @@ You already know how this goes, so let's start working:
 6. All the companies that don't include the `partners` field.
 7. All the companies that have a null type of value on the `category_code` field.
 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
-9. Order all the companies by their IPO price descendently.
+9. Order all the companies by their IPO price in a descending order.
 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
-12. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
+12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
-17. All the companies which their acquisition amount is more than 10.000.000, and currency is 'EUR'.
+17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
-
 
 Happy Coding! :heart:
