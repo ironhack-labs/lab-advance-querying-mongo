@@ -78,7 +78,10 @@ You already know how this goes, so let's start working:
 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
    ```js
-   db.companies.find( { number_of_employees: {$gt: 5000} }, { name: 1, number_of_employees: 1, _id: 0} ).limit(20).sort( {number_of_employees: 1} )
+   db.companies.find( 
+     { number_of_employees: {$gt: 5000} }, 
+     { name: 1, number_of_employees: 1, _id: 0} 
+   ).limit(20).sort( {number_of_employees: 1} )
    ```
 
    
@@ -86,7 +89,10 @@ You already know how this goes, so let's start working:
 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
    ```js
-   db.companies.find( { founded_year: { $in: [2000, 2001, 2002, 2003, 2004, 2005] } }, { name: 1, founded_year: 1, _id: 0 } )
+   db.companies.find( 
+     { founded_year: { $gte: 2000, $lte: 2005 } }, 
+     { name: 1, founded_year: 1, _id: 0 } 
+   )
    ```
 
    
@@ -145,11 +151,9 @@ You already know how this goes, so let's start working:
 
    ```js
    db.companies.find( 
-     { $and: [ 
-       {number_of_employees: {$gte: 100 } }, 
-       {number_of_employees: {$lt: 1000 } }  
-     ] },
-     { name: 1, number_of_employees: 1, _id: 0 } )
+     { number_of_employees: {$gte: 100, $lt: 1000 } },
+     { name: 1, number_of_employees: 1, _id: 0 } 
+   )
    ```
 
    
@@ -157,7 +161,10 @@ You already know how this goes, so let's start working:
 9. Order all the companies by their IPO price in a descending order.
 
    ```js
-   db.companies.find( { "ipo.valuation_amount": { $exists: true } }, { name:1, "ipo.valuation_amount": 1, _id: 0 } ).sort( { "ipo.valuation_amount": -1 } )
+   db.companies.find( 
+     { "ipo.valuation_amount": { $exists: true } }, 
+     { name:1, "ipo.valuation_amount": 1, _id: 0 } 
+   ).sort( { "ipo.valuation_amount": -1 } )
    ```
 
    
@@ -165,7 +172,10 @@ You already know how this goes, so let's start working:
 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
     ```js
-    db.companies.find( {}, { name:1, number_of_employees: 1, _id: 0} ).sort( {number_of_employees: -1} ).limit(10)
+    db.companies.find( 
+      {}, 
+      { name:1, number_of_employees: 1, _id: 0} 
+    ).sort( {number_of_employees: -1} ).limit(10)
     ```
 
     
@@ -174,7 +184,7 @@ You already know how this goes, so let's start working:
 
     ```js
     db.companies.find(
-      { founded_month: { $in: [ 7, 8, 9, 10, 11, 12 ] } },
+      { founded_month: { $gte: 6, $lte: 12 } },
       { name: 1, founded_month: 1, _id: 0}
     ).limit(1000)
     ```
@@ -220,7 +230,7 @@ You already know how this goes, so let's start working:
 
     ```js
     db.companies.find(
-    { founded_day: { $in: [1, 2, 3, 4, 5, 6, 7] } },
+    { founded_day: { $gte: 1, $lte: 7 } },
     { name: 1, founded_day: 1, "acquisition.price_amount": 1, _id: 0 }
     ).sort( { "acquisition.price_amount": -1 } ).limit(10)
     ```
@@ -269,7 +279,7 @@ You already know how this goes, so let's start working:
     ```js
     db.companies.find( {
     $and: [ 
-    { "founded_year": { $in: [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 ] } },
+    { "founded_year": { $gte: 2000, $lte: 2010 } },
     { "acquisition.acquired_year": { $gt: 2011 } } 
     ]},
     { name: 1, founded_year: 1, "acquisition.acquired_year": 1, _id: 0} )
