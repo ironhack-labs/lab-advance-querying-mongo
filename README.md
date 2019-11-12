@@ -78,7 +78,7 @@ You already know how this goes, so let's start working:
 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
    ```js
-   db.companies.find( { number_of_employees: {$gt: 5000} }, { name: 1, number_of_employees: 1} ).limit(20).sort( {number_of_employees: 1} )
+   db.companies.find( { number_of_employees: {$gt: 5000} }, { name: 1, number_of_employees: 1, _id: 0} ).limit(20).sort( {number_of_employees: 1} )
    ```
 
    
@@ -113,7 +113,7 @@ You already know how this goes, so let's start working:
       [ { number_of_employees: {$lt: 1000} }, 
        { founded_year: {$lt: 2005} } 
       ] }, 
-     { name: 1, number_of_employees: 1, founded_year: 1 } 
+     { name: 1, number_of_employees: 1, founded_year: 1, _id: 0 } 
    ).sort( {number_of_employees: 1} ).limit(10)
    ```
 
@@ -124,7 +124,7 @@ You already know how this goes, so let's start working:
    ```js
    db.companies.find( 
      { partners: { $exists: false } },
-     { name: 1 }
+     { name: 1, _id: 0 }
    )
    ```
 
@@ -135,7 +135,7 @@ You already know how this goes, so let's start working:
    ```
    db.companies.find( 
      { category_code: { $eq: null } },
-     { name: 1, category_code: 1 }
+     { name: 1, category_code: 1, _id: 0 }
    )
    ```
 
@@ -157,7 +157,7 @@ You already know how this goes, so let's start working:
 9. Order all the companies by their IPO price in a descending order.
 
    ```js
-   db.companies.find( { "ipo.valuation_amount": { $exists: true } }, { name:1, "ipo.valuation_amount": 1 } ).sort( { "ipo.valuation_amount": -1 } )
+   db.companies.find( { "ipo.valuation_amount": { $exists: true } }, { name:1, "ipo.valuation_amount": 1, _id: 0 } ).sort( { "ipo.valuation_amount": -1 } )
    ```
 
    
@@ -165,7 +165,7 @@ You already know how this goes, so let's start working:
 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
     ```js
-    db.companies.find( {}, { name:1, number_of_employees: 1} ).sort( {number_of_employees: -1} ).limit(10)
+    db.companies.find( {}, { name:1, number_of_employees: 1, _id: 0} ).sort( {number_of_employees: -1} ).limit(10)
     ```
 
     
@@ -175,7 +175,7 @@ You already know how this goes, so let's start working:
     ```js
     db.companies.find(
       { founded_month: { $in: [ 7, 8, 9, 10, 11, 12 ] } },
-      { name: 1, founded_month: 1 }
+      { name: 1, founded_month: 1, _id: 0}
     ).limit(1000)
     ```
 
@@ -189,7 +189,7 @@ You already know how this goes, so let's start working:
         { "acquisition.price_amount": {$gt: 10000000} },
         { founded_year: {$lt: 2000} }
       ] }, 
-       { name: 1, founded_year: 1, "acquisition.price_amount": 1 } )
+       { name: 1, founded_year: 1, "acquisition.price_amount": 1, _id: 0 } )
     ```
 
     
@@ -211,7 +211,7 @@ You already know how this goes, so let's start working:
     db.companies.find(
       { },
       { name: 1, founded_year: 1, _id: 0}
-    ).sort( { founded_year: -1 } ).limit(100)
+    ).sort( { founded_year: -1 } ).limit(1000)
     ```
 
     
@@ -244,19 +244,37 @@ You already know how this goes, so let's start working:
 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
     ```js
-    db.companies.find( { $and: [ { "acquisitions.price_amount": { $gt: 10000000 } }, { "acquisitions.price_currency_code": "EUR" } ]}, { name: 1, "acquisitions.price_amount": 1, "acquisitions.price_currency_code": 1, _id: 0} )
+    db.companies.find( 
+      { $and: [ 
+        { "acquisition.price_amount": { $gt: 10000000 } }, 
+        { "acquisition.price_currency_code": "EUR" } 
+      ]}, 
+      { name: 1, "acquisition.price_amount": 1, "acquisition.price_currency_code": 1, _id: 0} )
     ```
 
     
 
 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-    ```
-    
+    ```js
+    db.companies.find(
+    { "acquisition.acquired_month": { $in: [ 1, 2, 3] } },
+    { name: 1, acquisition: 1, _id: 0 }).limit(10)
     ```
 
     
 
 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
+
+    ```js
+    db.companies.find( {
+    $and: [ 
+    { "founded_year": { $in: [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 ] } },
+    { "acquisition.acquired_year": { $gt: 2011 } } 
+    ]},
+    { name: 1, founded_year: 1, "acquisition.acquired_year": 1, _id: 0} )
+    ```
+
+    
 
 Happy Coding! :heart:
