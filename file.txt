@@ -1,0 +1,563 @@
+MongoDB shell version v4.2.1
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("0f472b64-17d0-4ccd-882d-3a13ed19241e") }
+MongoDB server version: 4.2.1
+Mongo-Hacker 0.1.0
+Server has startup warnings: 
+2019-11-12T09:23:08.235+0100 I  STORAGE  [initandlisten] 
+2019-11-12T09:23:08.235+0100 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2019-11-12T09:23:08.235+0100 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2019-11-12T09:23:09.399+0100 I  CONTROL  [initandlisten] 
+2019-11-12T09:23:09.400+0100 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-11-12T09:23:09.400+0100 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-11-12T09:23:09.400+0100 I  CONTROL  [initandlisten] 
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+PhoeNiX-Manjaro(mongod-4.2.1) test> showdbs[37G[Jshowdb[43G[37G[Jshowd[42G[37G[Jshow[41G dbs[37G[Jshow dbs[45G
+[32;1madmin[m        → 0.000GB
+[32;1mcompanies[m    → 0.031GB
+[32;1mconfig[m       → 0.000GB
+[32;1mironhack-inc[m → 0.000GB
+[32;1mlocal[m        → 0.000GB
+[32;1mvideo[m        → 0.000GB
+PhoeNiX-Manjaro(mongod-4.2.1) test> use compni[37G[Juse compn[46G[37G[Juse comp[45Ganies[37G[Juse companies[50G
+switched to db companies
+PhoeNiX-Manjaro(mongod-4.2.1) companies> [42G[Juse companies[55G[42G[Jshow dbs[50G[42G[Jdb.companies.find().limit(1)[70G[42G[Jdb.companies.find().limit(1)[70G
+{
+  [37m"_id"[m: ObjectId([33;4m"52cdef7c4bab8bd675297d8a"[m),
+  [37m"name"[m: [32m"Wetpaint"[m,
+  [37m"permalink"[m: [32m"abc2"[m,
+  [37m"crunchbase_url"[m: [32m"http://www.crunchbase.com/company/wetpaint"[m,
+  [37m"homepage_url"[m: [32m"http://wetpaint-inc.com"[m,
+  [37m"blog_url"[m: [32m"http://digitalquarters.net/"[m,
+  [37m"blog_feed_url"[m: [32m"http://digitalquarters.net/feed/"[m,
+  [37m"twitter_username"[m: [32m"BachelrWetpaint"[m,
+  [37m"category_code"[m: [32m"web"[m,
+  [37m"number_of_employees"[m: [31m47[m,
+  [37m"founded_year"[m: [31m2005[m,
+  [37m"founded_month"[m: [31m10[m,
+  [37m"founded_day"[m: [31m17[m,
+  [37m"deadpooled_year"[m: [31m1[m,
+  [37m"tag_list"[m: [32m"wiki, seattle, elowitz, media-industry, media-platform, social-distribution-system"[m,
+  [37m"alias_list"[m: [32m""[m,
+  [37m"email_address"[m: [32m"info@wetpaint.com"[m,
+  [37m"phone_number"[m: [32m"206.859.6300"[m,
+  [37m"description"[m: [32m"Technology Platform Company"[m,
+  [37m"created_at"[m: ISODate([34m"2007-05-25T06:51:27Z"[m),
+  [37m"updated_at"[m: [32m"Sun Dec 08 07:15:44 UTC 2013"[m,
+  [37m"overview"[m: [32m"<p>Wetpaint is a technology platform company that uses its proprietary state-of-the-art technology and expertise in social media to build and monetize audiences for digital publishers. Wetpaint’s own online property, Wetpaint Entertainment, an entertainment news site that attracts more than 12 million unique visitors monthly and has over 2 million Facebook fans, is a proof point to the company’s success in building and engaging audiences. Media companies can license Wetpaint’s platform which includes a dynamic playbook tailored to their individual needs and comprehensive training. Founded by Internet pioneer Ben Elowitz, and with offices in New York and Seattle, Wetpaint is backed by Accel Partners, the investors behind Facebook.</p>"[m,
+  [37m"image"[m: {
+    [37m"available_sizes"[m: [
+      [
+        [
+          [31m150[m,
+          [31m75[m
+        ],
+        [32m"assets/images/resized/0000/3604/3604v14-max-150x150.jpg"[m
+      ],
+      [
+        [
+          [31m250[m,
+          [31m125[m
+        ],
+        [32m"assets/images/resized/0000/3604/3604v14-max-250x250.jpg"[m
+      ],
+      [
+        [
+          [31m450[m,
+          [31m225[m
+        ],
+        [32m"assets/images/resized/0000/3604/3604v14-max-450x450.jpg"[m
+      ]
+    ]
+  },
+  [37m"products"[m: [
+    {
+      [37m"name"[m: [32m"Wikison Wetpaint"[m,
+      [37m"permalink"[m: [32m"wetpaint-wiki"[m
+    },
+    {
+      [37m"name"[m: [32m"Wetpaint Social Distribution System"[m,
+      [37m"permalink"[m: [32m"wetpaint-social-distribution-system"[m
+    }
+  ],
+  [37m"relationships"[m: [
+    {
+      [37m"is_past"[m: [34;1mfalse[m,
+      [37m"title"[m: [32m"Co-Founder and VP, Social and Audience Development"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Michael"[m,
+        [37m"last_name"[m: [32m"Howell"[m,
+        [37m"permalink"[m: [32m"michael-howell"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mfalse[m,
+      [37m"title"[m: [32m"Co-Founder/CEO/Board of Directors"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Ben"[m,
+        [37m"last_name"[m: [32m"Elowitz"[m,
+        [37m"permalink"[m: [32m"ben-elowitz"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mfalse[m,
+      [37m"title"[m: [32m"COO/Board of Directors"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Rob"[m,
+        [37m"last_name"[m: [32m"Grady"[m,
+        [37m"permalink"[m: [32m"rob-grady"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mfalse[m,
+      [37m"title"[m: [32m"SVP, Strategy and Business Development"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Chris"[m,
+        [37m"last_name"[m: [32m"Kollas"[m,
+        [37m"permalink"[m: [32m"chris-kollas"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mfalse[m,
+      [37m"title"[m: [32m"Board"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Theresia"[m,
+        [37m"last_name"[m: [32m"Ranzetta"[m,
+        [37m"permalink"[m: [32m"theresia-ranzetta"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mfalse[m,
+      [37m"title"[m: [32m"Board Member"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Gus"[m,
+        [37m"last_name"[m: [32m"Tai"[m,
+        [37m"permalink"[m: [32m"gus-tai"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mfalse[m,
+      [37m"title"[m: [32m"Board"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Len"[m,
+        [37m"last_name"[m: [32m"Jordan"[m,
+        [37m"permalink"[m: [32m"len-jordan"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mfalse[m,
+      [37m"title"[m: [32m"Head of Technology and Product"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Alex"[m,
+        [37m"last_name"[m: [32m"Weinstein"[m,
+        [37m"permalink"[m: [32m"alex-weinstein"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mtrue[m,
+      [37m"title"[m: [32m"CFO"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Bert"[m,
+        [37m"last_name"[m: [32m"Hogue"[m,
+        [37m"permalink"[m: [32m"bert-hogue"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mtrue[m,
+      [37m"title"[m: [32m"CFO/ CRO"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Brian"[m,
+        [37m"last_name"[m: [32m"Watkins"[m,
+        [37m"permalink"[m: [32m"brian-watkins"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mtrue[m,
+      [37m"title"[m: [32m"Senior Vice President, Marketing"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Rob"[m,
+        [37m"last_name"[m: [32m"Grady"[m,
+        [37m"permalink"[m: [32m"rob-grady"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mtrue[m,
+      [37m"title"[m: [32m"VP, Technology and Product"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Werner"[m,
+        [37m"last_name"[m: [32m"Koepf"[m,
+        [37m"permalink"[m: [32m"werner-koepf"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mtrue[m,
+      [37m"title"[m: [32m"VP Marketing"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Kevin"[m,
+        [37m"last_name"[m: [32m"Flaherty"[m,
+        [37m"permalink"[m: [32m"kevin-flaherty"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mtrue[m,
+      [37m"title"[m: [32m"VP User Experience"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Alex"[m,
+        [37m"last_name"[m: [32m"Berg"[m,
+        [37m"permalink"[m: [32m"alex-berg"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mtrue[m,
+      [37m"title"[m: [32m"VP Engineering"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Steve"[m,
+        [37m"last_name"[m: [32m"McQuade"[m,
+        [37m"permalink"[m: [32m"steve-mcquade"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mtrue[m,
+      [37m"title"[m: [32m"Executive Editor"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Susan"[m,
+        [37m"last_name"[m: [32m"Mulcahy"[m,
+        [37m"permalink"[m: [32m"susan-mulcahy"[m
+      }
+    },
+    {
+      [37m"is_past"[m: [34;1mtrue[m,
+      [37m"title"[m: [32m"VP Business Development"[m,
+      [37m"person"[m: {
+        [37m"first_name"[m: [32m"Chris"[m,
+        [37m"last_name"[m: [32m"Kollas"[m,
+        [37m"permalink"[m: [32m"chris-kollas"[m
+      }
+    }
+  ],
+  [37m"competitions"[m: [
+    {
+      [37m"competitor"[m: {
+        [37m"name"[m: [32m"Wikia"[m,
+        [37m"permalink"[m: [32m"wikia"[m
+      }
+    },
+    {
+      [37m"competitor"[m: {
+        [37m"name"[m: [32m"JotSpot"[m,
+        [37m"permalink"[m: [32m"jotspot"[m
+      }
+    },
+    {
+      [37m"competitor"[m: {
+        [37m"name"[m: [32m"Socialtext"[m,
+        [37m"permalink"[m: [32m"socialtext"[m
+      }
+    },
+    {
+      [37m"competitor"[m: {
+        [37m"name"[m: [32m"Ning by Glam Media"[m,
+        [37m"permalink"[m: [32m"ning"[m
+      }
+    },
+    {
+      [37m"competitor"[m: {
+        [37m"name"[m: [32m"Soceeo"[m,
+        [37m"permalink"[m: [32m"soceeo"[m
+      }
+    },
+    {
+      [37m"competitor"[m: {
+        [37m"name"[m: [32m"Yola"[m,
+        [37m"permalink"[m: [32m"yola"[m
+      }
+    },
+    {
+      [37m"competitor"[m: {
+        [37m"name"[m: [32m"SocialGO"[m,
+        [37m"permalink"[m: [32m"socialgo"[m
+      }
+    },
+    {
+      [37m"competitor"[m: {
+        [37m"name"[m: [32m"IslamNor"[m,
+        [37m"permalink"[m: [32m"islamnor"[m
+      }
+    }
+  ],
+  [37m"providerships"[m: [ ],
+  [37m"total_money_raised"[m: [32m"$39.8M"[m,
+  [37m"funding_rounds"[m: [
+    {
+      [37m"id"[m: [31m888[m,
+      [37m"round_code"[m: [32m"a"[m,
+      [37m"source_url"[m: [32m"http://seattlepi.nwsource.com/business/246734_wiki02.html"[m,
+      [37m"source_description"[m: [32m""[m,
+      [37m"raised_amount"[m: [31m5250000[m,
+      [37m"raised_currency_code"[m: [32m"USD"[m,
+      [37m"funded_year"[m: [31m2005[m,
+      [37m"funded_month"[m: [31m10[m,
+      [37m"funded_day"[m: [31m1[m,
+      [37m"investments"[m: [
+        {
+          [37m"company"[m: [31;1mnull[m,
+          [37m"financial_org"[m: {
+            [37m"name"[m: [32m"Frazier Technology Ventures"[m,
+            [37m"permalink"[m: [32m"frazier-technology-ventures"[m
+          },
+          [37m"person"[m: [31;1mnull[m
+        },
+        {
+          [37m"company"[m: [31;1mnull[m,
+          [37m"financial_org"[m: {
+            [37m"name"[m: [32m"Trinity Ventures"[m,
+            [37m"permalink"[m: [32m"trinity-ventures"[m
+          },
+          [37m"person"[m: [31;1mnull[m
+        }
+      ]
+    },
+    {
+      [37m"id"[m: [31m889[m,
+      [37m"round_code"[m: [32m"b"[m,
+      [37m"source_url"[m: [32m"http://pulse2.com/2007/01/09/wiki-builder-website-wetpaint-welcomes-95m-funding/"[m,
+      [37m"source_description"[m: [32m""[m,
+      [37m"raised_amount"[m: [31m9500000[m,
+      [37m"raised_currency_code"[m: [32m"USD"[m,
+      [37m"funded_year"[m: [31m2007[m,
+      [37m"funded_month"[m: [31m1[m,
+      [37m"funded_day"[m: [31m1[m,
+      [37m"investments"[m: [
+        {
+          [37m"company"[m: [31;1mnull[m,
+          [37m"financial_org"[m: {
+            [37m"name"[m: [32m"Accel Partners"[m,
+            [37m"permalink"[m: [32m"accel-partners"[m
+          },
+          [37m"person"[m: [31;1mnull[m
+        },
+        {
+          [37m"company"[m: [31;1mnull[m,
+          [37m"financial_org"[m: {
+            [37m"name"[m: [32m"Frazier Technology Ventures"[m,
+            [37m"permalink"[m: [32m"frazier-technology-ventures"[m
+          },
+          [37m"person"[m: [31;1mnull[m
+        },
+        {
+          [37m"company"[m: [31;1mnull[m,
+          [37m"financial_org"[m: {
+            [37m"name"[m: [32m"Trinity Ventures"[m,
+            [37m"permalink"[m: [32m"trinity-ventures"[m
+          },
+          [37m"person"[m: [31;1mnull[m
+        }
+      ]
+    },
+    {
+      [37m"id"[m: [31m2312[m,
+      [37m"round_code"[m: [32m"c"[m,
+      [37m"source_url"[m: [32m"http://www.accel.com/news/news_one_up.php?news_id=185"[m,
+      [37m"source_description"[m: [32m"Accel"[m,
+      [37m"raised_amount"[m: [31m25000000[m,
+      [37m"raised_currency_code"[m: [32m"USD"[m,
+      [37m"funded_year"[m: [31m2008[m,
+      [37m"funded_month"[m: [31m5[m,
+      [37m"funded_day"[m: [31m19[m,
+      [37m"investments"[m: [
+        {
+          [37m"company"[m: [31;1mnull[m,
+          [37m"financial_org"[m: {
+            [37m"name"[m: [32m"DAG Ventures"[m,
+            [37m"permalink"[m: [32m"dag-ventures"[m
+          },
+          [37m"person"[m: [31;1mnull[m
+        },
+        {
+          [37m"company"[m: [31;1mnull[m,
+          [37m"financial_org"[m: {
+            [37m"name"[m: [32m"Accel Partners"[m,
+            [37m"permalink"[m: [32m"accel-partners"[m
+          },
+          [37m"person"[m: [31;1mnull[m
+        },
+        {
+          [37m"company"[m: [31;1mnull[m,
+          [37m"financial_org"[m: {
+            [37m"name"[m: [32m"Trinity Ventures"[m,
+            [37m"permalink"[m: [32m"trinity-ventures"[m
+          },
+          [37m"person"[m: [31;1mnull[m
+        },
+        {
+          [37m"company"[m: [31;1mnull[m,
+          [37m"financial_org"[m: {
+            [37m"name"[m: [32m"Frazier Technology Ventures"[m,
+            [37m"permalink"[m: [32m"frazier-technology-ventures"[m
+          },
+          [37m"person"[m: [31;1mnull[m
+        }
+      ]
+    }
+  ],
+  [37m"investments"[m: [ ],
+  [37m"acquisition"[m: {
+    [37m"price_amount"[m: [31m30000000[m,
+    [37m"price_currency_code"[m: [32m"USD"[m,
+    [37m"term_code"[m: [32m"cash_and_stock"[m,
+    [37m"source_url"[m: [32m"http://allthingsd.com/20131216/viggle-tries-to-bulk-up-its-social-tv-business-by-buying-wetpaint/?mod=atdtweet"[m,
+    [37m"source_description"[m: [32m" Viggle Tries to Bulk Up Its Social TV Business by Buying Wetpaint"[m,
+    [37m"acquired_year"[m: [31m2013[m,
+    [37m"acquired_month"[m: [31m12[m,
+    [37m"acquired_day"[m: [31m16[m,
+    [37m"acquiring_company"[m: {
+      [37m"name"[m: [32m"Viggle"[m,
+      [37m"permalink"[m: [32m"viggle"[m
+    }
+  },
+  [37m"acquisitions"[m: [ ],
+  [37m"offices"[m: [
+    {
+      [37m"description"[m: [32m""[m,
+      [37m"address1"[m: [32m"710 - 2nd Avenue"[m,
+      [37m"address2"[m: [32m"Suite 1100"[m,
+      [37m"zip_code"[m: [32m"98104"[m,
+      [37m"city"[m: [32m"Seattle"[m,
+      [37m"state_code"[m: [32m"WA"[m,
+      [37m"country_code"[m: [32m"USA"[m,
+      [37m"latitude"[m: [31m47.603122[m,
+      [37m"longitude"[m: [31m-122.333253[m
+    },
+    {
+      [37m"description"[m: [32m""[m,
+      [37m"address1"[m: [32m"270 Lafayette Street"[m,
+      [37m"address2"[m: [32m"Suite 505"[m,
+      [37m"zip_code"[m: [32m"10012"[m,
+      [37m"city"[m: [32m"New York"[m,
+      [37m"state_code"[m: [32m"NY"[m,
+      [37m"country_code"[m: [32m"USA"[m,
+      [37m"latitude"[m: [31m40.7237306[m,
+      [37m"longitude"[m: [31m-73.9964312[m
+    }
+  ],
+  [37m"milestones"[m: [
+    {
+      [37m"id"[m: [31m5869[m,
+      [37m"description"[m: [32m"Wetpaint named in Lead411's Hottest Seattle Companies list"[m,
+      [37m"stoned_year"[m: [31m2010[m,
+      [37m"stoned_month"[m: [31m6[m,
+      [37m"stoned_day"[m: [31m8[m,
+      [37m"source_url"[m: [32m"http://www.lead411.com/seattle-companies.html"[m,
+      [37m"source_text"[m: [31;1mnull[m,
+      [37m"source_description"[m: [32m"LEAD411 LAUNCHES \"HOTTEST SEATTLE COMPANIES\" AWARDS"[m,
+      [37m"stoneable_type"[m: [32m"Company"[m,
+      [37m"stoned_value"[m: [31;1mnull[m,
+      [37m"stoned_value_type"[m: [31;1mnull[m,
+      [37m"stoned_acquirer"[m: [31;1mnull[m,
+      [37m"stoneable"[m: {
+        [37m"name"[m: [32m"Wetpaint"[m,
+        [37m"permalink"[m: [32m"wetpaint"[m
+      }
+    },
+    {
+      [37m"id"[m: [31m8702[m,
+      [37m"description"[m: [32m"Site-Builder Wetpaint Makes One For Itself, Using the Demand Media Playbook"[m,
+      [37m"stoned_year"[m: [31m2010[m,
+      [37m"stoned_month"[m: [31m9[m,
+      [37m"stoned_day"[m: [31m6[m,
+      [37m"source_url"[m: [32m"http://mediamemo.allthingsd.com/20100906/site-builder-wetpaint-makes-one-for-itself-using-the-demand-media-playbook/"[m,
+      [37m"source_text"[m: [31;1mnull[m,
+      [37m"source_description"[m: [32m"All Things D"[m,
+      [37m"stoneable_type"[m: [32m"Company"[m,
+      [37m"stoned_value"[m: [31;1mnull[m,
+      [37m"stoned_value_type"[m: [31;1mnull[m,
+      [37m"stoned_acquirer"[m: [31;1mnull[m,
+      [37m"stoneable"[m: {
+        [37m"name"[m: [32m"Wetpaint"[m,
+        [37m"permalink"[m: [32m"wetpaint"[m
+      }
+    }
+  ],
+  [37m"video_embeds"[m: [ ],
+  [37m"screenshots"[m: [
+    {
+      [37m"available_sizes"[m: [
+        [
+          [
+            [31m150[m,
+            [31m86[m
+          ],
+          [32m"assets/images/resized/0016/0929/160929v2-max-150x150.png"[m
+        ],
+        [
+          [
+            [31m250[m,
+            [31m143[m
+          ],
+          [32m"assets/images/resized/0016/0929/160929v2-max-250x250.png"[m
+        ],
+        [
+          [
+            [31m450[m,
+            [31m258[m
+          ],
+          [32m"assets/images/resized/0016/0929/160929v2-max-450x450.png"[m
+        ]
+      ],
+      [37m"attribution"[m: [31;1mnull[m
+    }
+  ],
+  [37m"external_links"[m: [
+    {
+      [37m"external_url"[m: [32m"http://www.geekwire.com/2011/rewind-ben-elowitz-wetpaint-ceo-building-type-media-company"[m,
+      [37m"title"[m: [32m"GeekWire interview: Rewind - Ben Elowitz, Wetpaint CEO, on building a new type of media company"[m
+    },
+    {
+      [37m"external_url"[m: [32m"http://techcrunch.com/2012/06/17/search-and-social-how-two-will-soon-become-one/"[m,
+      [37m"title"[m: [32m"Guest post by CEO Ben Elowitz in TechCrunch"[m
+    },
+    {
+      [37m"external_url"[m: [32m"http://allthingsd.com/20120516/what-to-expect-when-facebook-is-expecting-five-predictions-for-facebooks-first-public-year/"[m,
+      [37m"title"[m: [32m"Guest post by CEO Ben Elowitz in AllThingsD"[m
+    },
+    {
+      [37m"external_url"[m: [32m"http://adage.com/article/digitalnext/facebook-biggest-player-advertising-s-540-billion-world/235708/"[m,
+      [37m"title"[m: [32m"Guest post by CEO Ben Elowitz in AdAge"[m
+    },
+    {
+      [37m"external_url"[m: [32m"http://www.businessinsider.com/facebook-captures-14-percent-of-our-online-attention-but-only-4-percent-of-ad-spending-online-2012-6"[m,
+      [37m"title"[m: [32m"Guest post by CEO Ben Elowitz in Business Insider"[m
+    },
+    {
+      [37m"external_url"[m: [32m"http://allfacebook.com/wetpaint-media-data_b75963"[m,
+      [37m"title"[m: [32m"AllFacebook coverage of Wetpaint"[m
+    },
+    {
+      [37m"external_url"[m: [32m"http://adage.com/article/digital/celeb-site-wetpaint-shows-media-profit-facebook/237828/"[m,
+      [37m"title"[m: [32m"Profile of Wetpaint in Ad Age"[m
+    },
+    {
+      [37m"external_url"[m: [32m"http://allthingsd.com/20121018/how-to-boost-your-facebook-traffic-tips-and-tricks-from-wetpaint/"[m,
+      [37m"title"[m: [32m"Interview with Wetpaint CEO Ben Elowitz in All Things D"[m
+    },
+    {
+      [37m"external_url"[m: [32m"http://www.xconomy.com/seattle/2012/10/19/wetpaint-starts-licensing-its-facebook-based-media-distribution-tech/"[m,
+      [37m"title"[m: [32m"Profile of Wetpaint in Xconomy"[m
+    }
+  ],
+  [37m"partners"[m: [ ]
+}
+Fetched 1 document in [32;1m34ms[m
+PhoeNiX-Manjaro(mongod-4.2.1) companies> exit[42G[Jexit[46G
+bye
