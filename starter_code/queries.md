@@ -33,14 +33,14 @@ limit:
 db.companies.find({ founded_year: { $gte: 2003, $lte:2005  } }, {name:1,_id:0, founded_year:1})
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
-query: {$and: [{'ipo.valuation_amount':{$gte: 100000000}}, {'founded_year': {$lte: 2010}}] }
+query: {$and: [{'ipo.valuation_amount':{$gt: 100000000}}, {'founded_year': {$lt: 2010}}] }
 projection: {name:1, ipo:1 ,_id:0}
 sort: 
 skip: 
 limit: 
 
 <!-- Your Code Goes Here -->
-db.companies.find({$and: [{'ipo.valuation_amount':{$gte: 100000000}}, {'founded_year': {$lte: 2010}}] }, {name:1, ipo:1 ,_id:0})
+db.companies.find({$and: [{'ipo.valuation_amount':{$gt: 100000000}}, {'founded_year': {$lt: 2010}}] }, {name:1, ipo:1 ,_id:0})
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
 <!-- Your Code Goes Here -->
@@ -72,12 +72,12 @@ db.companies.find({'category_code':null})
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
 <!-- Your Code Goes Here -->
-query: {'number_of_employees':{$gte: 100, $lte: 1000}}
+query: {'number_of_employees':{$gte: 100, $lt: 1000}}
 projection: {name:1, number_of_employees:1}
 sort: 
 skip: 
 limit:
-db.companies.find({'number_of_employees':{$gte: 100, $lte: 1000}}, {name:1, number_of_employees:1, _id:0})
+db.companies.find({'number_of_employees':{$gte: 100, $lt: 1000}}, {name:1, number_of_employees:1, _id:0})
 
 
 
@@ -115,21 +115,21 @@ db.companies.find({founded_month:{$gte:7}}).limit(1000)
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 <!-- Your Code Goes Here -->
-query:{$and: [{'founded_year':{$lt: 2000}}, {'acquisition.price_amount': {$gte: 10000000}}] }
+query:{$and: [{'founded_year':{$lt: 2000}}, {'acquisition.price_amount': {$gt: 10000000}}] }
 projection: 
 sort: 
 skip: 
 limit: 
-db.companies.find({$and: [{'founded_year':{$lt: 2000}}, {'acquisition.price_amount': {$gte: 10000000}}] }, {name:1,founded_year:1,_id:0})
+db.companies.find({$and: [{'founded_year':{$lt: 2000}}, {'acquisition.price_amount': {$gt: 10000000}}] }, {name:1,founded_year:1,_id:0})
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
 <!-- Your Code Goes Here -->
-query:{"acquisition.acquired_year": {$gte: 2010}}
+query:{"acquisition.acquired_year": {$gt: 2010}}
 projection: {name:1, _id: 0, 'acquisition':1, 'acquisition.price_amount': 1}
 sort: {"acquisition.price_amount": -1}
 skip: 
 limit: 
-db.companies.find({"acquisition.acquired_year": {$gte: 2010}}, {name:1, _id: 0, 'acquisition':1, 'acquisition.price_amount': 1}).sort({"acquisition.price_amount": -1})
+db.companies.find({"acquisition.acquired_year": {$gt: 2010}}, {name:1, _id: 0, 'acquisition':1, 'acquisition.price_amount': 1}).sort({"acquisition.price_amount": -1})
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
 <!-- Your Code Goes Here -->
@@ -152,26 +152,26 @@ db.companies.find({founded_day: {$lte: 7}}, {name:1, _id: 0,  founded_day: 1}).s
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
 <!-- Your Code Goes Here -->
-filter: {$and: [{'category_code':{$eq: 'web'}}, {'number_of_employees': {$gte: 4000}}] }
+filter: {$and: [{'category_code':{$eq: 'web'}}, {'number_of_employees': {$gt: 4000}}] }
 project: 
 sort: {number_of_employees:1}
 limit: 
-db.companies.find({$and: [{'category_code':{$eq: 'web'}}, {'number_of_employees': {$gte: 4000}}] }, {name:1,number_of_employees:1,_id:0}).sort({number_of_employees:1})
+db.companies.find({$and: [{'category_code':{$eq: 'web'}}, {'number_of_employees': {$gt: 4000}}] }, {name:1,number_of_employees:1,_id:0}).sort({number_of_employees:1})
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 <!-- Your Code Goes Here -->
-filter: {$and: [{'acquisition.price_amount':{$gte: 10000000}}, {'acquisition.price_currency_code': {$eq: 'EUR'}}] }
+filter: {$and: [{'acquisition.price_amount':{$gt: 10000000}}, {'acquisition.price_currency_code': {$eq: 'EUR'}}] }
 project: 
 sort: 
 limit: 
-db.companies.find({$and: [{'acquisition.price_amount':{$gte: 10000000}}, {'acquisition.price_currency_code': {$eq: 'EUR'}}] })
+db.companies.find({$and: [{'acquisition.price_amount':{$gt: 10000000}}, {'acquisition.price_currency_code': {$eq: 'EUR'}}] })
 
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
 <!-- Your Code Goes Here -->
 
-filter:{"acquisition.acquired_month":{$lt:4}}
+filter:{"acquisition.acquired_month":{$lte:4}}
 project: {name:1, acquisition:1, _id:0}
 sort: 
 limit: 10
