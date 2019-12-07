@@ -82,6 +82,11 @@
 
 <!-- Your Code Goes Here -->
 
+{
+ filter: {
+  category_code: null
+ }
+}
 
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
@@ -91,10 +96,35 @@
 ### 9. Order all the companies by their IPO price in a descending order.
 
 <!-- Your Code Goes Here -->
+{
+ filter: {
+  'ipo.valuation_amount': {
+   $ne: null
+  }
+ },
+ project: {
+  'ipo.valuation_amount': 1
+ },
+ sort: {
+  'ipo.valuation_amount': -1
+ }
+}
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
 <!-- Your Code Goes Here -->
+{
+ filter: {
+  number_of_employees: {
+   $ne: null
+  }
+ },
+ sort: {
+  number_of_employees: -1
+ },
+ limit: 10
+}
+
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
@@ -106,7 +136,18 @@
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+<!-- Your Code Goes Here --> 205
+{
+ filter: {
+  founded_year: {
+   $lt: 2000
+  },
+  'acquisition.price_amount': {
+   $gt: 10000000
+  }
+ }
+}
+
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
@@ -115,6 +156,8 @@
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
 <!-- Your Code Goes Here -->
+
+
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
