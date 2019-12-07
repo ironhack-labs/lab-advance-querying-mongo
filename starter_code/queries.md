@@ -26,10 +26,16 @@ db.companies.find({$and: [{founded_year:{$gte:2000}}, {founded_year:{$lte:2005}}
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
 <!-- Your Code Goes Here -->
+```
+db.companies.find({$and:[{ipo:{$ne:null}}, {"ipo.valuation_amount": {$gt: 100000000}}]},{name:1, ipo:1})
+```
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
 <!-- Your Code Goes Here -->
+```
+db.companies.find({$and:[{number_of_employees: {$lt:1000}}, {founded_year:{$lt:2005}}]}).sort({number_of_employees:1}).limit(10)
+```
 
 ### 6. All the companies that don't include the `partners` field.
 
