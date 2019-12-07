@@ -155,9 +155,22 @@
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
-<!-- Your Code Goes Here -->
+<!-- Your Code Goes Here --> 13136
 
-
+{
+ filter: {
+  founded_year: {
+   $ne: null
+  }
+ },
+ project: {
+  founded_year: 1,
+  name: 1
+ },
+ sort: {
+  founded_year: 1
+ }
+}
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
@@ -165,7 +178,19 @@
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+<!-- Your Code Goes Here --> 9
+
+{
+ filter: {
+  category_code: 'web',
+  number_of_employees: {
+   $gt: 4000
+  }
+ },
+ sort: {
+  number_of_employees: 1
+ }
+}
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
