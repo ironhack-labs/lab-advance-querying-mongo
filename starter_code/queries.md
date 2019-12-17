@@ -52,7 +52,7 @@ SORT {"ipo.valuation_amount":-1}
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 // stop here now
-<!-- Your Code Goes Here -->
+
 
 <!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
 
