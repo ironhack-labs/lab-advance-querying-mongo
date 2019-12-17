@@ -56,7 +56,7 @@ SORT {"ipo.valuation_amount":-1}
 
 <!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
 
-<!-- Your Code Goes Here -->
+<!-- Your Code Goes Here ->
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
