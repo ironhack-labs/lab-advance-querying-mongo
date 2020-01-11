@@ -6,7 +6,7 @@
 
 We are back with our queries! :wink:
 
-We have learned some super useful query operators, that will helps us to make much better queries to retrieve the data we need. We will continue using the **Crunchbase** database we used on the last exercise.
+We have learned some super useful query operators that will helps us to make much better queries to retrieve the data we need. We will continue using the **Crunchbase** database we used on the last exercise.
 
 ## Requirements
 
@@ -45,21 +45,23 @@ Since we will be querying our database from Mongo Compass, you will need to copy
 
 First, we need to import the database we will be using for the `lab`. We will use the Crunchbase database. Crunchbase is the premier destination for discovering industry trends, investments, and news about hundreds of thousands of companies globally. From startups to Fortune 500s, Crunchbase is recognized as the primary source of company intelligence by millions of users globally.
 
-The database contains more than 18k documents, and each of them has a lot of information about each of the companies. A document looks like the following:
+The database contains more than 18k documents. Each document holds the data about each of the companies. A document looks like the following:
 
 ![image](https://user-images.githubusercontent.com/23629340/36494916-d6db1770-1733-11e8-903e-5119b3c1b688.png)
 
-1. You will find the `.zip` file of the Database on the **lab** folder.
+1. You will find the `.zip` file of the database on the **lab** folder.
 2. Unzip the file
 3. Navigate to this lab's folder in your terminal, and when inside, import the database to Mongo using the following command:
 
-__When running the `mongoimport` you should be located in the same folder as the `companies.json` file.__
+**When running the `mongoimport` you should be located in the same folder as the `data.json` file.**
 
 ```bash
-$ mongoimport --db companies --collection companies --file companies.json
+$ mongoimport --db companiesDB --collection companies --file data.json
 ```
 
-_Side note_: In case errors or hanging with no response when running this command, add [--jsonArray](https://docs.mongodb.com/manual/reference/program/mongoimport/#cmdoption-mongoimport-jsonarray) in the end of the previous command.
+What this mongoimport will do for us is to create a database named _companiesDB_, and inside the database will create a collection named _companies_ which will be fed with _data.json_.
+
+_Side note_: In case errors or hanging with no response when running this command, add [--jsonArray](https://docs.mongodb.com/manual/reference/program/mongoimport/#cmdoption-mongoimport-jsonarray) at the end of the previous command.
 
 4. Check on Mongo Compass if everything goes ok:
 
@@ -77,16 +79,16 @@ You already know how this goes, so let's start working:
 6. All the companies that don't include the `partners` field.
 7. All the companies that have a null type of value on the `category_code` field.
 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
-9. Order all the companies by their IPO price in a descending order.
-10. Retrieve the 10 companies with more employees, order by the `number of employees`
-11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
+9. Order all the companies by their IPO price in descending order.
+10. Retrieve the ten companies with more employees, order by the `number of employees`
+11. All the companies founded in the second semester of the year. Limit your search to 1000 companies.
 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
-15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
-16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
-17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
-18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
+15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in descending order. Limit the search to 10 documents.
+16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the number of employees in ascending order.
+17. All the companies whose acquisition amount is more than 10.000.000 and the currency is 'EUR'.
+18. All the companies that have been acquired in the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 Happy Coding! :heart:
