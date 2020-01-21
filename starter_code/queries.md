@@ -56,10 +56,6 @@
 - query: {founded_month: {$gt: 6}}
 - limit: 1000
 
-<!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
-
-<!-- Your Code Goes Here -->
-
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 - query: {$and: [ {founded_year: {$lt: 2000}}, {"acquisition.price_amount": {$gt: 10000000}} ]}
@@ -98,4 +94,4 @@
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-- query: {$and: [ {$and: [{founded_year: {$gte: 2000}}, {founded_year: {$lte: 2010}}]}, {$or: [{"acquisition.acquired_year": {$gt: 2011}}, {acquisition: {$type: "null"}}]} ]}
+- query: {$and: [ {founded_year: {$gte: 2000, $lte: 2010}}, {$or: [{"acquisition.acquired_year": {$gt: 2011}}, {acquisition: {$type: "null"}}]} ]}
