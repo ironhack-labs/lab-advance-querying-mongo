@@ -37,36 +37,36 @@
 **Limit**: `10` 
 
 ### 6. All the companies that don't include the `partners` field.
-
-<!-- Your Code Goes Here -->
+**Query**: `{partners:{$size: 0}}`
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
+**Query**: `{category_code: null}`
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+**Query**: `{$and: [{number_of_employees: {$gte: 100}}, {number_of_employees: {$lt: 1000}}]}`
+
+**Projection**: `{name: 1, number_of_employees: 1, _id: 0}`
 
 ### 9. Order all the companies by their IPO price in a descending order.
-
-<!-- Your Code Goes Here -->
+**Sort**: `{"ipo.valuation_amount": -1}`
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
+**Sort**: `{number_of_employees: -1}`
 
-<!-- Your Code Goes Here -->
+**Limit**: `10`
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
+**Query**: `{founded_month: {$gt: 6}}`
 
-<!-- Your Code Goes Here -->
+**Limit**: `1000`
 
-<!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
-
-<!-- Your Code Goes Here -->
+### 12. All the companies that have been 'deadpooled' after the third year.
+**Query**: `{deadpooled_year: 3}`
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
-
-<!-- Your Code Goes Here -->
+**Query**: `{$and: [{"acquisitions.price_amount": {$gt: 10000000}}, {founded_year: {$lt: 2000}}]}`
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
