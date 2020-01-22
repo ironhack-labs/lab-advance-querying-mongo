@@ -61,7 +61,7 @@
 **Limit**: `1000`
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
-**Query**: `{deadpooled_year: 3}`
+**Query**: `{$and: [{$nor: [{founded_year: null}, {deadpooled_year: null}]}, {$where: "(obj.deadpooled_year - obj.founded_year) > 3"}]}`
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 **Query**: `{$and: [{"acquisition.price_amount": {$gt: 10000000}}, {founded_year: {$lt: 2000}}]}`
