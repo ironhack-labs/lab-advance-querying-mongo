@@ -35,7 +35,7 @@ limit: 20
 
 <!-- Your Code Goes Here -->
 
-query: {$and: [{"acquisition.price_amount":{$gte: 100000000}}, {founded_year: {$lte:2010}}]}
+query: {$and: [{"acquisition.price_amount":{$gt: 100000000}}, {founded_year: {$lt:2010}}]}
 projection: {name:1, _id: 0, ipo: 1}
 sort: 
 skip: 
@@ -44,6 +44,12 @@ limit:
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
 <!-- Your Code Goes Here -->
+
+query: {$and: [{number_of_employees:{$lt: 1000}}, {founded_year: {$lt:2005}}]}
+projection: {_id:0}
+sort: {number_of_employees: 1}
+skip: 
+limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
