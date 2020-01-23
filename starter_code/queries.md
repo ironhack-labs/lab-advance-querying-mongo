@@ -55,9 +55,21 @@ limit: 10
 
 <!-- Your Code Goes Here -->
 
+query: {partners: {$exists: false}}
+projection: {_id:0}
+sort: 
+skip: 
+limit: 
+
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 <!-- Your Code Goes Here -->
+
+query: {category_code: null}
+projection: {_id:0}
+sort: 
+skip: 
+limit: 
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
