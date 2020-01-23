@@ -15,13 +15,31 @@ limit:
 
 <!-- Your Code Goes Here -->
 
+query: {number_of_employees: {$gte:5000}}
+projection: {_id:0}
+sort: {number_of_employees: 1}
+skip: 
+limit: 
+
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
 <!-- Your Code Goes Here -->
+query: {$and: [{founded_year: {$gte:2000}} ,{founded_year:{$lte:2005}}]}
+projection: {name: 1, _id: 0, founded_year: 1}
+sort: 
+skip: 
+limit: 20
+
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
 <!-- Your Code Goes Here -->
+
+query: {$and: [{"acquisition.price_amount":{$gte: 100000000}}, {founded_year: {$lte:2010}}]}
+projection: {name:1, _id: 0, ipo: 1}
+sort: 
+skip: 
+limit: 
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
