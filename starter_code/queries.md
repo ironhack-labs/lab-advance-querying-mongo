@@ -95,9 +95,21 @@ limit:
 
 <!-- Your Code Goes Here -->
 
+query: 
+projection: { _id: 0}
+sort: {{number_of_employees: -1}
+skip: 
+limit: 10
+
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
 <!-- Your Code Goes Here -->
+
+query: {founded_month: {$gt: 6}}
+projection: { _id: 0}
+sort: 
+skip: 
+limit: 1000
 
 <!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
 
