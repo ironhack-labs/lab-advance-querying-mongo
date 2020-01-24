@@ -135,13 +135,32 @@ limit:
 
 <!-- Your Code Goes Here -->
 
+query: {"acquisition.acquired_year": {$gt: 2010}}
+projection: {_id: 0, name:1, acquisition: 1}
+sort: {"acquisition.price_amount": 1}
+skip: 
+limit: 
+
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
 <!-- Your Code Goes Here -->
 
+query: 
+projection: {_id: 0, name:1, founded_year: 1}
+sort: {founded_year: 1}
+skip: 
+limit: 
+
+
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
 <!-- Your Code Goes Here -->
+
+query: {founded_day: {$lte: 7}}
+projection: {_id: 0}
+sort: {"acquisition.price_amount": -1}
+skip: 
+limit: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
