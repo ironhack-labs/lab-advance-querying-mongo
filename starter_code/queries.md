@@ -4,20 +4,15 @@
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
-FILTER {name:{$eq:'Babelgum'}}
-PROJECT {name:1, _id:0}
+FILTER: {name:{$eq:'Babelgum'}}
+PROJECT: {name:1, _id:0}
 
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
-FILTER { number_of_employees: {$gt:5000} }
-PROJECT 
-SORT { number_of_employees: 1}
-LIMIT 20
-
-FILTER 
-PROJECT
-
+FILTER: { number_of_employees: {$gt:5000} } 
+SORT: { number_of_employees: 1}
+LIMIT: 20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
@@ -46,16 +41,18 @@ FILTER {partners: {$exists: true, $size: 0}}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-FILTER {$and:[{number_of_employees:{$gte:100}},{number_of_employees:{$lt:1000}}]}
+FILTER {$and:[ {number_of_employees:{$gte:100}},{number_of_employees:{$lt:1000}}]}
 PROYECT {name:1,number_of_employees:1,_id:0}
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-
+FILTER: {"ipo.valuation_amount":{$ne: null} }
+SORT:  {"ipo.valuation_amount": -1}
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+SORT {numbner_of_employers:-1}
+LIMIT 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
@@ -68,28 +65,36 @@ LIMIT 1000
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-<!-- Your Code Goes Here -->
+FILTER {"acquisition.acquired_year": {$gt: 2010}}
+PROjECT {name: 1, acquisition:1, _id:0}
+SORT {"acquisition.price_amount":1}
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
-<!-- Your Code Goes Here -->
+PROJECT {name:1, founded_year:1, _id:0}
+SORT {founded_year:-1}
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-<!-- Your Code Goes Here -->
+FILTER {founded_day: {$lte: 7}}
+SORT {"acquisition.price_amount": -1}
+LIMIT 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+FILTER {$and: [{category_code:"web"}, {number_of_employees:{$gt: 4000}}]}
+SORT {number_of_employees:1}
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-<!-- Your Code Goes Here -->
+FILTER {$and:[ {"acquisition.price_amount": {$gt:10000000}} , {"acquisition.price_currency_code": 'EUR'}]}
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-<!-- Your Code Goes Here -->
+FILTER {"acquisition.acquired_month": {$lte:3}}
+PROJECT {acquisitions:1, name:1, _id:0}
+LIMIT 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+FILTER { $and: [ { founded_year: {$gte: 2000} } , { founded_year: {$lte:2010} },{"acquisition.acquired_year": {$gte:2011}} ] }
