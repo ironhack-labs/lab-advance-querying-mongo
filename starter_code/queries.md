@@ -60,7 +60,7 @@ LIMIT: 1000
 <!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
 
 <!-- FILTER:{$where:{function(){return (isNumber(this.deadpooled_year)) - (isNumber(this.founded_year)) == "3"}}}
-¿¿??-->
+{$where: "(obj.deadpooled_year - obj.founded_year) > 3"}-->
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 FILTER: {$and:[{"founded_year":{$lt:2000}},{"acquisition.price_amount":{$gt:10000000}}]}
@@ -84,16 +84,19 @@ LIMIT: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+FILTER:{$and:[{"category_code":"web"},{"number_of_employees":{$gt:4000}}]}
+SORT:{"number_of_employees":1}
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-<!-- Your Code Goes Here -->
+FILTER:{$and:[{"acquisition.price_amount":{$gt:10000000}},{"acquisition.price_currency_code":"EUR"}]}
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-<!-- Your Code Goes Here -->
+FILTER: {"acquisition.acquired_month":{$lte:3}}
+PROJECT: {"name":1,_id:0,"acquisition":1}
+LIMIT: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+FILTER:  {$and : [ {founded_year:{$gte:2000}},{founded_year: {$lte:2010}},{'acquisition.acquired_year': {$lt:2011}}]}
