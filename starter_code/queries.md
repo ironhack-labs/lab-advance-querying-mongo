@@ -47,12 +47,25 @@ db.companies.find({founded_year:{$gte: 2000, $lte: 2005}}, {name: 1, founded_yea
 <!-- Your Code Goes Here -->
 
 //Answer on Compass
+//NOT CORRECT - can't figure out
+FILTER: {valuation_amount:{$gt 100.000.000}}, {founded_year: {$lt: 2010}}
+PROJECT: {name: 1, ipo: 1}
 
 //Answer on Terminal
+//DON'T KNOW
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
 <!-- Your Code Goes Here -->
+
+//Answer on Compass
+FILTER: {founded_year: {$lt: 2005}, number_of_employees:{$lt: 1000}}
+PROJECT: {name: 1, number_of_employees: 1, founded_year: 1, _id:0,}
+SORT: {number_of_employees: 1}
+LIMIT: 10
+
+//Answer on Terminal
+ db.companies.find({founded_year: {$lt: 2005}},{number_of_employees: {$lt: 1000}}, {number_of_employees: 1, _id:0}).limit(10).sort({number_of_employees: 1})
 
 ### 6. All the companies that don't include the `partners` field.
 
