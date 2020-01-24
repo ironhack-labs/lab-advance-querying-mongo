@@ -6,7 +6,7 @@
 
 ```
 collection.find(
-    { name: "Babegum" },
+    { name: "Babelgum" },
     { name: 1, _id: 0 }
 )
 ```
@@ -17,7 +17,7 @@ collection.find(
 
 ```
 collection.find(
-    { employees: {gt: 5000} }
+    { number_of_employees: {$gt: 5000} }
 )
 .limit(20)
 .sort( {employees: 1} )
@@ -40,7 +40,7 @@ collection.find(
 
 ```
 collection.find(
-    { amount: {$gte: 100000000}, founded_year: {$lt:2010} },
+    { "ipo.valuation_amount": {$gte: 100000000}, founded_year: {$lt:2010} },
     { name: 1, ipo: 1, _id: 0 }
 )
 ```
@@ -51,9 +51,9 @@ collection.find(
 
 ```
 collection.find(
-    { employees: {lt: 1000}, founded_year: {$lt: 2005} }
+    { number_of_employees: {lt: 1000}, founded_year: {$lt: 2005} }
 )
-.limit(20)
+.limit(10)
 .sort({ employees: 1 })
 ```
 
@@ -83,7 +83,7 @@ collection.find(
 
 ```
 collection.find(
-    { employees: {$gt: 100, $lt: 1000} },
+    { number_of_employees: {$gte: 100, $lt: 1000} },
     { name: 1, employees: 1, _id: 0 }
 )
 ```
@@ -94,7 +94,7 @@ collection.find(
 
 ```
 collection.find()
-.sort({ ipo: -1 })
+.sort({ "ipo.valuation_amount": -1 })
 ```
 
 ---
@@ -103,7 +103,7 @@ collection.find()
 
 ```
 collection.find()
-.sort({ employees: 1 })
+.sort({ number_of_employees: 1 })
 .limit(10);
 ```
 
@@ -113,7 +113,7 @@ collection.find()
 
 ```
 collection.find(
-    { founded_month: {$lt: 6} }
+    { founded_month: {$gt: 6} }
 )
 .limit(1000)
 ```
@@ -124,7 +124,10 @@ collection.find(
 
 ```
 collection.find(
-    { }
+    { $and: [ 
+        {founded_year: {$ne: null}}, 
+        {$where: "this.deadpooled_year - this.founded_year > 3"} 
+    ] }
 )
 ```
 
@@ -134,7 +137,7 @@ collection.find(
 
 ```
 collection.find(
-    { founded_year: {$gt: 2000}, amount: {$gt: 10000000} }
+    { founded_year: {$gt: 2000}, "acquisition.price_amount": {$gt: 10000000} }
 )
 ```
 
@@ -144,10 +147,10 @@ collection.find(
 
 ```
 collection.find(
-    { acquisition: {$gt: 2010} },
+    { "acquisition.acquired_year": {$gt: 2010} },
     { name: 1, acquisition: 1, _id: 0}
 )
-.sort({ acquisition: 1 })
+.sort({ "acquisition.price_amount": 1 })
 ```
 
 ---
@@ -180,8 +183,9 @@ collection.find(
 
 ```
 collection.find(
-    { }
+    { category_code: "web", number_of_employees: {$gt: 4000} }
 )
+.sort({ number_of_employees: 1 })
 ```
 
 ---
@@ -190,7 +194,7 @@ collection.find(
 
 ```
 collection.find(
-    { }
+    { "acquisition.price_amount": {$gt: 10000000}, "acquisition.price_currency_code": "EUR"  }
 )
 ```
 
@@ -200,8 +204,10 @@ collection.find(
 
 ```
 collection.find(
-    { }
+    { "acquisition.acquired_month": {$lte: 3} },
+    { name: 1, acquisition: 1, _id: 0 }  
 )
+.limit(10)
 ```
 
 ---
@@ -210,7 +216,14 @@ collection.find(
 
 ```
 collection.find(
-    { }
+    { $and: [ 
+        {founded_year: {$gte: 2000, $lte: 2010}}, 
+        {$or: [
+            {"acquisition.acquired_year": {$gte: 2011}}, 
+            {acquisition: {$type: "null"}}
+        ] } 
+    
+    ] }
 )
 ```
 
