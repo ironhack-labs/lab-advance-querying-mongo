@@ -65,7 +65,7 @@ limit:
 
 <!-- Your Code Goes Here -->
 
-query: {category_code: null}
+query: {category_code: {$type:"null"}}
 projection: {_id:0}
 sort: 
 skip: 
@@ -75,9 +75,21 @@ limit:
 
 <!-- Your Code Goes Here -->
 
+query: {$and: [{number_of_employees: {$gte: 100}}, {number_of_employees: {$lt: 1000}}]}
+projection: {name:1, _id: 0, number_of_employees: 1}
+sort: 
+skip: 
+limit: 
+
 ### 9. Order all the companies by their IPO price in a descending order.
 
 <!-- Your Code Goes Here -->
+
+query: 
+projection: { _id: 0}
+sort: {"ipo.valuation_amount": -1}
+skip: 
+limit: 
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
