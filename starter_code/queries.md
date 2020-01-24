@@ -58,7 +58,7 @@
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-- query: { $where: "this.deadpooled_year - this.founded_year > 3 && this.founded_year != null" }
+- query: {$and: [ {founded_year: {$ne: null}}, {$where: "this.deadpooled_year - this.founded_year > 3"} ] }
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
