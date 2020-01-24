@@ -111,13 +111,25 @@ sort:
 skip: 
 limit: 1000
 
-<!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
+### 12. All the companies that have been 'deadpooled' after the third year. 
 
 <!-- Your Code Goes Here -->
+
+query: {$and: [{$where: "this.deadpooled_year-this.founded_year > 3"}, {founded_year: {$ne: null}}]}
+projection: { _id: 0}
+sort: 
+skip: 
+limit: 
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 <!-- Your Code Goes Here -->
+
+query: {$and: [{founded_year: {$lt: 2000}}, {"acquisition.price_amount": {$gt: 10000000}}]}
+projection: { _id: 0}
+sort: 
+skip: 
+limit: 
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
