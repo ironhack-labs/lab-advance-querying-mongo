@@ -6,10 +6,10 @@
 
 <!-- Your Code Goes Here -->
 
-//Answer on Compass 
+<!-- Answer on Compass  -->
 {name: "Babelgum"}
 
-//Answer on Terminal
+<!-- Answer on Terminal -->
 db.companies.find({name: "Babelgum"}, {name: 1, _id:0})
 
 
@@ -18,13 +18,13 @@ db.companies.find({name: "Babelgum"}, {name: 1, _id:0})
 
 <!-- Your Code Goes Here -->
 
-//Answer on Compass
-//All other fields empty
+<!-- Answer on Compass -->
+<!-- All other fields empty -->
 FILTER: {number_of_employees: {$gt: 5000}}
 SORT: {number_of_employees: 1}
 LIMIT: 20
 
-//Answer on Terminal
+<!-- Answer on Terminal -->
  db.companies.find({number_of_employees: {$gt: 5000}}, {number_of_employees: 1, _id:0}).limit(20).sort({number_of_employees: 1})
 
 
@@ -33,26 +33,26 @@ LIMIT: 20
 
 <!-- Your Code Goes Here -->
 
-//Answer on Compass
+<!-- Answer on Compass -->
 FILTER: {founded_year: {$gte: 2000, $lte: 2005}}
 PROJECT: {name: 1, founded_year: 1}
-//We did this for fun, lol
+<!-- Extra Step -->
 SORT: {name: 1, _id:0}, {founded_year: 1}
 
-//Answer on Terminal
+<!-- Answer on Terminal -->
 db.companies.find({founded_year:{$gte: 2000, $lte: 2005}}, {name: 1, founded_year:1, _id:0}).sort({founded_year: 1})
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
 <!-- Your Code Goes Here -->
 
-//Answer on Compass
-//NOT CORRECT - can't figure out
+<!-- Answer on Compass -->
+<!-- NOT CORRECT - can't figure out -->
 FILTER: {valuation_amount:{$gt 100.000.000}}, {founded_year: {$lt: 2010}}
 PROJECT: {name: 1, ipo: 1}
 
-//Answer on Terminal
-//DON'T KNOW
+<!-- Answer on Terminal -->
+<!-- DON'T KNOW -->
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
@@ -71,9 +71,9 @@ LIMIT: 10
 
 <!-- Your Code Goes Here -->
 
-//Answer on Compass
+<!-- Answer on Compass -->
 
-//Answer on Terminal
+<!-- Answer on Terminal -->
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
