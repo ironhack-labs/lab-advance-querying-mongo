@@ -120,7 +120,7 @@ collection.find(
 
 ---
 
-#### 12. All the companies that have been 'deadpooled' after the third year. -->
+#### 12. All the companies that have been 'deadpooled' after the third year.
 
 ```
 collection.find(
@@ -133,7 +133,7 @@ collection.find(
 
 ---
 
-#### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
+#### 12.1. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 ```
 collection.find(
