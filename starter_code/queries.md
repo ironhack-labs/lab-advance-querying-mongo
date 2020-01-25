@@ -57,9 +57,11 @@ LIMIT : 10
 FILTER : {founded_month: {$gt: 6}}
 LIMIT:1000
 
-<!-- ### 12. All the companies that have been 'deadpooled' after the third year. -->
+### 12. All the companies that have been 'deadpooled' after the third year. 
 
-<!-- Your Code Goes Here -->
+FILTER: {$and:[{founded_year:{$ne: null}},{$where: "this.deadpooled_year - this.founded_year>3"}]}
+
+<!-- NO LO ECHO ELLO PERO ME VIENE BIEN TENERLA PARA ANALIZARLA -->
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 FILTER : {$and: [{"acquisition.price_amount": {$gt: 10000000}}, {founded_year: {$lt: 2000}}]}
