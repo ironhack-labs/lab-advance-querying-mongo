@@ -129,3 +129,11 @@ founded_month
 <!-- Your Code Goes Here -->
 
 `db.companies.find({ $and: [{founded_year: { $gt: 2000}},{founded_year: { $lt: 2010}},{"acquisition.acquired_year": { $gt: 2011}}]}, {name: 1,founded_year: 1, acquisition: 1,_id:0 })`
+
+### DeleteOne
+
+`db.tasks.deleteOne({_id: ObjectId("5e2ea9f35de7c3f424dd0fc0")})`
+
+### DeleteMany
+
+`db.tasks.deleteMany({priority: { $eq: 3}})`
