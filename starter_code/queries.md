@@ -63,7 +63,7 @@ LIMIT
 <!-- Your Code Goes Here -->
 
 FILTER
-`{partners: {$exists: false}}`
+`{"partners.0": {$exists: false}}`
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
