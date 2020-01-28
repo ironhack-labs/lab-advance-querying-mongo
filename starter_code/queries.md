@@ -44,7 +44,7 @@ Limit:10
 
 ### 6. All the companies that don't include the `partners` field.
 
-query:{ field: { $exists: <boolean> } }
+query:{ partners: { $exists: false } }
 Project:
 Sort:
 Skip:
