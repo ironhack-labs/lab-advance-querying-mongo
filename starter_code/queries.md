@@ -83,4 +83,4 @@ db.companies.find({"acquisition.acquired_month": {$in:[1,2,3,4]}},{"name":1, "ac
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+db.companies.find({$and:[{founded_year:{$gt: 2000}},{founded_year: {$lt: 2010}},{"acquisiton.acquired_month": {$ne: 2011}}]})
