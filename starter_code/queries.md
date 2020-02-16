@@ -4,7 +4,7 @@
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
-<!-- db.companies.find({name:'Babelgum'}, {name:1, _id:0}) -->
+<!-- db.companies.find({"name":'Babelgum'}, {name:1, _id:0}) -->
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
@@ -24,23 +24,24 @@
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- Your Code Goes Here -->
+<!-- db.companies.find( {"partners": {$exists: false}}, {name:1, _id:0}) -->
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
+<!-- db.companies.find({"category_code" :'null'}, {name:1, _id:0}) -->
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+<!-- db.companies.find({ $and : [{"number_of_employees": {$gte: 100}}, {"number_of_employees": {$lt: 1000}}]}, {name:1, number_of_employees:1, _id:0}) -->
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-<!-- Your Code Goes Here -->
+<!-- db.companies.find().sort({"ipo.valuation_amount": -1}).limit(2).pretty() -->
+
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+<!-- db.companies.find({name:1,number_of_employees:1, _id:0}).sort({"number_of_employees": -1}).limit(10).pretty() -->
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
