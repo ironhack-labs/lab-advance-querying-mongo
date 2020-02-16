@@ -12,15 +12,15 @@
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-<!-- db.companies.find({ $and : [{"founded_year": {$gte: 2000}}, {"founded_year": {$lte: 2005}}]}, {name:1, _id:0, founded_year:1}) -->
+<!-- db.companies.find({ $and : [{"founded_year": {$gte: 2000}}, {"founded_year": {$lte: 2005}}]}, {name:1, founded_year:1, _id:0}) -->
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-<!-- Your Code Goes Here -->
+<!-- db.companies.find({ $and : [{"acquisition.price_amount": {$gt: 100000000}}, {"founded_year": {$lt: 2010}}]}, {name:1, ipo:1, _id:0}) -->
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-<!-- Your Code Goes Here -->
+<!-- db.companies.find({ $and : [{"number_of_employees": {$lt: 1000}}, {"founded_year": {$lte: 2005}}]}, {name:1, number_of_employees:1, _id:0}).limit(10).sort({number_of_employees: -1}) -->
 
 ### 6. All the companies that don't include the `partners` field.
 
