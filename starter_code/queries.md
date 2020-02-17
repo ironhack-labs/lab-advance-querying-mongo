@@ -106,14 +106,24 @@ db.companies.find( { founded_day: { $gte: 1, $lte: 7 } }, { name: 1, _id: 0, fou
 
 <!-- Your Code Goes Here -->
 
+db.companies.find( { category_code: "web", number_of_employees: { $gt:4000} }, { name: 1, _id: 0, category_code: 1, number_of_employees: 1 } ).sort( { number_of_employees: 1 } ).pretty()
+
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
 <!-- Your Code Goes Here -->
+
+db.companies.find( { 'acquisition.price_amount': {$gt: 10000000 }, 'acquisition.price_currency_code': 'EUR' }, { name: 1, _id: 0, 'acquisition.price_amount': 1, 'acquisition.price_amount': 1 } ).pretty()
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
 <!-- Your Code Goes Here -->
 
+db.companies.find( { 'acquisition.acquired_month': { $gte: 1, $lte: 3 } }, { name: 1, _id: 0, 'acquisition.acquired_month': 1, acquisition: 1 } ).limit( 10 ).pretty( )
+
+I put the acquisition.acquired_month to show too for see if it's correct. 
+
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
+
+db.companies.find( { founded_year: { $lte: 2010, $gte: 2000}, 'acquisition.acquired_year': { $gte: 2011 } }, { name: 1, _id: 0, founded_year: 1, 'acquisition.acquired_year': 1 } ).pretty( )
