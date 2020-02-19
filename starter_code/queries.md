@@ -12,7 +12,7 @@ db.companies.find( { number_of_employees : { $gt : 20000 } } ).sort( { number_of
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-db.companies.find( { founded_year : { $gte : 2000, $lte : 2005 } }, { name: 1, founded_year: 1 })
+db.companies.find( { founded_year : { $gte : 2000, $lte : 2005 } }, { name: 1, founded_year: 1 } )
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
@@ -22,37 +22,60 @@ db.companies.find( {
     { founded_year : { $lt : 2010 } }
   ]
 },
-{ _id: 0, name: 1, "ipo.valuation_amount": 1 } )
+{ _id : 0, name : 1, "ipo.valuation_amount" : 1 } )
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-<!-- Your Code Goes Here -->
+db.companies.find( {
+  $and : [
+    { number_of_employees : { $lt : 1000 } },
+    { founded_year : { $lt : 2005 } }
+  ]
+} ).
+sort( { number_of_employees : 1 } ).
+limit( 1 )
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- Your Code Goes Here -->
+[comment]: <> this is what it should be, but returns nothing:
+
+db.companies.find( { partners : { $exists : false } } )
+
+[comment]: <> I guess what we are looking for is this:
+
+db.companies.find( { partners : [ ] } )
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
+db.companies.find( { category_code : null } )
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+db.companies.find( { number_of_employees : { $gte : 100, $lt : 1000 } }, { _id: 0, name: 1, number_of_employees: 1 } )
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-<!-- Your Code Goes Here -->
+db.companies.createIndex( { "ipo.valuation_amount" : 1 } )
+db.companies.find().sort( { "ipo.valuation_amount" : 1 } )
 
-### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
+### 10. Retrieve the 10 companies with THE MOST ~~more~~ employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+db.companies.find().sort( { number_of_employees : -1 } ).limit( 10 )
 
-### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
+### 11. All the companies founded IN ~~on~~ the second semester of the year. Limit your search to 1000 companies.
+
+db.companies.find( { founded_month : { $gte : 6 } } ).limit( 1000 )
 
 <!-- Your Code Goes Here -->
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
+
+db.companies.find( {
+  $and : [
+    { "acquisition.price_amount" : { $gte : 10000 } },
+    { founded_year : { $lt : 2000 } }
+  ]
+} )
 
 <!-- Your Code Goes Here -->
 
