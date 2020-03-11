@@ -195,7 +195,7 @@
 
 {
  filter: {
-  founded_year: {
+  'acquisition.acquired_year': {
    $gt: 2010
   }
  },
