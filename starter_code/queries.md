@@ -99,27 +99,85 @@
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
+{
+ filter: {
+  category_code: null
+ }
+}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+{
+ filter: {
+  $and: [
+   {
+    number_of_employees: {
+     $gte: 100
+    }
+   },
+   {
+    number_of_employees: {
+     $lt: 1000
+    }
+   }
+  ]
+ },
+ project: {
+  name: 1,
+  number_of_employees: 1
+ }
+}
 
 ### 9. Order all the companies by their IPO price in a descending order.
-
-<!-- Your Code Goes Here -->
+<!-- projected to name and ipo.value - for better reading -->
+{
+ project: {
+  name: 1,
+  'ipo.valuation_amount': 1
+ },
+ sort: {
+  'ipo.valuation_amount': -1
+ }
+}
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+{
+ sort: {
+  number_of_employees: -1
+ },
+ limit: 10
+}
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
+{
+ filter: {
+  founded_month: {
+   $gte: 7
+  }
+ },
+ limit: 1000
+}
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+{
+ filter: {
+  $and: [
+   {
+    founded_year: {
+     $lt: 2000
+    }
+   },
+   {
+    'acquisition.price_amount': {
+     $gt: 10000000
+    }
+   }
+  ]
+ }
+}
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
