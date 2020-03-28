@@ -15,7 +15,7 @@ limit: 20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-filter: { $and : [ { founded_year: { $gte : 2000 }}, { founded_year : { $lte: 2005 }} ] }
+filter: { $and : [{ founded_year: { $gte : 2000 }}, { founded_year : { $lte: 2005 }} ] }
 projection: { name : 1, founded_year : 1 }
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
@@ -49,11 +49,13 @@ filter : { $and : [ { number_of_employees : { $gte: 100 } }, { number_of_employe
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+sort: { number_of_employees : -1 }
+limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
+filter: { founded_month : { $gte : 6 } }
+limit: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
