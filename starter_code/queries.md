@@ -12,7 +12,7 @@ limit:
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
-filter: { number_of_employees: { \$gt: 5000 } }
+filter: { number_of_employees: { $gt: 5000 } }
 project:
 sort: {number_of_employees: 1}
 skip:
@@ -28,7 +28,7 @@ limit:
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-filter: {$and:[ {founded_year: {$lt:2010} }, {"ipo.valuation_amount": {\$gt:100000000} } ]}
+filter: {$and:[ {founded_year: {$lt:2010} }, {"ipo.valuation_amount": {$gt:100000000} } ]}
 project: {name: 1, ipo:1}
 sort:
 skip:
@@ -36,7 +36,7 @@ limit:
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-filter: {$and:[{number_of_employees: {$lt:1000}}, {founded_year:{\$lte:2005}}]}
+filter: {$and:[{number_of_employees: {$lt:1000}}, {founded_year:{$lte:2005}}]}
 project:
 sort: {number_of_employees: 1}
 skip:
@@ -44,7 +44,7 @@ limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
-filter: { partners: { \$exists: false } }
+filter: { partners: { $exists: false } }
 project:
 sort:
 skip:
@@ -52,7 +52,7 @@ limit:
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-filter: { category_code: { \$type: "null" } }
+filter: { category_code: { $type: "null" } }
 project:
 sort:
 skip:
@@ -84,7 +84,7 @@ limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-filter: { founded_month:{\$gt:6} }
+filter: { founded_month:{$gt:6} }
 project:
 sort:
 skip:
@@ -92,7 +92,7 @@ limit: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-filter: {$and: [ { founded_year:{$lt:2000} }, { "acquisition.price_amount":{\$gt:10000000} } ] }
+filter: {$and: [ { founded_year:{$lt:2000} }, { "acquisition.price_amount":{$gt:10000000} } ] }
 project:
 sort:
 skip:
@@ -100,7 +100,7 @@ limit:
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-filter: { "acquisition.acquired_year":{\$gt:2010} }
+filter: { "acquisition.acquired_year":{$gt:2010} }
 project: { name : 1, acquisition: 1 }
 sort: { "acquisition.price_amount": 1 }
 skip:
@@ -116,7 +116,7 @@ limit:
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-filter: { founded_day:{\$lte:7} }
+filter: { founded_day:{$lte:7} }
 project:
 sort: { "acquisition.price_amount": -1 }
 skip:
@@ -124,7 +124,7 @@ limit: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-filter: {$and: [ { category_code:{$eq:"web"} }, { number_of_employees:{\$gt:4000} } ] }
+filter: {$and: [ { category_code:{$eq:"web"} }, { number_of_employees:{$gt:4000} } ] }
 project:
 sort: { number_of_employees: 1 }
 skip:
@@ -132,7 +132,7 @@ limit:
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-filter: {$and: [ { "acquisition.price_amount":{$gt:10000000} }, { "acquisition.price_currency_code": {\$eq:"EUR"} } ] }
+filter: {$and: [ { "acquisition.price_amount":{$gt:10000000} }, { "acquisition.price_currency_code": {$eq:"EUR"} } ] }
 project:
 sort:
 skip:
@@ -140,7 +140,7 @@ limit:
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-filter: { "acquisition.acquired_month":{\$lt:4} }
+filter: { "acquisition.acquired_month":{$lt:4} }
 project: { name : 1, acquisition: 1 }
 sort:
 skip:
