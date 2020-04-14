@@ -22,7 +22,7 @@ skip:
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-filter:  { founded_year: { $in: [2000, 2005] } }
+filter: {$and: [{founded_year: {$gte: 2000}}, {founded_year:{$lte: 2005}}]}
 projection: { name: 1, _id:0, founded_year: 1 }
 sort:
 limit:
@@ -65,7 +65,7 @@ skip:
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-filter: { $and: [ { number_of_employees : { $lt: 1000 } }, { number_of_employees : { $gte: 100 } } ] }
+filter: {number_of_employees: {$gte: 100, $lt: 1000} }
 projection: { name: 1, _id: 0, number_of_employees: 1 }
 sort: { ipo.valuation_amount: -1 }
 limit: 
@@ -90,7 +90,7 @@ skip:
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-filter: { founded_month: { $gte: 9 }}
+filter: { founded_month: { $gte: 7 }}
 projection: 
 sort: 
 limit: 1000
@@ -147,7 +147,7 @@ skip:
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-filter: {$and: [{"acquisition.acquired_month": {$lte: 1}}, {"acquisition.acquired_month": {$gte: 3}}]}
+filter: {$and: [{"acquisition.acquired_month": {$lte: 3}}, {"acquisition.acquired_month": {$gte: 1}}]}
 projection: {name: 1, acquisition: 1, _id: 0}
 projection: 
 sort: 
