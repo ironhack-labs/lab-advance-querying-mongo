@@ -169,7 +169,7 @@ query: {$and: [{"acquisition.price_currency_code" : "EUR"},{"acquisition.price_a
 
 <!-- Your Code Goes Here
 
-query: {"acquisition.acquired_month": {$lte: 3}}
+query: {"acquisition.acquired_month": {$lte: 4}}
 limit: 10
 projection: {name:1, acquisition:1, _id:0}
 
