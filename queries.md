@@ -9,43 +9,33 @@ db.companies.find({name: {$eq: 'Babelgum'}})
 db.companies.find(
     {number_of_employees: {$gt: 5000}
     }, {name: "", number_of_employees: 5000}).limit(20).sort({number_of_employees:1})
-<!-- Your Code Goes Here -->
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 db.companies.find({founded_year:{ $gte: 2000, $lt: 2005} }, {name: "", founded_year: 2000})
-<!-- Your Code Goes Here -->
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
-db.companies.find({ipo:{"valution_amount" : NumberLong("100000000")} })
-<!-- Your Code Goes Here -->
+db.companies.find({$and: [{"ipo.valuation_amount": {$gte: 100000000}}, {founded_year : {$lte : 2010}}]}, {name: 1, ipo:1}) 
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
-
-<!-- Your Code Goes Here -->
+db.companies.find({$and: [{number_of_employees: {$lte: 1000}}, {founded_year : {$lte : 2005}}]}).limit(10).sort({number_of_employees:1})
 
 ### 6. All the companies that don't include the `partners` field.
-
-<!-- Your Code Goes Here -->
+db.companies.find({partners:{$exist:false}})
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
-
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
+db.companies.find({$and:[{number_of_employees:{$gt:99}},{number_of_employees:{$lt:1001}}]},{name:1,number_of_employees:1, _id:0})
 
-<!-- Your Code Goes Here -->
 
 ### 9. Order all the companies by their IPO price in a descending order.
-
-<!-- Your Code Goes Here -->
+db.companies.find({"ipo.valuation_amount": {$ne: null}}).sort({"ipo.valuation_amount": -1})
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
-
-<!-- Your Code Goes Here -->
+db.companies.find().sort({number_ofemployees:-1}).limit(10)
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
