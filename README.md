@@ -47,7 +47,7 @@ First, we need to import the database we will be using for the `lab`. We will us
 
 The database contains more than 18k documents. Each document holds the data about each of the companies. A document looks like the following:
 
-![image](https://user-images.githubusercontent.com/23629340/36494916-d6db1770-1733-11e8-903e-5119b3c1b688.png)
+![image](https://users-images.githubusercontent.com/23629340/36494916-d6db1770-1733-11e8-903e-5119b3c1b688.png)
 
 1. You will find the `.zip` file of the database on the **lab** folder.
 2. Unzip the file
