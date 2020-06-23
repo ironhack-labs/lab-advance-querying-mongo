@@ -262,3 +262,17 @@ const filter = {
         }
     ]
 };
+
+// Code for query 
+
+MongoClient.connect(
+    'mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false',
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    function (connectErr, client) {
+        assert.equal(null, connectErr);
+        const coll = client.db('companiesDb').collection('companies');
+        coll.find(filter, { sort: sort }, (cmdErr, result) => {
+            assert.equal(null, cmdErr);
+        });
+        client.close();
+    });
