@@ -1,11 +1,3 @@
-/*
- * Requires the MongoDB Node.js Driver
- * https://mongodb.github.io/node-mongodb-native
- */
-const MongoClient = require('mongodb').MongoClient
-const assert = require('assert');
-
-
 
 // #1 All the companies whose name match 'Babelgum'. Retrieve only their name field.
 const filter = {
