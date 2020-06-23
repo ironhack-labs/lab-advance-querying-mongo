@@ -1,0 +1,43 @@
+Arguments: 
+  /usr/local/Cellar/node/14.2.0/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js add node-mongodb-native
+
+PATH: 
+  /Users/ziegler-dev/.zplugin/polaris/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ziegler-dev/.zplugin/polaris/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  14.2.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/node-mongodb-native: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:66987:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:140748:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141720:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141642:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1225:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "lab-advance-querying-mongo",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/CarlosZiegler/lab-advance-querying-mongo.git",
+    "author": "carlosziegler <carlos.ziegler@gmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

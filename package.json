@@ -1,0 +1,11 @@
+{
+  "name": "lab-advance-querying-mongo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CarlosZiegler/lab-advance-querying-mongo.git",
+  "author": "carlosziegler <carlos.ziegler@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^3.5.9"
+  }
+}
