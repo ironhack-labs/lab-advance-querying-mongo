@@ -211,3 +211,50 @@ const filter = {
 const sort = {
     'number_of_employees': 1
 };
+
+//#17 All the companies whose acquisition amount is more than 10.000.000 and the currency is 'EUR'.
+
+const filter = {
+    '$and': [
+        {
+            'acquisition.price_amount': {
+                '$gt': 10000000
+            }
+        }, {
+            'acquisition.price_currency_code': {
+                '$eq': 'EUR'
+            }
+        }
+    ]
+};
+
+//#18 All the companies that have been acquired in the first trimester of the year. Limit the search to 10 companies, and retrieve only their name and acquisition fields.
+const filter = {
+    'acquisition.acquired_month': {
+        '$lt': 4
+    }
+};
+const sort = {
+    'name': 1,
+    'acquisition': 1
+};
+const limit = 10;
+
+//#19 All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
+const filter = {
+    '$and': [
+        {
+            'founded_year': {
+                '$gte': 2000
+            }
+        }, {
+            'founded_year': {
+                '$lte': 2010
+            }
+        }, {
+            'acquisition.acquired_year': {
+                '$gte': 2011
+            }
+        }
+    ]
+};
