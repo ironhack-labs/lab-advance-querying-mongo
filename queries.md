@@ -35,24 +35,15 @@
 - sort: {number_of_employees: 1}
 - limit: 10
 
-
 ### 6. All the companies that don't include the `partners` field.
-<!-- Pending: -->
+
 <!-- Your Code Goes Here -->
-- filter: 
-- project: 
-- sort: 
-- skip: 
-- limit: 
+- filter: {partners: {$exists: false}}
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
-<!-- Pending: -->
+
 <!-- Your Code Goes Here -->
-- filter: 
-- project: 
-- sort: 
-- skip: 
-- limit: 
+- filter: {category_code: {$eq: null}}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
@@ -61,13 +52,9 @@
 - project: {name: 1, number_of_employees: 1, _id:0}
 
 ### 9. Order all the companies by their IPO price in a descending order.
-<!-- Pending: -->
+
 <!-- Your Code Goes Here -->
-- filter: 
-- project: 
-- sort: {number_of_employees: 1}
-- skip: 
-- limit: 
+- sort: {"ipo.valuation_amount": -1}
 
 ### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
 
@@ -105,7 +92,7 @@
 <!-- Your Code Goes Here -->
 - filter: {$and: [{founded_day: {$gte: 1} }, {founded_day: {$lte: 7}} ]}
 - sort: {"acquisition.price_amount": -1}
-
+- limit: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
