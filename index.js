@@ -133,7 +133,7 @@ const filter = {
     '$and': [
         {
             'founded_month': {
-                '$gt': 5
+                '$gt': 6
             }
         }
     ]
@@ -156,4 +156,58 @@ const filter = {
     ]
 };
 
-  //#
+//# 13 All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their name and acquisition field.
+
+const filter = {
+    'acquisition.acquired_year': {
+        '$gte': 2010
+    }
+};
+const projection = {
+    'name': 1,
+    'acquisition': 1
+};
+const sort = {
+    'acquisition.price_amount': 1
+};
+
+//#14 Order the companies by their founded year, retrieving only their name and founded year.
+
+const filter = {};
+const projection = {
+    'name': 1,
+    'founded_year': 1,
+    '_id': 0
+};
+const sort = {
+    'founded_year': -1
+};
+
+//#15 All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their acquisition price in descending order. Limit the search to 10 documents
+const filter = {
+    'founded_day': {
+        '$lte': 7
+    }
+};
+const sort = {
+    'acquisition.price_amount': -1
+};
+const limit = 10;
+
+//#16 All the companies on the 'web' category that have more than 4000 employees. Sort them by the number of employees in ascending order.
+const filter = {
+    '$and': [
+        {
+            'category_code': {
+                '$eq': 'web'
+            }
+        }, {
+            'number_of_employees': {
+                '$gt': 4000
+            }
+        }
+    ]
+};
+const sort = {
+    'number_of_employees': 1
+};
