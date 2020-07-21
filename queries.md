@@ -75,11 +75,6 @@ const filter = {
 
 <!-- Your Code Goes Here -->
 
-/*
- * Requires the MongoDB Node.js Driver
- * https://mongodb.github.io/node-mongodb-native
- */
-
 const filter = {
   '$and': [
     {
