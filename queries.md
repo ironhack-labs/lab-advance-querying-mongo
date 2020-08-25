@@ -182,8 +182,8 @@ limit: 10
 
 <!-- Your Code Goes Here -->
 
-⋅⋅*query: {$and:[{"founded_year":{$gt: 2000}}, {"founded_year": {$lt:2010}}, {"acquisition.acquired_year": {$gt: 2011}}]}
-⋅⋅*projection: 
-⋅⋅*sort: 
-⋅⋅*skip:
-⋅⋅*limit:
+⋅⋅* query: {$and:[{"founded_year":{$gt: 2000}}, {"founded_year": {$lt:2010}}, {"acquisition.acquired_year": {$gt: 2011}}]}
+⋅⋅* projection: 
+⋅⋅* sort: 
+⋅⋅* skip:
+⋅⋅* limit:
