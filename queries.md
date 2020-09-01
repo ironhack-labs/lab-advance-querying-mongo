@@ -38,7 +38,7 @@
 
 <!-- Your Code Goes Here -->
 
-### 10. Retrieve the 10 companies with more employees, order by the `number of employees`
+### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
 <!-- Your Code Goes Here -->
 

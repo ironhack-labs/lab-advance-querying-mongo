@@ -80,7 +80,7 @@ You already know how this goes, so let's start working:
 7. All the companies that have a null type of value on the `category_code` field.
 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 9. Order all the companies by their IPO price in descending order.
-10. Retrieve the ten companies with more employees, order by the `number of employees`
+10. Retrieve the ten companies with most employees, order by the `number of employees`
 11. All the companies founded in the second semester of the year. Limit your search to 1000 companies.
 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
