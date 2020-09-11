@@ -12,7 +12,7 @@ limit: 0 <br>
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
-query: {number*of_employees: {\$gt: 5000}} /*(greater than)\_\<br>
+query: {number_of_employees: {\$gt: 5000}} /\*(greater than)\_\<br>
 projection: N/A<br>
 sort: {number_of_employees: 1}<br>
 skip: 0<br>
@@ -38,13 +38,13 @@ limit: 0<br>
 
 query: {$and: [{number_of_employees: {$lt: 1000}}, {founded_year: {\$lt: 2005}}]}<br>
 projection: N/A<br>
-sort: {number_of_employees: -1}<br>
+sort: {number_of_employees: 1}<br>
 skip: 0<br>
 limit: 10<br>
 
 ### 6. All the companies that don't include the `partners` field.
 
-query: {partners: {\$exists: false}} /_verificar, retorna zero_\<br>
+query: {partners: {\$exists: false}}
 projection: N/A<br>
 sort: N/A<br>
 skip: 0<br>
@@ -148,7 +148,7 @@ limit: 10<br>
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-query: {$and: [{founded_year:{$gt: 2000, $lt: 2010}, "acquisition.acquired_year":{$gt: 2011}}]}<br>
+query: {$and: [{founded_year:{$gt: 2000, $lt: 2010}, "acquisition.acquired_year":{$gte: 2011}}]}<br>
 projection: N/A<br>
 sort: N/A<br>
 skip: 0<br>
