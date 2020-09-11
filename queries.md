@@ -26,7 +26,7 @@ db.companies.find(
 <!-- Your Code Goes Here -->
 ```json
 db.companies.find(
-  {$and:[{founded_year:{$gte:2000}},{founded_year:{$lte:2005}}]},
+  {$and:[{founded_year:{$gte:2000, $lte:2005}}]},
   {name:1,founded_year:1,_id:0}
 )
 ```
@@ -73,7 +73,7 @@ db.companies.find(
 <!-- Your Code Goes Here -->
 ```json
 db.companies.find(
-  {$and:[{number_of_employees:{$gte:100}},{number_of_employees:{$lt:1000}}]},
+  {{number_of_employees:{$gte:100, $lt:1000}},
   {name:1,number_of_employees:1,_id:0}
 )
 ```
@@ -82,18 +82,14 @@ db.companies.find(
 
 <!-- Your Code Goes Here -->
 ```json
-db.companies.find(
-  undefined
-).sort({'ipo.valuation_amount':-1})
+db.companies.find().sort({'ipo.valuation_amount':-1})
 ```
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
 <!-- Your Code Goes Here -->
 ```json
-db.companies.find(
-  undefined
-).sort({number_of_employees:-1}).limit(10)
+db.companies.find().sort({number_of_employees:-1}).limit(10)
 ```
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
@@ -129,7 +125,7 @@ db.companies.find(
 <!-- Your Code Goes Here -->
 ```json
 db.companies.find(
-  undefined,
+  {},
   {name:1,founded_year:1,_id:0}
 ).sort({founded_year:1})
 ```
@@ -166,7 +162,7 @@ db.companies.find(
 <!-- Your Code Goes Here -->
 ```json
 db.companies.find(
-  {'acquisition.acquired_month':{$lte:4}},
+  {'acquisition.acquired_month':{$lte:3}},
   {name:1,acquisition:1,_id:0}
 ).limit(10)
 ```
@@ -176,6 +172,6 @@ db.companies.find(
 <!-- Your Code Goes Here -->
 ```json
 db.companies.find(
-  {$and:[{founded_year:{$gt:2000}},{founded_year:{$lt:2010}},{'acquisition.acquired_year':{$gte:2011}}]}
+  {$and:[{founded_year:{$gte:2000}},{founded_year:{$lte:2010}},{'acquisition.acquired_year':{$gte:2011}}]}
 )
 ```
