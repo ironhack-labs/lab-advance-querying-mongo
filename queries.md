@@ -96,4 +96,4 @@ project: {name:1, acquisition:1}
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-filter: {$and: [{"founded_year": {$gt: 2000}}, {"founded_year": {$lt: 2010}}, {"acquisition.acquired_year": {$gt: 2011}}]}
+filter: {$and: [{"founded_year": {$gte: 2000}}, {"founded_year": {$lte: 2010}}, {"acquisition.acquired_year": {$gte: 2011}}]}
