@@ -18,9 +18,9 @@ limit : 20
 {founded_year:1 , name:1 ,_id:0}
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
-{ $and: [ { "acquisition.price_amount": { $gte:100000000 } }, { founded_year: {$lt:2010 } } ] }
+{ $and: [ { "ipo.valuation_amount": { $gte:100000000 } }, { founded_year: {$lt:2010 } } ] }
 {name:1 ,ipo :1 , _id:0 }
-
+ 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
 { $and: [ { number_of_employees: { $lt:1000 } }, { founded_year: {$lt:2005 } } ] }
@@ -29,7 +29,7 @@ limit : 20
 
 ### 6. All the companies that don't include the `partners` field.
 
-{partners: {$exists: false}}
+ { partners: {$exists: false }}    
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
@@ -89,5 +89,5 @@ limit : 20
 {"acquisition.price_amount": -1}
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
-
+                                                               
 <!-- Your Code Goes Here -->
