@@ -14,6 +14,11 @@
 {number_of_employees:1}
 Limit 20
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
+{$and:[{founded_year: {$gte:2000 }}, {founded_year: {$lte:2005}}]}
+
+
+{ $and: [ { number_of_employees: {$gte:2000 }, { number_of_employees: {$gte:2000 }] }
+
 
 <!-- Your Code Goes Here -->
 
