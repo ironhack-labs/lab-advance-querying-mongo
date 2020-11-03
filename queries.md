@@ -19,8 +19,8 @@ query: {$and:[{founded_year: {$gte:2000 }}, {founded_year: {$lte:2005}}]}
 proyect:  { name: 1, founded_year: 1 }  
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
-{$all:[{founded_year: {$gte:2000 }}, {founded_year: {$lte:2005}}]}
-
+f: { 'ipo.valuation_amount': { $gte: 100000000 }, founded_year: { $lt: 2010 } }
+p: { ipo: 1, name: 1 } 
 
 <!-- Your Code Goes Here -->
 
