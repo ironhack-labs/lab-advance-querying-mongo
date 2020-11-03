@@ -9,8 +9,6 @@ query: { name : { $eq: "Babelgum" } }
 project: {name: 1}
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
-
-<!-- Your Code Goes Here -->
 query:{ number_of_employees: { $gt: 5000 } }
 project: {number_of_employees:1}
 Limit 20
@@ -28,10 +26,11 @@ project: { ipo: 1, name: 1 }
 
 query: {$and: [{number_of_employees: { $lt: 1000} }, {founded_year: {$lt: 2005}}]}
 
-s: {number_of_employees: -1}
+sort: {number_of_employees: -1}
 
-l: 10
+limit: 10
 ### 6. All the companies that don't include the `partners` field.
+query: { partners: {$exists: false}}
 
 <!-- Your Code Goes Here -->
 
@@ -49,12 +48,12 @@ s: {"ipo.valuation_amount": -1}   o  {ipo: -1}
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 s: {number_of_employees:-1}
 
-l: 10
+limit: 10
 <!-- Your Code Goes Here -->
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 query: { founded_month : {$gt: 6}}
-l: 1000
+limit: 1000
 
 <!-- Your Code Goes Here -->
 
