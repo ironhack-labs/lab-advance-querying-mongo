@@ -60,9 +60,11 @@ l: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 {$and :[{ "founded_year" : {$lt: 2000}}, {"acquisition.price_amount": {$gt: 10000000}}]}
-<!-- Your Code Goes Here -->
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
+query: {"acquisition.acquired_year": {$gt: 2010}}
+proyect: {name: 1, founded_year:1, _id: 0}
+sort: {"acquisition.price_amount": 1}
 
 <!-- Your Code Goes Here -->
 
