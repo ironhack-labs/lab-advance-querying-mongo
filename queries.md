@@ -43,7 +43,7 @@ f: {number_of_employees: {$gte: 100, $lt: 1000}}
 p: {name: 1, number_of_employees: 1, _id:0}
 
 ### 9. Order all the companies by their IPO price in a descending order.
-
+s: {"ipo.valuation_amount": -1}
 <!-- Your Code Goes Here -->
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
