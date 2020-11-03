@@ -53,6 +53,8 @@ l: 10
 <!-- Your Code Goes Here -->
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
+f: { founded_month : {$gt: 6}}
+l: 1000
 
 <!-- Your Code Goes Here -->
 
