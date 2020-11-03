@@ -76,12 +76,10 @@ sort: {founded_year: -1}
 este entrega null, porqué?
 sort: {founded_year: 1}
 
-<!-- Your Code Goes Here -->
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 query: { $and: [ { founded_day: { $gte: 1 } }, { founded_day:{ $lte: 7 } } ] }
 sort:  { "acquisition.price_amount" : -1 }
-<!-- Your Code Goes Here -->
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 query: { $and: [ { "category_code": { $eq: "web"} }, { "number_of_employees": {$gt: 4000} } ] }
