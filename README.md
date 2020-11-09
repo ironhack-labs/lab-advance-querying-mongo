@@ -56,7 +56,7 @@ The database contains more than 18k documents. Each document holds the data abou
 **When running the `mongoimport` you should be located in the same folder as the `data.json` file.**
 
 ```bash
-$ mongoimport --db companiesDB --collection companies --file data.json
+
 ```
 
 What this mongoimport will do for us is to create a database named _companiesDB_, and inside the database will create a collection named _companies_ which will be fed with _data.json_.
