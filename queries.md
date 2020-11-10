@@ -100,10 +100,10 @@ Project: {_id: 0, name: 1, ipo: 1}
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
     Filter: {"acquisition.acquired_month": {$lte: 3}}
-    Project: {name: 1, acquisition: 1}
+    Project: {name: 1, acquisition: 1, _id: 0}
     Limit: 10
 <!-- Your Code Goes Here -->
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
-    Filter: {$and: [{founded_year: {$gt: 2000}}, {founded_year: {$lt: 2010}}, {"acquisition.acquired_year": {$gt: 2011}}]}
+    Filter: {$and: [{founded_year: {$gte: 2000}}, {founded_year: {$lt: 2010}}, {"acquisition.acquired_year": {$gte: 2011}}]}
 <!-- Your Code Goes Here -->
