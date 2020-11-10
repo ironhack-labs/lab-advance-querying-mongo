@@ -1,30 +1,73 @@
 ![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
 
-# Answers
+All the answers on the Typora file
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
-<!-- Your Code Goes Here -->
+```bash
+db.companies.find(
+    {name:"Babelgum"}, { name: 1, _id: 0 }
+    )
+```
+
+
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
-<!-- Your Code Goes Here -->
+```bash
+db.companies.find(
+    {employees: {$gt:5000}} 
+    ).limit(20).sort(1)
+```
+
+
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-<!-- Your Code Goes Here -->
+```bash
+db.companies.find(
+    {
+        {founded_year: {$gte: 2000}}, 
+        $and: {founded_year: {$lte: 2005}},
+        {name: 1, founded_year: 1, id: 0}
+    }
+)
+```
+
+
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-<!-- Your Code Goes Here -->
+```bash
+db.companies.find(
+    {
+        $and: [ {valuation_amount:{$gt: 100.000.000}}, {founded_year: {$lt: 2010}}]
+        {name: 1, ipo: 1, _id: 0}
+    }
+)
+```
+
+
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-<!-- Your Code Goes Here -->
+```bash
+db.companies.find(
+    {
+        $and: [ {employees: {$lt: 1000}}, {founded_year: {$lt: 2005}}]}).limit(10).sort(1)
+```
+
+
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- Your Code Goes Here -->
+```bash
+db.companies.find(
+    {$ne: field}
+)
+```
+
+
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
