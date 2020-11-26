@@ -20,19 +20,19 @@ db.companies.find({founded_year:{$gte:2000, $lte:2005}},{name:1})
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-<!-- Your Code Goes Here -->
+db.companies.find({$and:[{number_of_employees:{$lt:1000}},{founded_year:{$lte:2005}}]}).limit(10).sort({number_of_employees:1}).pretty()
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- Your Code Goes Here -->
+db.companies.find({partners:{$exists:false}})
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
+db.companies.find({"category_code":null}).pretty()
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+ db.companies.find({number_of_employees:{$lte:100, $lte:1000}},{name:1},{number_of_employees:1}).pretty()
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
@@ -44,11 +44,11 @@ db.companies.find({founded_year:{$gte:2000, $lte:2005}},{name:1})
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
+db.companies.find({founded_month:{$lte:6, $lte:12}}).limit(1000).pretty()
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+db.companies.find({$and:[{founded_year:{$lt:2000}},{"acquisition.price_amount":{$gt:10000000}}]}).pretty()
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
