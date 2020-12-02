@@ -71,7 +71,7 @@ sort: {"acquisition.price_amount": -1}
 projection: {name: 1, founded_year: 1}
 sort: {founded_year: 1}
 
-### 15. All the companies that have been founded on the first seven days of the month, including the seventh. sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
+### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
 query: {$and: [{founded_day: {$gt: 0}}, {founded_day: {$lte: 7}}]}
 sort: {"acquisition.price_amount": -1}
