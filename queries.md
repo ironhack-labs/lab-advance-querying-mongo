@@ -176,8 +176,8 @@ db.companies.find(
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-filter: {$and:[{founded_year:{$lt:2010}},{founded_year:{$gt:2000}},{'acquisition.acquired_year':{$ne:{$lt:2011}}}]}
+filter: {$and:[{founded_year:{$lt:2010}},{founded_year:{$gt:2000}},{'acquisition.acquired_year':{$gt:2011}}]}
 
 db.companies.find(
-{$and:[{founded_year:{$lt:2010}},{founded_year:{$gt:2000}},{'acquisition.acquired_year':{$ne:{$lt:2011}}}]}
+{$and:[{founded_year:{$lt:2010}},{founded_year:{$gt:2000}},{'acquisition.acquired_year':{$gt:2011}}}]}
 )
