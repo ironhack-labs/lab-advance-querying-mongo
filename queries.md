@@ -179,5 +179,5 @@ db.companies.find(
 filter: {$and:[{founded_year:{$lt:2010}},{founded_year:{$gt:2000}},{'acquisition.acquired_year':{$gt:2011}}]}
 
 db.companies.find(
-{$and:[{founded_year:{$lt:2010}},{founded_year:{$gt:2000}},{'acquisition.acquired_year':{$gt:2011}}}]}
+{$and:[{founded_year:{$lt:2010}},{founded_year:{$gt:2000}},{'acquisition.acquired_year':{$gt:2011}}]}
 )
