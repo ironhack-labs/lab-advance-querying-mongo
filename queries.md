@@ -62,8 +62,8 @@ limit:
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-query: 
-projection: 
+query: { number_of_employees: {$gte:100, $lt:1000} }
+projection: { number_of_employees: 1, name: 1, _id:0}
 sort: 
 skip: 
 limit: 
@@ -72,21 +72,21 @@ limit:
 
 query: 
 projection: 
-sort: 
+sort: {"ipo.valuation_amount":-1}
 skip: 
 limit: 
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
-query: 
+query: {number_of_employees:{$exists: true}}
 projection: 
-sort: 
+sort: {number_of_employees: -1}
 skip: 
-limit: 
+limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-query: 
+query: 2nd semester??
 projection: 
 sort: 
 skip: 
@@ -94,7 +94,7 @@ limit:
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-query: 
+query: {$and:[{"acquisition.price_amount": {$gt: 10000000}}, {founded_year:{$lt: 2000}}]}
 projection: 
 sort: 
 skip: 
