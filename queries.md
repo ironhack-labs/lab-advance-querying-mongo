@@ -27,12 +27,12 @@
 <!-- Your Code Goes Here -->
 
 ### 6. All the companies that don't include the `partners` field.  
-###PENDIENTE
+{"partners":{$exists:false}}
 
 <!-- Your Code Goes Here -->
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
-{category_code:null}
+{category_code{$type:null}}
 <!-- Your Code Goes Here -->
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
@@ -42,7 +42,7 @@
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-PENDIENTE
+{"ipo.valuation_amount":-1}
 
 <!-- Your Code Goes Here -->
 
@@ -92,5 +92,5 @@ PENDIENTE
 <!-- Your Code Goes Here -->
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
-PENDIENTE
+{$and:[{founded_year:{$gte:2000}},{founded_year:{$lte:2010}},{"acquisition.acquired_year":{$gt:2011}}]}
 <!-- Your Code Goes Here -->
