@@ -32,7 +32,8 @@ limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
-query: { partners: {$exists: false }} <!-- it actually gives me no result because they seem to all have a "partners" field even if it's an empty array, so maybe I misunderstood-->
+query: { partners: {$exists: false }} 
+<!-- it actually gives me no result because they seem to all have a "partners" field even if it's an empty array, so maybe I misunderstood -->
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
