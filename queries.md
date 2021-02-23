@@ -10,7 +10,7 @@
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
 -query: {number_of_employees : {$gt : 5000}}
--{number_of_employees : 1}
+-sort: {number_of_employees : 1}
 -limit : 20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
@@ -35,7 +35,7 @@
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
--{category_code : null}
+-query: {category_code : null}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
@@ -54,6 +54,7 @@
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
 -query: {founded_month: {$gt:6}}
+-limit: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
