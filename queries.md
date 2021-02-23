@@ -104,5 +104,5 @@ PROJECT: {name: 1, acquisition: 1}
 LIMIT: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
-FILTER: {$and: [ {founded_year: {$gte: 2000}}, {founded_year: {$lte:2010}}, {"acquisition.acquired_day": {$gt: 2011}} ]} 
+FILTER: {$and: [ {founded_year: {$gte: 2000}}, {founded_year: {$lte:2010}}, {"acquisition.acquired_year": {$gt: 2011}} ]} 
 <!-- Your Code Goes Here -->
