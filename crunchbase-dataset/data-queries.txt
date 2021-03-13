@@ -1,0 +1,37 @@
+1) Filter: { name: 'Babelgum' }, Project: { name: 1 }
+
+2) Filter: { number_of_employees: { $gt: 5000 } }, Sort: { number_of_employees: -1 }, Limit: 20
+
+3) Filter: { $and: [ { founded_year: { $gte: 2000 } }, { founded_year: { $lte: 2005 } } ] }, Project: { name: 1, founded_year: 1 }
+
+4) Filter: { $and: [ { founded_year: { $lt: 2010 } }, { "ipo.valuation_amount": { $gt: 100000000} } ] }, Project: { name: 1, ipo: 1 }
+
+5) Filter: { $and: [ { number_of_employees: { $lte: 1000 } }, { founded_year: { $lte: 2005} } ] }, Sort: {number_of_employees: 1 }, Limit: 10
+
+6) Filter: { partners: { $exists: false } }
+
+7) Filter: { category_code: null }
+
+8) Filter: { $and: [ { number_of_employees: { $gte: 100 } }, { number_of_employees: { $lte: 1000} } ] }, Project: { name: 1, number_of_employees: 1 }
+
+9) Sort: { "ipo.valuation_amount": -1 }
+
+10) Sort: { number_of_employees: -1 }, Limit: 10
+
+11) Filter: { founded_month: { $gte: 7 } }, Limit: 1000
+
+12) Filter: { $and: [ { founded_year: { $lt: 2000 } }, { "acquisition.price_amount": { $gt: 10000000} } ] }
+
+13) Filter: { "acquisitions.acquired_year": { $gt: 2010 } }, Project: { name: 1, acquisition: 1 }, Sort: { "acquisition.price_amount": -1 }
+
+14) Filter: { $nor: [ { founded_year: null } ] }, Project: { name: 1, founded_year: 1 }, Sort: { founded_year: 1 }
+
+15) Filter: { founded_day: { $lte: 7 } }, Sort: { "acquisition.price_amount": -1 }
+
+16) Filter: { $and: [ { category_code: "web" }, { number_of_employees: { $gt: 4000 } } ] }, Sort: { number_of_employees: 1 }
+
+17) Filter: { $and: [ { "acquisition.price_amount": { $gt: 10000000 } }, { "acquisition.price_currency_code": "EUR" } ] }
+
+18) Filter: { "acquisition.acquired_month": { $lte: 4 } }, Project: { name: 1, acquisition: 1 }, Limit: 10
+
+19) Filter: { $and: [ { founded_year: { $gte: 2000 } }, { founded_year: { $lte: 2010} }, { "acquisition.acquired_year": { $gte: 2011 }} ] }
