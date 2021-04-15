@@ -5,7 +5,7 @@
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
 query: {name: "Babelgum"}
-projection: 
+projection: {name:1, _id:0}
 sort: 
 skip: 
 limit: 
@@ -39,9 +39,9 @@ limit:
 
 query: {$and:[{number_of_employees:{$lt:1000}}, {founded_year:{$lt:2005}}]}
 projection: 
-sort: 
-skip: 10
-limit: 
+sort: {number_of_employees: 1}
+skip: 
+limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
