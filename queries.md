@@ -40,7 +40,7 @@ filter: { $and: [{number_of_employees: {$lt : 1000}} , {founded_year: {$lt: 2005
 projection: {number_of_employees: 1}
 sort: {number_of_employees: -1}
 skip: 
-limit: 0
+limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
@@ -76,15 +76,15 @@ limit: 0
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
-filter: { number_of_employees : { $gt: 100900 } } ????? 
-projection: { number_of_employees : 1}
+filter: 
+projection: 
 sort: { number_of_employees : -1}
 skip: 
 limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-filter: {$and:[{founded_month: {$gt: 06}}, {founded_month: {$lt: 12}}]}
+filter: {$and:[{founded_month: {$gte: 06}}, {founded_month: {$lte: 12}}]}
 projection: {founded_month: 1}
 sort: 
 skip: 
@@ -93,16 +93,16 @@ limit: 1000
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 filter: {$and:[{founded_year: {$lt: 2000}}, {"acquisition.price_amount": {$gt: 10000000}}]}
-projection: none
+projection:
 sort: 
 skip: 
 limit: 0
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-filter: {founded_year: {$gt: 2010}}
+filter: {"acquisition.acquired_year" : {$gt: 2010}}
 projection: {name: 1, acquisition:1}
-sort: {"acquisition.price_amount": -1}
+sort: {"acquisition.price_amount": -1} 
 skip: 
 limit: 0
 
@@ -116,11 +116,11 @@ limit: 0
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-filter: {founded_day: {$gt : 0 , $lte :7 } }
-projection: none
+filter: {founded_day: {$gt : 1 , $lte :7 } }
+projection: 
 sort: {"acquisition.price_amount": -1}
-skip: 10
-limit: 0
+skip: 0
+limit: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
@@ -143,7 +143,7 @@ limit: 0
 filter: {founded_month: {$gt : 0 , $lte :6 } } 
 projection: {name: 1, acquisition: 1}
 sort: 
-skip: none
+skip: 
 limit: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
@@ -151,5 +151,5 @@ limit: 10
 filter: {$and : [ {founded_year: {$gte: 2000, $lt: 2010 }}, {"acquisition.acquired_year": {$gt: 2011}} ]}
 projection: 
 sort: 
-skip: none
+skip: 
 limit: 
