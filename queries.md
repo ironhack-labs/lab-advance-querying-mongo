@@ -53,7 +53,7 @@ limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-query: {$and: [{founded_month: {$gte: 7, $lte:12}}]}
+query: {founded_month: {$gte: 7}}
 limit: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
@@ -74,7 +74,7 @@ sort: {founded_year: 1}
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-query: {$and: [{founded_day: {$gte: 1, $lte:7}}]}
+query: {founded_day: {$lte:7}}
 sort: {"acquisitions.price_amount": -1}
 limit: 10
 
@@ -89,7 +89,7 @@ query: {$and: [{"acquisitions.price_amount": {$gt: 10000000}}, {"acquisitions.pr
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-query: {$and: [{"acquisitions.acquired_month": {$gte: 1, $lte:4}}]}
+query: {"acquisitions.acquired_month": {$lte:4}}
 projection: {name: 1, acquisition: 1, _id: 0}
 limit: 10
 
