@@ -48,8 +48,8 @@ sort: {'ipo.valuation_amount': -1}
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
-sort: {number_of_employees: -1}
-limit: 10
+sort: {number_of_employees: 1}
+skip: 18791 (= 18801companies - 10)
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
