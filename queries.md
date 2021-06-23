@@ -35,11 +35,8 @@ db.companies.find({$and: [{number_of_employees: {$lt: 1000}}, {founded_year: {$l
 
 ### 6. All the companies that don't include the `partners` field.
 
-db.companies.find({partners: {$size: 0}})
-
-OR
-
 db.companies.find({partners: {$exists: false}})
+
 
 
 
@@ -117,4 +114,4 @@ db.companies.find({"acquisition.acquired_month": {$lte: 4}}, {name: 1, acquisiti
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+db.companies.find({$and: [{founded_year: {$gt: 2000}}, {founded_year: {$lt: 2010}}, {$or: [{acquisition: {$exists: false}}, {"acquisition.acquired_year": {$gte: 2011}}]}]}).pretty()
