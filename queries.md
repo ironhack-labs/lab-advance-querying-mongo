@@ -45,27 +45,27 @@ db.companies.find().sort({number_of_employees:-1}).limit(10).pretty()
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
+db.companies.find({founded_month:{$gte : 7}}).limit(1000).pretty()
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+db.companies.find({$and:[{founded_year: {$lte:2000}},{"acquisition.price_amount":{$gte : 10000000}}]}).pretty()
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-<!-- Your Code Goes Here -->
+db.companies.find({"acquisition.acquired_year":{$gte: 2010}},{name:1, acquisition:1}).sort({"acquisition.price_amount":-1}).pretty()
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
-<!-- Your Code Goes Here -->
+db.companies.find({}, {name:1,founded_year:1}).sort({founded_year:-1}).pretty()
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-<!-- Your Code Goes Here -->
+db.companies.find({founded_day:{$lte:7}}).sort({"acquisition.price_amount":-1}).limit(10).pretty()
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+db.companies.find({$and:[{category_code:"web"},{number_of_employees:{$gte:4000}}]}).sort({number_of_employes:1})
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
