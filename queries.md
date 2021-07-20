@@ -75,4 +75,4 @@ in filter : {"acquisition.acquired_month":{$lte:3}} // in project : {name: 1} //
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-in filter : {$and: [{founded_year: {$gt:2000}}, {founded_year: {$lt:2010}}, {"acquisition.price_amount": null}]}
+in filter : {$and: [{founded_year: {$gt:2000}}, {founded_year: {$lt:2010}}, {$and: {{"acquisition.price_amount": null}, {"acquisition.acquired_month":{$lt:2011}]}]}
