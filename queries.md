@@ -67,6 +67,7 @@ sort: {"acquisition.price_amount": 1}
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
+query: {$ne: [{founded_year: null}]}
 projection: {name: 1, founded_year: 1}
 sort: {founded_year: 1}
 
