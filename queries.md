@@ -15,7 +15,7 @@ number: 1
 
 query: { number_of_employees : { $gt: 5000 } }
 projection:
-sort: {number_of_employees: 1}
+sort: {number_of_employees: -1}
 skip:
 limit: 20
 number: 20
@@ -42,7 +42,7 @@ number: 42
 
 query: { $and:[{ number_of_employees : { $lt: 1000 }}, {founded_year : {$lt: 2005 }}]}
 projection:
-sort: {number_of_employees: 1}
+sort: {number_of_employees: -1}
 skip:
 limit: 10
 number: 10
@@ -63,7 +63,7 @@ projection:
 sort:
 skip:
 limit:
-number: 0
+number: 2751
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
@@ -81,7 +81,7 @@ projection:
 sort: { "ipo.valuation_amount": -1 }
 skip:
 limit:
-number: 0
+number: 18801
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
@@ -114,7 +114,7 @@ number: 205
 
 query: { "acquisition.acquired_year" : { $gt: 2010 } }
 projection: {name :1, acquisition:1, \_id:0}
-sort: {"acquisition.price_amount" : 1}
+sort: {"acquisition.price_amount" : -1}
 skip:
 limit:
 number: 736
@@ -139,12 +139,12 @@ number: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-query: { number_of_employees : { $gt: 4000 } }
+query: {$and: [{category_code:"web"}, {number_of_employees: {$gt:4000}}]}
 projection:
 sort: {number_of_employees: 1}
 skip:
 limit:
-number: 128
+number: 9
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
