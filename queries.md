@@ -45,7 +45,7 @@ projection:
 sort: {number_of_employees : -1}
 skip:
 limit: 10
-number: 2424
+number: ^
 
 ### 6. All the companies that don't include the `partners` field.
 
@@ -54,7 +54,7 @@ projection:
 sort:
 skip:
 limit:
-number: 18801
+number: 0
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
@@ -76,13 +76,12 @@ number: 917
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-query1: {'ipo.valuation_amount' : {$ne : null} } //better readability
-query2: {} //all companies even those that do not have data on that field
+query: {'ipo.valuation_amount' : {$ne : null} } //better readability
 projection:
 sort: {'ipo.valuation_amount' : -1}
 skip:
 limit:
-number: 61 / 1000
+number: 61 
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
@@ -145,7 +144,7 @@ projection:
 sort: {number_of_employees: 1}
 skip:
 limit:
-number:
+number: 9
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
@@ -162,8 +161,8 @@ query: {founded_month: {$lte: 3}}
 projection: {name:1, acquisition:1 , \_id:0}
 sort:
 skip:
-limit:
-number: 2596
+limit: 10
+number: ^
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
