@@ -107,106 +107,106 @@ number: 18801
 
 query: 
 projection: 
-sort: 
+sort: {number_of_employees: -1}
 skip: 
 limit:
-number: 
+number: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {$and: [{founded_month: {$gte: 7}}, {founded_month: {$lte: 12}}]}
 projection: 
 sort: 
 skip: 
 limit:
-number: 
+number: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {$and: [{"acquisitions.price_amount": {$gte: 10000000}}, {founded_year: {$lte: 2000}}]}
 projection: 
 sort: 
 skip: 
 limit:
-number: 
+number: 286
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
 <!-- Your Code Goes Here -->
 
-query: 
-projection: 
+query: {"acquisition.acquired_year": {$gte: 2010}}
+projection: {name: 1, acquisition:1, _id:0}
 sort: 
 skip: 
 limit:
-number: 
+number: 1100
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
 <!-- Your Code Goes Here -->
 
 query: 
-projection: 
-sort: 
+projection: {name:1, founded_year:1, _id:0}
+sort: {founded_year: -1}
 skip: 
 limit:
-number: 
+number: 18801
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {founded_day: {$lte: 7}}
 projection: 
-sort: 
+sort: {"acquisitions.price_amount": -1}
 skip: 
 limit:
-number: 
+number: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {$and: [{category_code: "web"}, {number_of_employees: {$gte: 4000}}] }
 projection: 
-sort: 
+sort: {number_of_employees: 1}
 skip: 
 limit:
-number: 
+number: 9
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {$and:[{"acquisition.price_amount":{$gte:10000000}}, {"acquisition.price_currency_code":"EUR"}]}
 projection: 
 sort: 
 skip: 
 limit:
-number: 
+number: 7
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
 <!-- Your Code Goes Here -->
 
-query: 
-projection: 
+query: {"funding_rounds.funded_month":{$lte:3}}
+projection: {name:1, acquisition:1, _id: 0}
 sort: 
 skip: 
 limit:
-number: 
+number: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
 
-query: 
+query: {$and: [{founded_year: {$gte: 2000}}, {founded_year:{$lte: 2010}}, {"acquisition.acquired_year": {$gte: 2011}}]}
 projection: 
 sort: 
 skip: 
 limit:
-number: 
+number: 486
