@@ -81,7 +81,7 @@ number:917
 
 query: 
 projection: 
-sort: 
+sort: sort : {ipo: -1}
 skip: 
 limit:
 number:
@@ -90,23 +90,24 @@ number:
 
 query: 
 projection: 
-sort: 
+sort: sort : {number_of_employees: -1}
 skip: 
 limit:10
 number:10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-query: 
+query:{founded_month: {$gte: 7}}
 projection: 
 sort: 
 skip: 
-limit:
+limit:1000
 number:
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-query: 
+query: {$and:[ {'acquisition.price_amount': {$gt: 10000000}}, {founded_year: {$lt: 2000}}]}
+
 projection: 
 sort: 
 skip: 
@@ -133,18 +134,18 @@ number:
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-query: 
+query: {founded_day: {$lte: 7}}
 projection: 
-sort: 
+sort: {"acquisition.price_amount": -1}
 skip: 
-limit:
+limit: 10
 number:
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-query: 
+query: {$and: [ {category_code: 'web'}, {number_of_employees: {$gt: 4000} }]}
 projection: 
-sort: 
+sort: sort : {number_of_employees: 1}
 skip: 
 limit:
 number:
@@ -164,7 +165,7 @@ query:  {"acquisition.acquired_month":{$lt:4}}
 projection: {name:1, acquisition:1, _id:0}
 sort: 
 skip: 
-limit:
+limit:10
 number:
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
