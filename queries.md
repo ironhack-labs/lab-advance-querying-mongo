@@ -34,23 +34,24 @@
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+{number_of_employees: {$gte: 100, $lt: 1000}}.name
+{number_of_employees: {$gte: 100, $lt: 1000}}.number_of_employees
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-<!-- Your Code Goes Here -->
+{}.sort({ipo: -1})
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+{}.sort({number_of_employees: 1}).limit(10)
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
+{founded_month: {$gte: 1, $lt: 8}}
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+{$and: [ {founded_year: {$lt: 2000}}, {acquisition_amount: {$gt: 100000000} }]}
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
