@@ -33,8 +33,8 @@ LIMIT: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- Your Code Goes Here -->
-
+FILTER: {partners:{$exist:true}}
+PROJECT: {_id:0, name:1,partners:1}
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 FILTER: {category_code:null}
