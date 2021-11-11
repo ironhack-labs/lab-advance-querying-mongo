@@ -49,7 +49,9 @@ results: 917
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
+filter: { 'ipo.valuation_amount': { $ne: null } }
 sort: { 'ipo.valuation_amount': -1 }
+results: 61
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
@@ -89,11 +91,14 @@ limit: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+filter: { $and: [ { category_code: { $eq: 'web'} }, { number_of_employees: { $gt: 4000 } }, { number_of_employees: { $ne: null} } ] }
+sort: { number_of_employees: 1 }
+results: 9
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-<!-- Your Code Goes Here -->
+filter: { $and: [ { 'acquisition.price_amount': { $gt: 10000000 } }, {  'acquisition.price_currency_code': { $eq: 'EUR' } } ] }
+results: 7
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
