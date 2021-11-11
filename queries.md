@@ -112,21 +112,21 @@ results: 205
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-query: {founded_year: {$gt: 2010}}
+query: {"acquisition.acquired_year": {$gt: 2010}}
 projection: {name: 1, acquisition: 1, _id: 0}
 sort: {"acquisition.price_amount": 1}
 skip:
 limit:
-results: 86
+results: 736
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
-query: 
+query: {founded_year: {$ne: null}}
 projection: {name: 1, founded_year: 1, _id: 0}
 sort: {founded_year: 1}
 skip:
 limit:
-results: 18801
+results: 13136
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
@@ -166,9 +166,9 @@ results: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-query: {$and: [{founded_year: {$gte: 2000, $lte: 2010}}, {"acquisition.acquired_year": {$gt: 2011}}]}
+query: {$and: [{founded_year: {$gte: 2000, $lte: 2010}}, {"acquisition.acquired_year": {$gte: 2011}}]}
 projection: 
 sort:
 skip:
 limit:
-results: 274
+results: 486
