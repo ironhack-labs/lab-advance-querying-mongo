@@ -227,6 +227,7 @@ You already know how this goes, so let's start working:
     ```
     { "acquisition.acquired_month": { $lte: 3 }  }
     { name: 1, acquisition: 1 }
+    -> settings limit to 10
     ```
 
 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
