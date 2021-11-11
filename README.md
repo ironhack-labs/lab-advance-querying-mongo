@@ -114,9 +114,9 @@ resultados: 2751
 
 
 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
-FILTER: {$and: [{number_of_employees: {$gt: 100, $lt: 1000}}]}
+FILTER: {$and: [{number_of_employees: {$gte: 100, $lt: 1000}}]}
 PROJECT: {name: 1, number_of_employees: 1, _id: 0}
-resultados: 753
+resultados: 917
 
 
 9. Order all the companies by their IPO price in descending order.
@@ -149,8 +149,10 @@ resultados: 736
 
 
 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
+FILTER: {founded_year: {$ne: null}}
 PROJECT: {name: 1, founded_year: 1, _id: 0}
 SORT: {founded_year: 1}
+resultados: 13136
 
 
 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in descending order. Limit the search to 10 documents.
@@ -171,9 +173,13 @@ resultados: 7
 
 
 18. All the companies that have been acquired in the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
-
+FILTER: {"acquisition.acquired_month": {$lt: 4}}
+PROJECT: {name: 1, acquisition: 1, _id: 0}
+resultados sin filter: 642
 
 
 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
+FILTER: {$and: [{founded_year: {$gte: 2000, $lte: 2010}}, {"acquisition.acquired_year": {$gte: 2011}}]}
+resultados: 486
 
 Happy Coding! :heart:
