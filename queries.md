@@ -28,11 +28,11 @@ limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- Your Code Goes Here -->
+filter:  { partners: { $exists: false } }
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
+filter: { category_code: null }
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
