@@ -19,11 +19,12 @@ project: { name: 1, founded_year:1 }
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-<!-- Your Code Goes Here -->
+filter: { $and: [ {"ipo.valuation_amount": { $gt: 100000000 } }, { founded_year: { $lt: 2010 } } ] }
+project: { name: 1,  ipo: 1 }
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-filter: { number_of_employees: { $lte: 1000 }, founded_year: { $lt: 2010 } }
+filter: { $and: [ { number_of_employees: { $lt: 1000 }, founded_year: { $lt: 2005 } } ] }
 limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
@@ -41,7 +42,7 @@ project: { name: 1, number_of_employees: 1 }
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-filter: { category_code: null }
+filter: { 'ipo.valuation_amount': -1 }
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
