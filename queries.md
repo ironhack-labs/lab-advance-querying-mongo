@@ -15,8 +15,8 @@ limit: 20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-filter: { founded_year: { $in: [2000, 2001, 2002, 2003, 2004, 2005] } }
-project: { name: 1, founded_year:1 }
+filter: { founded_year: { $gte: 2000, $lte: 2005 } }
+project: { name: 1, founded_year: 1 }
 results: 3734
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
@@ -102,8 +102,13 @@ results: 7
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-<!-- Your Code Goes Here -->
+filter: { $and: [ { 'acquisition.acquired_month': { $lte: 3 } }, { 'acquisition.acquired_month': { $ne: null } } ] }
+project: { name: 1, acquisition: 1}
+limit: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+filter: { $and: [ { founded_year: { $gte: 2000, $lte: 2010 } }, { 'acquisition.acquired_year': {  $gte: 2011 } }  ] }
+results: 486
+
+
