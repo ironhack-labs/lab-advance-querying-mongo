@@ -74,7 +74,7 @@ You already know how this goes, so let's start working:
 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
-4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
+4. All the companies that had a IPO Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 6. All the companies that don't include the `partners` field.
 7. All the companies that have a null type of value on the `category_code` field.
