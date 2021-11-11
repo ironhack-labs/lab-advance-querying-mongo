@@ -90,7 +90,7 @@ result:42
 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 query:
 filter:{$and: [{founded_year:{$lt:2005}},{number_of_employees: {$lt:1000}}]}
-projection: 
+project: 
 sort:{number_of_employees:-1}
 skip:
 limit:10
@@ -99,18 +99,53 @@ results:2424
 {partners: { $exists: false } }
 result:0
 7. All the companies that have a null type of value on the `category_code` field.
-
+filter:{category_code: { $type: "null" }}
+result:2751
 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
+query:
+filter:{$and: [{number_of_employees:{$gte:100}},{number_of_employees: {$lt:1000}}]}
+project:{name:1,_id:0,number_of_employees:1}
+result:917
 9. Order all the companies by their IPO price in descending order.
+filter:{ 'ipo.valuation_amount': { $ne: null } }
+sort:{ 'ipo.valuation_amount': -1 }
+result: 61
 10. Retrieve the ten companies with most employees, order by the `number of employees`
+sort:{number_of_employees:-1}
+limit:10
 11. All the companies founded in the second semester of the year. Limit your search to 1000 companies.
+filter: {founded_month:{$gt:6}}
+limit:1000
 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
+filter { $and: [ { founded_year: { $lt: 2000}, 'acquisition.price_amount': { $gt: 10000000 } } ] }
+result:205
 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
+filter: {"acquisition.acquired_year":{$gt:2010}}
+sort: {"acquisition.price_amount":1}
+project: {name:1,_id:0,acquisition:1}
+result:736 
 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
+filter:{founded_year: { $ne: null } }
+project: {name:1,_id:0,founded_year:1}
+sort:{founded_year:1} 
+result:13136
 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in descending order. Limit the search to 10 documents.
+filter: {founded_day: { $lte:7 } }
+sort:{"acquisition.price_amount":-1}
+limit:10
+result: 3221
 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the number of employees in ascending order.
+filter:{$and:[{category_code:"web"},{{number_of_employees: {$lt:4000}}}]}
+sort:{number_of_employees:1}
+result:9
 17. All the companies whose acquisition amount is more than 10.000.000 and the currency is 'EUR'.
+filter:{$and:[{"acquisition.price_amount":{$gt:10000000}},{ "acquisition.price_currency_code": "EUR"}]}
+result:7
 18. All the companies that have been acquired in the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
+filter: {"acquisition.acquired_month":{$lte:3}}
+project: {name:1,_id:0,acquisition:1}
+limit:10
+result:642
 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
-
-Happy Coding! :heart:
+filter: {$and:[{founded_year:{$gte:2000, $lte:2010}},{"acquisition.acquired_year":{$gte:2011}}]}
+result:486
