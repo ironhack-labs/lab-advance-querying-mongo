@@ -77,3 +77,89 @@
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
+
+
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'Companies';
+const collection = 'NEW_COLLECTION_NAME';
+
+// The current database to use.
+use(database);
+
+// Create a new collection.
+//db.createCollection(collection);
+
+// The prototype form to create a collection:
+/* db.createCollection( <name>,
+  {
+    capped: <boolean>,
+    autoIndexId: <boolean>,
+    size: <number>,
+    max: <number>,
+    storageEngine: <document>,
+    validator: <document>,
+    validationLevel: <string>,
+    validationAction: <string>,
+    indexOptionDefaults: <document>,
+    viewOn: <string>,
+    pipeline: <pipeline>,
+    collation: <document>,
+    writeConcern: <document>
+  }
+)*/
+//1
+db.Companies.find(
+  { name: "Babelgum"},
+  { name : 1 }
+)
+//2
+db.Companies.find(
+  { number_of_employees : {$gt: 5000} }
+
+).limit(20).sort({ number_of_employees: 1})
+//3
+db.Companies.find(
+  { founded_year : { $gte: 2000 , $lte: 2005}},
+  { name : 1 , founded_year: 1}
+
+)
+//4
+db.Companies.find({
+  $and:[
+    {ipo : {$ne : null}},
+    {founded_year : {$lte: 2010}},
+    {"ipo.valuation_amount" : {$gt : 100000000}}
+  ] 
+},
+{ name: 1, ipo: 1 }
+)
+//5
+db.Companies.find({$and : [
+    { number_of_employees : {$lte: 1000} },
+    { founded_year : { $lte: 2005}}
+  ]
+}
+).limit(10).sort({ number_of_employees: 1})
+//6
+db.Companies.find(
+  {partners: { $exists: false }}
+)
+//7
+db.Companies.find(
+  {category_code: {$eq: null}}
+)
+//8
+db.Companies.find(
+  {$and: [
+    { number_of_employees : { $gte: 100}},
+    { number_of_employees : { $lte: 1000}},
+  ]},
+  {name:1, number_of_employees: 1}
+  
+)
+
+
+
+
