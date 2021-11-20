@@ -96,20 +96,45 @@ db.companies.find(
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-<!-- Your Code Goes Here -->
+query: {founded_day: {$lte: 7}}
+projection:
+sort: {"acquisition.price_amount": -1}
+skip:
+limit: 10
+results: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+query: {$and: [{category_code: {$eq: "web"}}, {number_of_employees: {$gt: 4000}}, {number_of_employees: {$ne: null}}]}
+projection:
+sort: {number_of_employees: -1}
+skip:
+limit:
+results: 9
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-<!-- Your Code Goes Here -->
+query: {$and: [{"acquisition.price_amount": {$gt: 10000000}}, {"acquisition.price_currency_code": {$eq: "EUR"}}]}
+projection:
+sort:
+skip:
+limit:
+results: 7
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-<!-- Your Code Goes Here -->
+query: {"acquisition.acquired_month": {$gte: 1, $lte: 3}}
+projection: {name: 1, acquisition: 1, \_id: 0}
+sort:
+skip:
+limit: 10
+results: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+query: {$and: [{founded_year: {$gte: 2000, $lte: 2010}}, {"acquisition.acquired_year": {$gte: 2011}}]}
+projection:
+sort:
+skip:
+limit:
+results: 486
