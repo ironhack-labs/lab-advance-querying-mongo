@@ -74,7 +74,7 @@ COLLATION
 SKIP
 LIMIT
 
-### 9. Order all the companies by their IPO prrice in a descending order.
+### 9. Order all the companies by their IPO price in a descending order.
 
 FILTER
 PROJECT
