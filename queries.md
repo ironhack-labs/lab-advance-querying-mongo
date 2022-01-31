@@ -70,6 +70,7 @@ sort: {"acquisition.price_amount":1}
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
+{founded_year:{$gte:0}}
 project : {name:1,founded_year:1}
 sort : {founded_year:1}
 
