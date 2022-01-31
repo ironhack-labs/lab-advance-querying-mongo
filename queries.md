@@ -43,7 +43,6 @@ project {name: 1, number_of_employees: 1}
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-filter {"ipo.valuation_amount": {$gte: 0}}
 sort {"ipo.valuation_amount": -1}
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
