@@ -45,7 +45,7 @@ projection: { name: 1, number_of_employees:1 , _id: 0 }
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-<!-- Your Code Goes Here -->
+sort: {"ipo.valuation_amount": -1}
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
@@ -57,7 +57,7 @@ projection: { name: 1, number_of_employees:1 , _id: 0 }
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+query: { $and: [{ founded_year: { $lt: 2000}}, { 'acquisition.price_amount': { $gte: 10000000}}]}
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
