@@ -43,7 +43,9 @@ db.companies.find({ partners: { $exists: false } })
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
+```javascript
+db.companies.find({ category_code: { $type: "null" } })
+```
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
