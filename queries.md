@@ -55,7 +55,9 @@ db.companies.find({ number_of_employees: { $gte: 1e2, $lt: 1e3 } }, { name: 1, n
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-<!-- Your Code Goes Here -->
+```javascript
+db.companies.find().sort({ "ipo.valuation_amount": -1 })
+```
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
