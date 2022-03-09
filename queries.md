@@ -106,7 +106,9 @@ db.companies.find({ founded_day: { $lte: 7 } }).sort({ "acquisition.price_amount
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+```javascript
+db.companies.find({ category_code: "web", number_of_employees: { $gt: 4e3 } }).sort({ number_of_employees: 1 })
+```
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
