@@ -73,7 +73,9 @@ db.companies.find({ founded_month: { $gte: 7 } }).limit(1e3)
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+```javascript
+db.companies.find({ founded_year: { $lt: 2000 }, "acquisition.price_amount": { $gt: 1e7 } })
+```
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
