@@ -49,7 +49,9 @@ db.companies.find({ category_code: { $type: "null" } })
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+```javascript
+db.companies.find({ number_of_employees: { $gte: 1e2, $lt: 1e3 } }, { name: 1, number_of_employees: 1, _id: 0 })
+```
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
