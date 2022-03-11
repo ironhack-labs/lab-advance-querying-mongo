@@ -11,12 +11,12 @@ projection: {name: 1, _id:0}
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
 query: {number_of_employees: {$gt: (5000)}}
+limit: 20
+sort: {number_of_employees: 1}
 
-<!-- Your Code Goes Here -->
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-<!-- Your Code Goes Here -->
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
