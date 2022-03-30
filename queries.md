@@ -4,35 +4,39 @@
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
-<!-- Your Code Goes Here -->
+filter: { name: {$eq: "Babelgum"} }
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
-<!-- Your Code Goes Here -->
+filter: { $nor: [ { employee: "5000"}, { companies: "20"}] }
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-<!-- Your Code Goes Here -->
+filter: { year: {$ne: "2000, 2005"}} // não consegui achar os anos.
+project: { name: 1, _id: 0 }
+
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-<!-- Your Code Goes Here -->
+filter: { $nor:[{ipo: "100.000.000"}, {year: "2000"}]}
+project: { name: 1, ipo: 1, _id: 0 }
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-<!-- Your Code Goes Here -->
+filter: { $lte:[{employees: "1000"}, {founded: "2005"}]}
+projectt: {founded: 10}
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- Your Code Goes Here -->
+filter: {partners:{ $exists: true } }
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
+filter: {category_code: { $type: "null"} }
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+filter: 
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
