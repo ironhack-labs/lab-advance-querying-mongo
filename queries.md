@@ -185,7 +185,7 @@ collation:                                  skip:                      limits:10
 <!-- Your Code Goes Here -->
 
 
-filter:{ $and: [{ founded_year: { $gte: 2000 } }, { founded_year: { $lte: 2010 } },{ "acquisition.acquired_year": { $gte: 2011 } }] } 
+filter:{ $and: [{ founded_year: { $gte: 2000 } }, { founded_year: { $lte: 2010 } },{ "acquisition.acquired_year": { $gt: 2011 } }] } 
 project:
 sort:                                       max items:
 collation:                                  skip:                      limits:
