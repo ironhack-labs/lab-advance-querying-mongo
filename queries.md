@@ -1,5 +1,12 @@
 ![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
 
+//  This is an example
+//  query: /You should copy/paste the query in here/
+//  projection: /You should copy/paste the projection in here/
+//  sort: /You should copy/paste the sort in here/
+//  skip: /You should copy/paste the skip in here/
+//  limit: /You should copy/paste the limit in here/
+
 # Answers
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
