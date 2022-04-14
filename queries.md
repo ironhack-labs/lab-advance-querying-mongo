@@ -1,16 +1,32 @@
 ![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
 
+query: /You should copy/paste the query in here/
+projection: /You should copy/paste the projection in here/
+sort: /You should copy/paste the sort in here/
+skip: /You should copy/paste the skip in here/
+limit: /You should copy/paste the limit in here/
+
 # Answers
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
 <!-- Your Code Goes Here -->
 
+query :{name: "Babelgum"}
+projection : {name: 1, \_id: 0}
+
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
 <!-- Your Code Goes Here -->
 
+query :{number_of_employees: {$gt: 5000}}
+sort: {number_of_employees: 1}
+limit: 20
+
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
+
+query: {founded_year: {$gte: 2000, $lte:2005}}
+project: {name:1, \_id: 0}
 
 <!-- Your Code Goes Here -->
 
@@ -22,11 +38,21 @@
 
 <!-- Your Code Goes Here -->
 
+query: {$and : [ {number_of_employees: {$lt: 1000}}, {founded_year: {$lt:2005}}]}
+
+sort:{number_of_employees: 1}
+
+limit: 10
+
 ### 6. All the companies that don't include the `partners` field.
+
+query: {partners: {$exists: false}}
 
 <!-- Your Code Goes Here -->
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
+
+query: {category_code: {$type: "null"}}
 
 <!-- Your Code Goes Here -->
 
