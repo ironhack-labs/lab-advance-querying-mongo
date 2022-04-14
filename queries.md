@@ -58,6 +58,9 @@ query: {category_code: {$type: "null"}}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
+query: { number_of_employees:{$gte:100, $lt:1000}}
+projection: {name:1, number_of_employees:1, \_id:0}
+
 <!-- Your Code Goes Here -->
 
 ### 9. Order all the companies by their IPO price in a descending order.
@@ -65,6 +68,9 @@ query: {category_code: {$type: "null"}}
 <!-- Your Code Goes Here -->
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
+
+query: {number_of_employees:-1}
+limit:10
 
 <!-- Your Code Goes Here -->
 
