@@ -30,7 +30,7 @@ PROJECT: {name: 1, ipo: 1, _id: 0}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-FILTER: {number_of_employees: {$gt: 1000}, founded_year: {$lt: 2005}}
+FILTER: {number_of_employees: {$lt: 1000}, founded_year: {$lt: 2005}}
 SORT: {number_of_employees:1}
 LIMIT: 10
 
