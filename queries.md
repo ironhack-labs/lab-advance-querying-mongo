@@ -18,7 +18,7 @@ Limit: {20}
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
 <!-- Your Code Goes Here -->
-Filter: { $and: [ {founded_year: { $gte: 2000 } }, {founded_year: { $lte: 2005 } }]}
+Filter: {founded_year: { $in:[2000,2005] } }}
 Project: { name:1, founded_year:1}
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
@@ -39,11 +39,13 @@ Limit: { 10 }
 
 <!-- Your Code Goes Here -->
 Filter: {partners: {$exists: true, $size: 0}}
+<!--or-->
+Filter: {partners: {$nin:[]}}
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 <!-- Your Code Goes Here -->
-Filter: { category_code: null}
+Filter: { category_code: {$eq: null}}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
