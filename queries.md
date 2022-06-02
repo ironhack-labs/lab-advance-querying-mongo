@@ -68,6 +68,13 @@
 
 <!-- Your Code Goes Here -->
 
+{
+$and: [
+        { $or: [ { founded_year: { $lt : 2000 } }, { founded_year : { $lt: 2000 } } ] },
+        { $or: [ { "acquisition.price_amount": {$gte: 10000000 }} ] }
+]
+}
+
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
 <!-- Your Code Goes Here -->
@@ -93,6 +100,13 @@
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
 <!-- Your Code Goes Here -->
+
+{
+$and: [
+        { $or: [ { acquisition: { $gte: 10000000 } } ] },
+        { $or: [ { "acquisition.price_amount": {$eq: "eur" }} ] }
+]
+}
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
