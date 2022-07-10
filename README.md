@@ -31,7 +31,7 @@ Since we will be querying our database from Mongo Compass, you will need to copy
 
 ### Example
 
-1. This is an example
+1. This is an example...
 
 - **`query`**: /_You should copy/paste the query in here_/
 - **`projection`**: /_You should copy/paste the projection in here_/
