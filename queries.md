@@ -24,8 +24,8 @@ Project { "name":1, "founded_year":1, "_id":0 }
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
 <!-- Your Code Goes Here -->
-Filter { $and: [ { "acquisition.price_amount": { $gte:100000000 }  }, { founded_year: { $lt:2010 } }, ] }
-Project { name:1, ipo:1, _id:0 }
+Filter { $and: [ {"ipo.valuation_amount": {$gt: 100000000}}, {"founded_year": {$lt: 2010} } ] }
+Project {"name": 1, "ipo": 1, "_id": 0}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
@@ -101,17 +101,17 @@ Sort { "number_of_employees":1 }
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
 <!-- Your Code Goes Here -->
-Filter { $and: [ {"acquisitions.price_amount": { $gte: 10000000 } }, { "acquisition.price_currency_code":"EUR" } ] }
+Filter { $and: [ {"acquisitions.price_amount": { $gt: 10000000 } }, { "acquisition.price_currency_code":"EUR" } ] }
 
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
 <!-- Your Code Goes Here -->
 Filter { "acquisition.acquired_month": { $lte:3 } }
-Project { "name":1, "acquisition":1, _id:0 }
+Project { "name":1, "acquisition":1, "_id":0 }
 Limit 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
-Filter { $and: [ { "founded_year": { $gte:2000 }  }, { "founded_year": { $lte:2010 } }, { "acquisition.acquired_year": { $gt: 2011 }  } ] }
+Filter { $and: [ { "founded_year": { $gte:2000 }  }, { "founded_year": { $lte:2010 } }, { "acquisition.acquired_year": { $gte: 2011 }  } ] }
