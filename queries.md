@@ -48,17 +48,17 @@
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+{"acquisition.price_amount" : { $gte: 10000000 }, founded_year : { $lt: 2000 } } { _id : 0, name : 1}
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-<!-- Your Code Goes Here -->
+{founded_year : { $gt: 2010 } } { _id : 0, name : 1, acquisition: 1} {"acquisition.price_amount" : 1}
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
 {name : 1, _id : 0, founded_year : 1} {founded_year : -1}
 
-### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
+### 15. All the companies that have been founded on e first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
 <!-- Your Code Goes Here -->
 
@@ -68,7 +68,7 @@
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-<!-- Your Code Goes Here -->
+{"acquisition.price_amount" : { $gte: 10000000 }, "acquisition.price_currency_code": { $eq:"EUR" }} { _id : 0, name : 1}
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
