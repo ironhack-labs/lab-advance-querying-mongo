@@ -32,7 +32,7 @@
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+{number_of_employees : { $gte: 100,  $lt: 1000 }} { _id :0, name : 1, number_of_employees : 1}
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
@@ -44,7 +44,7 @@
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
+{founded_month : {$gte : 6} } { _id :0, name : 1}
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
@@ -60,11 +60,11 @@
 
 ### 15. All the companies that have been founded on e first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-<!-- Your Code Goes Here -->
+{founded_day : { $lte: 7}} { _id :0, name : 1} {"acquisitions.price_amount" : -1}
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+{ category_code : "web" , number_of_employees : { $gte: 4000 } } { _id :0, name : 1} { number_of_employees : 1 }
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
@@ -72,8 +72,8 @@
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-<!-- Your Code Goes Here -->
+{founded_month : { $in: [ 1, 2, 3 ] } } { _id :0, name : 1, acquisition : 1, founded_month : 1}
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-<!-- Your Code Goes Here -->
+{founded_year : { $gte:2000,  $lt: 2010}, "acquisition.acquired_year" : { $gte:2011}  } { _id :0, name : 1}
