@@ -71,7 +71,7 @@ SORT: {founded_year:1}
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-FILTER:  {$and: [{ founded_day: { $gt: 1 } }, { founded_day: { $lte: 7 } }] } 
+FILTER:  {founded_day: { $lte: 7 } } 
 SORT: {"acquisition.price_amount":-1}
 LIMIT: 10
 
@@ -82,11 +82,11 @@ SORT: {number_of_employees:1}
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-FILTER: { $and: [{ "acquisition.price_currency_code": 'EUR' }, { "acquisition.price_amount": { $gt: '10.000.000' } }] }
+FILTER: {"acquisition.price_amount": {$gt:10000000}, "acquisition.price_currency_code": 'EUR'}
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-FILTER: {$and: [{ founded_month: { $gt: 1 } }, { founded_month: { $lte: 3 } }] } 
+FILTER: {founded_month: { $lte: 3 } } 
 PROJECT: {name:1}
 LIMIT:10
 
