@@ -127,7 +127,7 @@ filter: {$and:[{"acquisition.price_amount":{$gte: 10000000} }, {"acquisition.pri
 
 <!-- Your Code Goes Here -->
 
-filter: {"acquisition.acquired_month":{$lte: 4}}
+filter: {"acquisition.acquired_month":{$lte: 3}}
 project: {name:1, acquisition:1, \_id:0}
 limit: 10
 
