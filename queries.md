@@ -28,8 +28,8 @@
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-- **`query`**: 
-- **`projection`**: 
+- **`query`**: { $and: [ { 'ipo.valuation_amount': { $gt: 100000000} }, { founded_year: { $lte: 2010} } ]  }
+- **`projection`**: { name: 1, ipo: 1, _id: 0}
 - **`sort`**: 
 - **`skip`**:
 - **`limit`**: 
@@ -42,12 +42,12 @@
 - **`skip`**:
 - **`limit`**: 10
 
-### 6. All the companies that don't include the `partners` field. <!-- Ask angela -->
+### 6. All the companies that don't include the `partners` field. 
 
 - **`query`**: { partners: { $exists: false } }
 - **`projection`**: 
 - **`sort`**: 
-- **`skip`**:
+- **`skip`**:   
 - **`limit`**: 
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
@@ -70,7 +70,7 @@
 
 - **`query`**: 
 - **`projection`**: 
-- **`sort`**: 
+- **`sort`**: { 'ipo.valuation_amount': -1 }
 - **`skip`**:
 - **`limit`**: 
 
@@ -84,15 +84,15 @@
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-- **`query`**: 
-- **`projection`**: 
+- **`query`**: { founded_month: {$gt: 6} }
+- **`projection`**: { name: 1, _id: 0 }
 - **`sort`**: 
 - **`skip`**:
-- **`limit`**: 
+- **`limit`**: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-- **`query`**: 
+- **`query`**: { $and: [ { founded_year: { $lt: 2000 } }, { 'acquisition.price_amount': { $gt: 10000000 } } ] }
 - **`projection`**: 
 - **`sort`**: 
 - **`skip`**:
@@ -100,39 +100,39 @@
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-- **`query`**: 
-- **`projection`**: 
-- **`sort`**: 
+- **`query`**:  { 'acquisition.acquired_year': { $gt: 2010 } }
+- **`projection`**: { name: 1 , acquisition: 1 }
+- **`sort`**: { 'acquisition.price_amount': 1 }
 - **`skip`**:
 - **`limit`**: 
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
 - **`query`**: 
-- **`projection`**: 
-- **`sort`**: 
+- **`projection`**: { name: 1, founded_year: 1, _id: 0 }
+- **`sort`**: { founded_year: 1 }
 - **`skip`**:
 - **`limit`**: 
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-- **`query`**: 
+- **`query`**:  {$or: [ { founded_day: { $gte: 1 } }, { founded_day: { $lte: 7} } ] }
 - **`projection`**: 
-- **`sort`**: 
+- **`sort`**: { price_amount: -1}
 - **`skip`**:
-- **`limit`**: 
+- **`limit`**: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-- **`query`**: 
+- **`query`**: { $and: [{ category_code: "web" }, {number_of_employees: {$gt: 4000}}]}
 - **`projection`**: 
-- **`sort`**: 
+- **`sort`**: { number_of_employees: 1 }
 - **`skip`**:
 - **`limit`**: 
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-- **`query`**: 
+- **`query`**: { $and: [{ 'acquisition.price_amount' : {$gt: 10000000} }, { 'acquisition.price_currency_code': 'EUR' }] }
 - **`projection`**: 
 - **`sort`**: 
 - **`skip`**:
@@ -140,15 +140,15 @@
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-- **`query`**: 
-- **`projection`**: 
+- **`query`**: { $and: [ { 'acquisition.acquired_month' : {$gt: 1} }, { 'acquisition.acquired_month' : {$lte: 4} }] }
+- **`projection`**: { name: 1, acquisition: 1, _id: 0 }
 - **`sort`**: 
 - **`skip`**:
-- **`limit`**: 
+- **`limit`**: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-- **`query`**: 
+- **`query`**: { $and: [ { founded_year: {$gte: 2000} }, { founded_year: {$lte: 2010} }, { "acquisition.acquired_year": {$not: {$gt: 2011}}} ] }
 - **`projection`**: 
 - **`sort`**: 
 - **`skip`**:
