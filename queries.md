@@ -131,7 +131,7 @@
 
 <!-- Your Code Goes Here -->
 
-- **`query`**:{founded_month:{$lte:4}}
+- **`query`**:{acquisition.acquired_month:{$lte:4}}
 - **`projection`**:{name:1,acquisition:1}
 - **`limit`**:10
 
