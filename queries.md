@@ -13,7 +13,7 @@ query: {name: "Babelgum"}
 
 <!-- Your Code Goes Here -->
 <pre>
-query: { number_of_employees: { $gt: 500 } }
+query: { number_of_employees: { $gt: 5000 } }
 projection: 
 sort: {number_of_employees: 1}
 skip: 
