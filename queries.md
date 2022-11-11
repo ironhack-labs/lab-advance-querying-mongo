@@ -39,6 +39,7 @@ LIMIT
 ### 6. All the companies that don't include the `partners` field.
 QUERY
 { partners: {$exists: false } }
+- or: { partners: {$size: 0} }
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 QUERY
@@ -47,6 +48,9 @@ QUERY
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 QUERY
 { $and: [ {number_of_employees: {$gte: 100}}, { number_of_employees: {$lt: 1000 }}  ]}
+
+- shorter version: {number_of_employees: {$gte: 100, $lt: 1000}}
+
 PROJECTION
 {name: 1, number_of_employees: 1, _id: 0}
 
@@ -63,6 +67,8 @@ LIMIT
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 QUERY
 { founded_month: {$gt: 6} }
+LIMIT
+10000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 QUERY
@@ -74,7 +80,7 @@ QUERY
 PROJECTION
 {name: 1, acquisition: 1, _id: 0}
 SORT
-{ acquisition: -1 }
+{ "acquisition.price_amount": -1 }
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 QUERY
