@@ -1,51 +1,68 @@
-[{
-  "_id": {
-    "$oid": "636d12efc54ed71dafb449dd"
-  },
-  "Name": "Frances",
-  "Pretty ": "True",
-  "Alcoholic ": "True",
-  "Animal_lover": "Cat",
-  "Bootcamp": "Ironhack",
-  "LastName": "Morales"
-},{
-  "_id": {
-    "$oid": "636d132ec54ed71dafb449de"
-  },
-  "Name": "Daniela",
-  "Pretty ": "True",
-  "Alcoholic ": "False",
-  "Animal_lover": "Dog",
-  "Bootcamp": "Ironhack",
-  "Daniela": "Cardona"
-},{
-  "_id": {
-    "$oid": "636d133ac54ed71dafb449df"
-  },
-  "Name": "Carolina ",
-  "Alcoholic": "True",
-  "Animal_lover": "Dog",
-  "Pretty ": "True",
-  "Bootcamp": "Ironhack",
-  "LastName": "Acuña"
-},{
-  "_id": {
-    "$oid": "636d138ac54ed71dafb449e0"
-  },
-  "Name": "Pablo",
-  "Alcoholic ": "True",
-  "Animal_lover": "Dog",
-  "Pretty ": "True",
-  "Bootcamp": "Ironhack",
-  "LastName": "Cigoy"
-},{
-  "_id": {
-    "$oid": "636d6b33c54ed71dafb449e3"
-  },
-  "Name": "Matias",
-  "Pretty ": "True",
-  "Alcoholic ": "True",
-  "Animal_lover": "Undefined ",
-  "Bootcamp": "Ironhack",
-  "LastName": "Gobbi"
-}]
+[
+    {
+        "_id": {
+            "$oid": "636d12efc54ed71dafb449dd"
+        },
+        "Name": "Frances",
+        "Pretty ": "True",
+        "Alcoholic ": "True",
+        "Animal_lover": "Cat",
+        "Bootcamp": "Ironhack",
+        "LastName": "Morales"
+    },
+    {
+        "_id": {
+            "$oid": "636d132ec54ed71dafb449de"
+        },
+        "Name": "Daniela",
+        "Pretty ": "True",
+        "Alcoholic ": "False",
+        "Animal_lover": "Dog",
+        "Bootcamp": "Ironhack",
+        "Daniela": "Cardona"
+    },
+    {
+        "_id": {
+            "$oid": "636d133ac54ed71dafb449df"
+        },
+        "Name": "Carolina ",
+        "Alcoholic": "True",
+        "Animal_lover": "Dog",
+        "Pretty ": "True",
+        "Bootcamp": "Ironhack",
+        "LastName": "Acuña"
+    },
+    {
+        "_id": {
+            "$oid": "636d138ac54ed71dafb449e0"
+        },
+        "Name": "Pablo",
+        "Alcoholic ": "True",
+        "Animal_lover": "Dog",
+        "Pretty ": "True",
+        "Bootcamp": "Ironhack",
+        "LastName": "Cigoy"
+    },
+    {
+        "_id": {
+            "$oid": "636d6b33c54ed71dafb449e3"
+        },
+        "Name": "Matias",
+        "Pretty ": "True",
+        "Alcoholic ": "True",
+        "Animal_lover": "Undefined ",
+        "Bootcamp": "Ironhack",
+        "LastName": "Gobbi"
+    },
+    {
+        "_id": {
+            "$oid": "636d6b33c54ed71dafb449e3"
+        },
+        "Name": "Antonio",
+        "Pretty ": "Undeined",
+        "Alcoholic ": "True",
+        "Animal_lover": "Undefined ",
+        "Bootcamp": "Ironhack",
+        "LastName": "Kilo"
+    }
+]
