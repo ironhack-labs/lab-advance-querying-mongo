@@ -40,35 +40,53 @@ limit: 10
 <!-- Your Code Goes Here -->
 
 ### 6. All the companies that don't include the `partners` field.
+
 filter: {$and:[{partners:{$type: "array"}}, {partners:{$exists: false}}]}
+
 <!-- Your Code Goes Here -->
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
+
 filter:{category_code:{$type:"null"}}
-project: {category_code:1, _id:0}
+project: {category_code:1, \_id:0}
+
 <!-- Your Code Goes Here -->
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
+
+filter: {$and:[{number_of_employees:{$gte:100}}, {number_of_employees:{$lt:1000}}]}
+project: {name:1, number_of_employees:1, \_id:0}
 
 <!-- Your Code Goes Here -->
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
+sort: {'ipo.valuation_amount': -1}
+
 <!-- Your Code Goes Here -->
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
+
+sort: {number_of_employees: -1}
 
 <!-- Your Code Goes Here -->
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
+filter: {founded_month: {$gt:6}}
+limit: 1000
+
 <!-- Your Code Goes Here -->
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
+filter: {$and: [{founded_year: {$lt:2000}}, {'acquisitions.price_amount': {$gt: 10000000}}]}
+
 <!-- Your Code Goes Here -->
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
+{'acquisitions.aquired_year':{$gt:2010}}
+project:{name:1, acquisition:1, \_id:0 }
 
 <!-- Your Code Goes Here -->
 
