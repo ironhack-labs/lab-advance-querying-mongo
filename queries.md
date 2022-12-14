@@ -69,8 +69,16 @@ Project: {name: 1, number_of_employees: 1, \_id: 0}
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
 <!-- using querying (mongosh) -->
+<!-- sort() doesn't work without find() -->
+
+db.companies.find({number_of_employees: { $exists: 'true'}}).sort({number_of_employees: -1}).limit(10)
 
 <!-- using compass tool -->
+<!-- do we need the filter, it works in compass tool without -->
+
+Filter: {number_of_employees: { $exists: 'true'}}
+Sort: {number_of_employees: -1}
+Limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
