@@ -41,7 +41,11 @@ Project: {name: 1, ipo: 1, \_id: 0}
 
 <!-- using querying (mongosh) -->
 
+db.companies.find({$and:[{partners:{$type: "array"}}, {partners:{$exists: false}}]})
+
 <!-- using compass tool -->
+
+Filter: { $and: [ { partners: {$type: 'array'}}, {partners: {$exists: false}} ]}
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
@@ -51,7 +55,12 @@ Project: {name: 1, ipo: 1, \_id: 0}
 
 <!-- using querying (mongosh) -->
 
+db.companies.find({number_of_employees: {$gte: 100, $lt: 1000}}, {name: 1, number_of_employees: 1, \_id: 0})
+
 <!-- using compass tool -->
+
+Filter: {number_of_employees: {$gte: 100, $lt: 1000}}
+Project: {name: 1, number_of_employees: 1, \_id: 0}
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
