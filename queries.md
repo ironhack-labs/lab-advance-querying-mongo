@@ -5,7 +5,7 @@
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
 Filter: {name: "Babelgum"}
-Project: {name: 1, _id: 0}
+Project: {name: 1, \_id: 0}
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
@@ -22,7 +22,7 @@ Limit: 20
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
 Filter: { $and: [{founded_year:{ $gte: 2000} }, {founded_year:{ $lte: 2005} }]}
-Project: {name: 1, _id: 0, founded_year: 1} 
+Project: {name: 1, \_id: 0, founded_year: 1}
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
@@ -37,8 +37,8 @@ Project: {name: 1, ipo: 1, \_id: 0}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-Filter: { $and: [{founded_year:{ $lt: 2005} }, {number_of_employees:{ $lt: 1000} }]} 
-Project: {name: 1, _id: 0, founded_year: 1, number_of_employees: 1}
+Filter: { $and: [{founded_year:{ $lt: 2005} }, {number_of_employees:{ $lt: 1000} }]}
+Project: {name: 1, \_id: 0, founded_year: 1, number_of_employees: 1}
 Sort: {number_of_employees: 1}
 Limit: 10
 
@@ -55,7 +55,7 @@ Filter: { $and: [ { partners: {$type: 'array'}}, {partners: {$exists: false}} ]}
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 Filter: {category_code: null}
-Project: {name: 1, _id: 0}
+Project: {name: 1, \_id: 0}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
@@ -91,14 +91,31 @@ Limit: 10
 <!-- I wasn't sure what second semester means so I did months July through December -->
 
 Filter: {founded_month: {$gte: 7}}
-Project: {name: 1, _id: 0, founded_month: 1} <!-- not needed but didn't want to see so much data, just the name of company -->
+Project: {name: 1, \_id: 0, founded_month: 1} <!-- not needed but didn't want to see so much data, just the name of company -->
 Limit: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
 <!-- using querying (mongosh) -->
 
+db.companies.find({ $and: [ {founded_year: { $lt: 2000}}, {'acquisition.price_amount': { $gt: 10000000}} ]})
+
 <!-- using compass tool -->
+<!-- first step, don't find sth -->
+
+Filter: { $and: [ {founded_year: { $lt: 2000}}, {acquisition: { $gt: 10000000}} ]}
+
+<!-- second step, I checked what is aquisition and how it looks as a query -->
+<!-- it's  an object, which has price_amount key:value  -->
+
+Filter: {acquisition: { $exists: true}}
+Project: {acquisition: 1, name: 1, \_id: 0}
+
+<!-- third step -->
+
+Filter: { $and: [ {founded_year: { $lt: 2000}}, {'acquisition.price_amount': { $gt: 10000000}} ]}
+
+<!-- Just to check how it looks: Project: {acquisition: 1, name: 1, _id: 0, founded_year: 1} -->
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
@@ -107,8 +124,17 @@ Limit: 1000
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
 <!-- using querying (mongosh) -->
+<!-- sort() doesn't work without find() -->
+<!-- db.companies.sort({founded_year: -1}) -->
+
+db.companies.find({founded_year: { $ne: null}}, {name: 1, founded_year: 1, \_id: 0}).sort({founded_year: 1})
 
 <!-- using compass tool -->
+<!-- because many companies have founded_year: null, I've used filter -->
+
+Filter: {founded_year: { $ne: null}}
+Project: {name: 1, founded_year: 1, \_id: 0}
+Sort: {founded_year: 1}
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
@@ -118,7 +144,14 @@ Limit: 1000
 
 <!-- using querying (mongosh) -->
 
+db.companies.find({ $and: [ {category_code: 'web'}, {number_of_employees: {$gte: 4000}} ] }).sort({number_of_employees: 1})
+
 <!-- using compass tool -->
+
+Filter: { $and: [ {category_code: 'web'}, {number_of_employees: {$gte: 4000}} ] }
+Sort: {number_of_employees: 1}
+
+<!-- Just to check how it looks: Project: {category_code: 1, number_of_employees: 1, _id:0 } -->
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
