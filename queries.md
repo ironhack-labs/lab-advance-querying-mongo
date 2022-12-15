@@ -109,6 +109,7 @@ Sort: {ipo: -1}
 db.companies.find({number_of_employees: { $gt: 0}}).sort({number_of_employees: -1}).limit(10)
 
 <!-- using compass tool -->
+<!-- here we don't need filter actually, because we retrieve the 10 companies with most employees, and only the first 10   -->
 
 Filter: {number_of_employees: { $gt: 0}}
 Sort: {number_of_employees: -1}
