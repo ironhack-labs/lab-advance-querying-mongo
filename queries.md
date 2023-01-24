@@ -9,7 +9,7 @@
 const projection = {
   'name': 1, 
   '_id': 0
-
+}
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
@@ -159,32 +159,119 @@ const limit = 100;
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+const filter = {
+  '$and': [
+    {
+      'founded_year': {
+        '$lte': 2000
+      }
+    }, {
+      'acquisition.price_amount': {
+        '$gte': 10000000
+      }
+    }
+  ]
+};
+
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-<!-- Your Code Goes Here -->
+const filter = {
+  'acquisition.acquired_year': {
+    '$gte': 2010
+  }
+};
+const projection = {
+  'name': 1, 
+  'acquisition': 1
+};
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
-<!-- Your Code Goes Here -->
+const filter = {};
+const projection = {
+  'name': 1, 
+  'founded_year': 1
+};
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-<!-- Your Code Goes Here -->
+const filter = {
+  'founded_day': {
+    '$lte': 7
+  }
+};
+const sort = {
+  'acquisition.price_amount': -1
+};
+const limit = 10;
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+const filter = {
+  '$and': [
+    {
+      'category_code': {
+        '$eq': 'web'
+      }
+    }, {
+      'number_of_employees': {
+        '$gte': 4000
+      }
+    }
+  ]
+};
+const sort = {
+  'number_of_employees': 1
+};
+
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
+const filter = {
+  '$and': [
+    const filter = {
+  '$and': [
+    {
+      'acquisition.price_amount': {
+        '$gte': 10000000
+      }
+    }, {
+      'acquisition.price_currency_code': {
+        '$eq': 'EUR'
+      }
+    }
+  ]
+};
 
-<!-- Your Code Goes Here -->
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
+const filter = {
+  'acquisition.acquired_month': {
+    '$lte': 3
+  }
+};
+const projection = {
+  'name': 1, 
+  'acquisition': 1
+};
+const limit = 10;
 
-<!-- Your Code Goes Here -->
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
-
-<!-- Your Code Goes Here -->
+const filter = {
+  '$and': [
+    {
+      'founded_year': {
+        '$gte': 2000
+      }
+    }, {
+      'founded_year': {
+        '$lte': 2010
+      }
+    }, {
+      'acquisition.acquired_year': {
+        '$gte': 2011
+      }
+    }
+  ]
+};
