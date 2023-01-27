@@ -20,7 +20,7 @@
   number_of_employees: { $gt: 5000 }
  },
  sort: {
-  number_of_employees: -1
+  number_of_employees: 1
  },
  limit: 20
 }
@@ -29,7 +29,7 @@
 
 {
  filter: {
-  founded_year: { $in: [ 2000, 2001, 2002, 2003, 2004, 2005 ] }
+  founded_year: { $and: [{$gte: 2000}}, {founded_year: {$lte: 2005}}] }
  },
  project: {
   name: 1, founded_year: 1, _id: 0
@@ -114,7 +114,7 @@
 
 {
  filter: {
-  founded_year: { $lt: 2000 }, 'ipo.valuation_amount': { $gt: 10000000 }
+  founded_year: { $lt: 2000 }, 'acquisitions.price_amount': { $gt: 10000000 }
  }
 }
 
@@ -152,7 +152,7 @@
   founded_day: { $gte: 1, $lte: 7 }
  },
  sort: {
-  'ipo.valuation_amount': -1
+  'acquisition.price_amount': -1
  },
  limit: 10
 }
@@ -172,7 +172,7 @@
 
 {
  filter: {
-  'ipo.valuation_amount': { $gt: 10000000 }, 'ipo.valuation_currency_code': 'EUR'
+  'acquisition.price_amount': { $gt: 10000000 }, 'acquisition.price_current_code': 'EUR'
  }
 }
 
