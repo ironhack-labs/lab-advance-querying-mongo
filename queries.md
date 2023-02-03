@@ -1,5 +1,3 @@
-![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
-
 # Answers
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their 
@@ -104,5 +102,4 @@ PROJECT {name:1, founded_month:1}
 LIMIT 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
-
 FILTER {founded_year:{$gte:2000,$lt:2011}}
