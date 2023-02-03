@@ -25,13 +25,13 @@ projection: {name:1, ipo: 1, _id:0}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-query:  
+query: {$and: [{ "number_of_employees": { $lt: 1000 } }, { founded_year: { $lt: 2010 } }]}
 sort: {"number_of_employees" : -1}
 Limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
-query: {partners: {$exists: false}}
+query: {partners: {$size: 0}}
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
@@ -73,8 +73,9 @@ sort: {"founded_year": -1}
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-query: {"acquisition.price_amount": -1}
+query: {founded_day {$lte:7}}
 sort: {"acquisition.price_amount": -1}
+Limit: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
@@ -87,8 +88,9 @@ query: {$and: [{"acquisition.price_amount": {$gt: 10000000}}, {"acquisition.pric
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-query: {"acquisition.acquired_month": {$lte: 4}}
+query: {"acquisition.acquired_month": {$lte: 3}}
 projection: {name:1, acquisition:1, _id:0}
+Limit: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
