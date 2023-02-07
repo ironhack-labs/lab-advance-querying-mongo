@@ -18,9 +18,9 @@ We have learned some super useful query operators that will helps us to make muc
 - Upon completion, run the following commands
 
 ```
-$ git add .
-$ git commit -m "done"
-$ git push origin master
+git add .
+git commit -m "done"
+git push origin master
 ```
 
 - Create Pull Request so your TAs can check up your work.
@@ -56,7 +56,7 @@ The database contains more than 18k documents. Each document holds the data abou
 **When running the `mongoimport` you should be located in the same folder as the `data.json` file.**
 
 ```bash
-$ mongoimport --db companiesDB --collection companies --file data.json
+mongoimport --db companiesDB --collection companies --file data.json
 ```
 
 What this mongoimport will do for us is to create a database named _companiesDB_, and inside the database will create a collection named _companies_ which will be fed with _data.json_.
