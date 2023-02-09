@@ -3,32 +3,67 @@
 # Answers
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
-
+- **QUERY**: ``
+- **PROJECT**: `` 
+- **SORT**: ``
+- **LIMIT**: ``
+- **SKIP**: ``
 <!-- Your Code Goes Here -->
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
 <!-- Your Code Goes Here -->
+- **QUERY**: ` { number_of_employees : { $gt: 5000 } }`
+- **PROJECT**: `` 
+- **SORT**: `{ number_of_employees : -1 }`
+- **LIMIT**: `20`
+- **SKIP**: ``
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
 <!-- Your Code Goes Here -->
+- **QUERY**: `{ $and: [{founded_year: {$gte : 2000}}, {founded_year: {$lte : 2005}}]}`
+- **PROJECT**: `{founded_year : 1 , name : 1 , _id : 0 }` 
+- **SORT**: ``
+- **LIMIT**: ``
+- **SKIP**: ``
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
 <!-- Your Code Goes Here -->
+- **QUERY**: `{$and: [{"ipo.valuation_amount" : { $gt : 100000000}} , {founded_year: {$lt : 2010}}]}`
+- **PROJECT**: `{ipo : 1 , name : 1, _id : 0}` 
+- **SORT**: ``
+- **LIMIT**: ``
+- **SKIP**: ``
+
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
 <!-- Your Code Goes Here -->
+- **QUERY**: `{$and: [{"ipo.valuation_amount" : { $gt : 100000000}} , {founded_year: {$lt : 2010}}]}`
+- **PROJECT**: ``
+- **SORT**: `{number_of_employees : -1}`
+- **LIMIT**: ``
+- **SKIP**: ``
 
 ### 6. All the companies that don't include the `partners` field.
 
 <!-- Your Code Goes Here -->
+- **QUERY**: `{ partners : { $exists: false } }`
+- **PROJECT**: ``
+- **SORT**: ``
+- **LIMIT**: ``
+- **SKIP**: ``
+
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
+- **QUERY**: ``
+- **PROJECT**: ``
+- **SORT**: ``
+- **LIMIT**: ``
+- **SKIP**: ``
 
-<!-- Your Code Goes Here -->
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
