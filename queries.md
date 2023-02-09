@@ -4,23 +4,33 @@
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
-<!-- Your Code Goes Here -->
+{name: 'Babelgum'}
+project {name:1}
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
 
-<!-- Your Code Goes Here -->
+{number_of_employees: { $gt: 5000 }}
+Limit 20
+sort {number_of_employees: -1}
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-<!-- Your Code Goes Here -->
+ {founded_year: {$gte: 2000, $lte: 2005}}
+ project {name: 1, founded_year: 1}
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-<!-- Your Code Goes Here -->
+{"ipo.valuation_amount": {$gt: 100000000}}
+project {name: 1, ipo: 1}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-<!-- Your Code Goes Here -->
+
+<!-- did not have time to do more -->
+
+
+
+
 
 ### 6. All the companies that don't include the `partners` field.
 
