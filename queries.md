@@ -70,8 +70,6 @@
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-?????
-
 - **QUERY**: ``
 - **PROJECT**: `{'ipo.valuation_amount': -1}`
 - **SORT**: ``
