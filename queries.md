@@ -16,63 +16,43 @@ limit: 20
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
 query: {$or:[{founded_year:2000},{founded_year:2005}]}
-projection: {name:1,founded_year:1,\_id:0}
+projection: {name:1,founded_year:1, \_id:0}
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {$and:[{founded_year:{$lte: 2005}}, {"ipo.valuation_amount":{$gt: 100000000}}]}
+projection: {name:1, ipo:1, \_id:0}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {$and:[ {number_of_employees: {$lt:1000} }, {founded_year: {$lt:2005} } ] }
+sort: {number_of_employees:-1}
+limit: 10
 
 ### 6. All the companies that don't include the `partners` field.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {partners:{$exists:false}}
+{}
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {category_code: null}
+nu
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {number_of_employees:{$gte: 100},number_of_employees:{$lt:1000}}
+projection: {name:1,number_of_employees:1,\_id:0}
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: {ipo:{$exists :true}}
+sort: {"ipo.valuation_amount":-1}
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+sort: {number_of_employees: -1}
+limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
