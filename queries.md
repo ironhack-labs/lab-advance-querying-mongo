@@ -3,11 +3,19 @@
 # Answers
 
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
-
+- **`query`**: /_You should copy/paste the query in here_/
+- **`projection`**: /_You should copy/paste the projection in here_/
+- **`sort`**: /_You should copy/paste the sort in here_/
+- **`skip`**: /_You should copy/paste the skip in here_/
+- **`limit`**: /_You should copy/paste the limit in here_/
 <!-- Your Code Goes Here -->
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
-
+- **`query`**: /_You should copy/paste the query in here_/
+- **`projection`**: /_You should copy/paste the projection in here_/
+- **`sort`**: /_You should copy/paste the sort in here_/
+- **`skip`**: /_You should copy/paste the skip in here_/
+- **`limit`**: /_You should copy/paste the limit in here_/
 <!-- Your Code Goes Here -->
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
