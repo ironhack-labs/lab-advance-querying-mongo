@@ -11,23 +11,31 @@
 <!-- Your Code Goes Here -->
 
 ### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
-- **`query`**: /_You should copy/paste the query in here_/
-- **`projection`**: /_You should copy/paste the projection in here_/{number_of_employees : {$gt :5000}}
-- **`sort`**: /_You should copy/paste the sort in here_/{number_of_employees: 1}
+- **`query`**: {number_of_employees: {$gt: 5000}}
+- **`projection`**: /_You should copy/paste the projection in here_/
+- **`sort`**: {number_of_employees: 1}
 - **`skip`**: /_You should copy/paste the skip in here_/
-- **`limit`**: /_You should copy/paste the limit in here_/20
+- **`limit`**: 20
 <!-- Your Code Goes Here -->
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
-- **`query`**: /_You should copy/paste the query in here_/{founded_year :{$gte: 2000 ,$lte: 2005}} 
-- **`projection`**: /_You should copy/paste the projection in here_/{name: 1, founded_year:1}
+
+- **`query`**: { founded_year: { $gt: 2000, $lt: 2005 } }
+- **`projection`**: {name: 1, founded_year: 1}
 - **`sort`**: /_You should copy/paste the sort in here_/
 - **`skip`**: /_You should copy/paste the skip in here_/
 - **`limit`**: /_You should copy/paste the limit in here_/
-<!-- Your Code Goes Here -->
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
+- **`query`**: {
+    "founded_year": { "$lt": 2010 },
+    "ipo.valuation_amount": { "$gt": 100000000 }
+  }
+- **`projection`**: { "name": 1, "ipo": 1, "_id": 0 }
+- **`sort`**: /_You should copy/paste the sort in here_/
+- **`skip`**: /_You should copy/paste the skip in here_/
+- **`limit`**: /_You should copy/paste the limit in here_/
 <!-- Your Code Goes Here -->
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
