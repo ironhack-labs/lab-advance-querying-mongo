@@ -42,8 +42,8 @@
 **`query`**: {$and: [{founded_year: {$lt: 2005}}, {number_of_employees: {$lt: 1000}}]}
 - **`projection`**: 
 - **`sort`**: /_You should copy/paste the sort in here_/
-- **`skip`**: /_You should copy/paste the skip in here_/{number_of_employees: 1}
-- **`limit`**: /_You should copy/paste the limit in here_/10
+- **`skip`**: {number_of_employees: 1}
+- **`limit`**: 10
 <!-- Your Code Goes Here -->
 
 ### 6. All the companies that don't include the `partners` field.
