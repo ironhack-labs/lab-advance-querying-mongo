@@ -139,7 +139,7 @@
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-- **`query`**: /_You should copy/paste the query in here_/
+- **`query`**: {founded_year: {$lte: 2010, $gte: 2000}, "acquisition.acquired_year": {$lte: 2011}}
 - **`projection`**: /_You should copy/paste the projection in here_/
 - **`sort`**: /_You should copy/paste the sort in here_/
 - **`skip`**: /_You should copy/paste the skip in here_/
