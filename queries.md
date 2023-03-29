@@ -48,7 +48,7 @@
 
 ### 6. All the companies that don't include the `partners` field.
 
-- **`query`**: /_You should copy/paste the query in here_/
+- **`query`**: { partners: { $exists: false } }
 - **`projection`**: /_You should copy/paste the projection in here_/
 - **`sort`**: /_You should copy/paste the sort in here_/
 - **`skip`**: /_You should copy/paste the skip in here_/
