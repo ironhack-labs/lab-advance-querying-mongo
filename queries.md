@@ -98,20 +98,16 @@
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
-- **`query`**: /_You should copy/paste the query in here_/
-- **`projection`**: /_You should copy/paste the projection in here_/
-- **`sort`**: /_You should copy/paste the sort in here_/
-- **`skip`**: /_You should copy/paste the skip in here_/
-- **`limit`**: /_You should copy/paste the limit in here_/
+- **`projection`**:  {name: 1, founded_year: 1, _id: 0}
+- **`sort`**: {founded_year: 1}
+
 
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-- **`query`**: /_You should copy/paste the query in here_/
-- **`projection`**: /_You should copy/paste the projection in here_/
-- **`sort`**: /_You should copy/paste the sort in here_/
-- **`skip`**: /_You should copy/paste the skip in here_/
-- **`limit`**: /_You should copy/paste the limit in here_/
+- **`query`**: {founded_day: {$gte: 1,$lte: 7}}
+- **`sort`**: {acquisition_price: -1}
+- **`limit`**: 10
 
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
