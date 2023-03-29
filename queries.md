@@ -39,16 +39,28 @@
 <!-- Your Code Goes Here -->
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
-
+**`query`**: {$and: [{founded_year: {$lt: 2005}}, {number_of_employees: {$lt: 1000}}]}
+- **`projection`**: 
+- **`sort`**: /_You should copy/paste the sort in here_/
+- **`skip`**: /_You should copy/paste the skip in here_/{number_of_employees: 1}
+- **`limit`**: /_You should copy/paste the limit in here_/10
 <!-- Your Code Goes Here -->
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- Your Code Goes Here -->
+- **`query`**: /_You should copy/paste the query in here_/
+- **`projection`**: /_You should copy/paste the projection in here_/
+- **`sort`**: /_You should copy/paste the sort in here_/
+- **`skip`**: /_You should copy/paste the skip in here_/
+- **`limit`**: /_You should copy/paste the limit in here_/
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
-<!-- Your Code Goes Here -->
+- **`query`**: /_You should copy/paste the query in here_/
+- **`projection`**: /_You should copy/paste the projection in here_/
+- **`sort`**: /_You should copy/paste the sort in here_/
+- **`skip`**: /_You should copy/paste the skip in here_/
+- **`limit`**: /_You should copy/paste the limit in here_/
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
