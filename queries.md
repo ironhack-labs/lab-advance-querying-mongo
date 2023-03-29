@@ -112,9 +112,9 @@
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-- **`query`**: /_You should copy/paste the query in here_/
+- **`query`**: {category_code: "web", number_of_employees: {$gt: 4000}}
 - **`projection`**: /_You should copy/paste the projection in here_/
-- **`sort`**: /_You should copy/paste the sort in here_/
+- **`sort`**: {number_of_employees: 1}
 - **`skip`**: /_You should copy/paste the skip in here_/
 - **`limit`**: /_You should copy/paste the limit in here_/
 
