@@ -121,7 +121,7 @@
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-- **`query`**: /_You should copy/paste the query in here_/
+- **`query`**: {"acquisition.price_amount": {$gt: 10.000000}, "acquisition.price_currency_code": "EUR"}
 - **`projection`**: /_You should copy/paste the projection in here_/
 - **`sort`**: /_You should copy/paste the sort in here_/
 - **`skip`**: /_You should copy/paste the skip in here_/
