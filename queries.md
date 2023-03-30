@@ -131,7 +131,7 @@
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
 - **`query`**: {"acquisition.acquired_month": {$lte: 3}}
-- **`projection`**: {name: 1, acquisition: 1}
+- **`projection`**: {name: 1, acquisition: 1, _id:0}
 - **`sort`**: /_You should copy/paste the sort in here_/
 - **`skip`**: /_You should copy/paste the skip in here_/
 - **`limit`**: 10
@@ -139,9 +139,12 @@
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-- **`query`**: {founded_year: {$lte: 2010, $gte: 2000}, "acquisition.acquired_year": {$lte: 2011}}
+- **`query`**: {founded_year: {$lte: 2010, $gte: 2000}, "acquisition.acquired_year": {$not: {$lt: 2011}}}
 - **`projection`**: /_You should copy/paste the projection in here_/
 - **`sort`**: /_You should copy/paste the sort in here_/
 - **`skip`**: /_You should copy/paste the skip in here_/
 - **`limit`**: /_You should copy/paste the limit in here_/
+
+
+
 
