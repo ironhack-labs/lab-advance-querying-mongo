@@ -218,10 +218,13 @@ const sort = {
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
+
 const filter = {
   '$and': [
     {
-      'acquisition.price_amount': 10000000
+      'acquisition.price_amount': {
+        '$gte': 10000000
+      }
     }, {
       'acquisition.price_currency_code': {
         '$eq': 'EUR'
@@ -230,7 +233,7 @@ const filter = {
   ]
 };
 
-//con dolares si aparecen: "USD"
+
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
