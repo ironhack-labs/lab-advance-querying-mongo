@@ -39,7 +39,6 @@ query: {partners: {$exists: false}}
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
 query: {category_code: {$eq: null}}    
-<!-- ¿se puede poner también  {category_code: null} ?-->
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
@@ -87,13 +86,13 @@ limit: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- ¿a que se refiere con web category? -->
+query: {category_code:{$eq:"web"}, number_of_employees: {$gt:4000}}
+sort: {number_of_employees: 1}
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
 
-query: {$and: [{"acquisition.price_amount": {$gt: "10000000"}}, {"acquisitions.price_currency_code": "EUR"} ]} 
-<!-- me sale sin resultados... -->
+query: {"acquisition.price_amount": {$gt: 10000000}, "acquisition.price_currency_code": "EUR"} 
 
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
@@ -104,6 +103,5 @@ limit: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-query: {$and: [{year: {$gte:2000}}, {year: {$lte: 2010}}, {"acquisition.acquired_year": {$lte:"2011"}}]}
-<!-- me sale sin resultados... -->
+query: {$and: [{founded_year: {$gte:2000}}, {founded_year: {$lte: 2010}}, {"acquisition.acquired_year": {$lte: 2011}}]}
 
