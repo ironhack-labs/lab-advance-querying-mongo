@@ -19,6 +19,7 @@
 
 - **`query`**: {number_of_employees: { $gt: 5000} }
 - **`sort`**: {number_of_employees: -1}
+- **`limit`**: 20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
@@ -39,6 +40,7 @@
 ### 6. All the companies that don't include the `partners` field.
 
 - **`query`**: {partners: { $nin: ["partners.partner_name"] } }
+- or: - **`query`**: {partners: {$size: 0} }
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
@@ -87,7 +89,7 @@
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
 - **`query`**: {$and: [{category_code: "web"}, {number_of_employees: {$gt: 4000} }] }
-- **`sort`**: {number_of_employees: -1}
+- **`sort`**: {number_of_employees: 1}
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
