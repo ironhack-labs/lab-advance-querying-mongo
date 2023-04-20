@@ -32,7 +32,7 @@ Sort: {number_of_employees : 1}
 Limit: 10
 ### 6. All the companies that don't include the `partners` field.
 
-Filter: { partners: { $exists: true, $type: 'array', $ne: [] } }
+Filter: { partners: { $exists: true, $type: 'array', $ne: []}}
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
