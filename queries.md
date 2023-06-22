@@ -143,6 +143,10 @@ Filter:{$and: [{"acquisition.price_amount": {$gt: 10000000}},{"acquisition.price
 
 <!-- Your Code Goes Here -->
 
+Filter: {"acquisition.acquired_month": {$lte: 4}}
+Project: {\_id: 0, name: 1, acquisition: 1}
+Limit: 10
+
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
