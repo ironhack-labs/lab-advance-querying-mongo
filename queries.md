@@ -119,7 +119,7 @@ sort: {number_of_employees: 1}
 
 <!-- Your Code Goes Here -->
 
-query: {"acquisition.price_amount": {$gt: 10000000}, "acquisition.price_currency_code":{$eq: "USD"} }
+query: {"acquisition.price_amount": {$gt: 10000000}, "acquisition.price_currency_code":{$eq: "EUR"} }
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
@@ -139,6 +139,6 @@ $and: [
     { founded_year: { $ne: null } },
     { founded_year: { $gte: 2000 } },
     { founded_year: { $lte: 2010 } },
-    { "acquisition.acquired_year": {$lte: 2011} }
+    { "acquisition.acquired_year": {$gt: 2011} }
 ]
 }
