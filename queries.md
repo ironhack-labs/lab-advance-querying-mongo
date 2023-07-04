@@ -61,35 +61,45 @@ sort:{ "ipo.price_amount": -1 }
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
-<!-- Your Code Goes Here -->
+query: {number_of_employees:{$ne:null}}
+sort: {number_of_employees:-1}
+limit: 10
 
 ### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
 
-<!-- Your Code Goes Here -->
+query: {founded_month:{$in:[7,8,9,10,11,12]}}
+limit: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+query: {$and:[{founded_year:{$lt:2000}},{"acquisition.price_amount":{$gt:10000000}}]}
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-<!-- Your Code Goes Here -->
+query: {$and:[{"acquisition.acquired_year":{$gt:2010}},{"acquisition.price_amount":{$ne: null}}]}
+projection: {name:1, acquisition:1}
+sort: {"acquisition.price_amount":1}
 
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
-<!-- Your Code Goes Here -->
+query: {founded_year:{$ne:null}}
+projection: {name:1, founded_year:1}
+sort: {founded_year:1}
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-<!-- Your Code Goes Here -->
+query: {$and:[{founded_day:{$lte:7}},{"acquisition.price_amount":{$ne:null}}]}
+sort: {"acquisition.price_amount": -1}
+limit: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- Your Code Goes Here -->
+query: {$and:[{category_code:'web'},{number_of_employees:{$gt:4000}}]}
+sort: {number_of_employees:1}
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-query:{"acquisition.price_amount": { $gt: 10000000 },"acquisition.price_currency_code": "EUR"}
+query:{$and:[{"acquisition.price_amount": { $gt: 10000000 },"acquisition.price_currency_code": "EUR"}]}
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
@@ -99,4 +109,4 @@ limit: 10
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-{$and: [{ "founded_year": { $gte: 2000, $lte: 2010 } },{ "acquisition.acquired_year": { $lt: 2011, $exists: true } }]}
+{$and: [{ "founded_year": { $gte: 2000, $lte: 2010 } },{ "acquisition.acquired_year": { $gt: 2011, $exists: true } }]}
