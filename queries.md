@@ -108,4 +108,4 @@
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
 <!-- Your Code Goes Here -->
-<!-- Filter --> {$and: [{founded_year: {$gte:2000, $lte:2010}}, {"acquisition.acquired_year": {$gt: 2011}}]}
+<!-- Filter --> {$and: [{founded_year: {$gte:2000, $lte:2010}}, {"acquisition.acquired_year": {$lt: 2011}}]}
