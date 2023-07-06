@@ -101,8 +101,8 @@
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-<!-- query: -->
-<!-- projection: -->
+<!-- query: { "acquisition.acquired_year": { $gt: 2010 } } -->
+<!-- projection: {name:1,'acquisition':1,_id:0} -->
 <!-- sort: -->
 <!-- skip: -->
 <!-- limit: -->
@@ -111,32 +111,32 @@
 ### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
 
 <!-- query: -->
-<!-- projection: -->
-<!-- sort: -->
+<!-- projection: {name:1,founded_year:1,_id:0} -->
+<!-- sort: {founded_year: 1} -->
 <!-- skip: -->
 <!-- limit: -->
 
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-<!-- query: -->
+<!-- query:  {founded_day:{$lte:7}} -->
 <!-- projection: -->
-<!-- sort: -->
+<!-- sort: {'acquisition.price_amount':1} -->
 <!-- skip: -->
-<!-- limit: -->
+<!-- limit: 10 -->
 
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
-<!-- query: -->
+<!-- query: {category_code:'web',number_of_employees:{$gt:4000}} -->
 <!-- projection: -->
-<!-- sort: -->
+<!-- sort: {number_of_employees:1} -->
 <!-- skip: -->
 <!-- limit: -->
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-<!-- query: -->
+<!-- query: {"acquisition.price_currency_code":'EUR','acquisition.price_amount':{$gt:10000000}} -->
 <!-- projection: -->
 <!-- sort: -->
 <!-- skip: -->
