@@ -102,7 +102,7 @@ skip:
 limit: 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-query: { $and: [ {number_of_employees: {$gt:4000} }, {founded_month: {$nin: [8,9,10,11,12, null]} } ] }
+query: { founded_day: {$lte: 7 } }
 project: 
 sort: {"acquisition.price_amount": -1}
 skip:
