@@ -15,7 +15,7 @@ limit:20
 
 ### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
 
-filter:{$and:[{founded_year:{$gt:2000}},{founded_year:{$lt:2005}}]}
+filter:{$and:[{founded_year:{$gte:2000}},{founded_year:{$lte:2005}}]}
 project:{name:1,founded_year: 1}
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
@@ -39,7 +39,7 @@ filter: {category_code: null}
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-filter: {$and:[{number_of_employees:{$gt:100}},{number_of_employees:{$lt:1000}}]}
+filter: {$and:[{number_of_employees:{$gte:100}},{number_of_employees:{$lt:1000}}]}
 project: {name:1,number_of_employees: 1}
 
 ### 9. Order all the companies by their IPO price in a descending order.
@@ -58,7 +58,7 @@ limit:1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-<!-- Your Code Goes Here -->
+filter:{$and:[{founded_year:{$lt:2000},{"acquisition.price_amount":{$gt:10000000}}}]}
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
