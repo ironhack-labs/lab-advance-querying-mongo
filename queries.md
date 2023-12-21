@@ -25,7 +25,7 @@ projection: { _id: 0, ipo: 1, name: 1 }
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-query: { $and: [ { number_of_employees: { $lte: 1000 } }, { founded_year: { $lte: 2005 } } ] }
+query: { $and: [ { number_of_employees: { $lt: 1000 } }, { founded_year: { $lt: 2005 } } ] }
 sort: { number_of_employees: 1 }
 limit: 10
 
@@ -39,7 +39,7 @@ query: { category_code: null }
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-query: { $and: [ { number_of_employees: { $gte: 100 } }, { number_of_employees: { $lte: 1000 } } ] }
+query: { $and: [ { number_of_employees: { $gte: 100 } }, { number_of_employees: { $lt: 1000 } } ] }
 projection: { _id: 0, name: 1, number_of_employees: 1 }
 
 ### 9. Order all the companies by their IPO price in a descending order.
@@ -58,11 +58,11 @@ limit: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-query: { $and: [ { founded_year: { $lte: 2000 } }, { "acquisition.price_amount": { $gte: 10000000 } } ] }
+query: { $and: [ { founded_year: { $lt: 2000 } }, { "acquisition.price_amount": { $gt: 10000000 } } ] }
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
-query: { "acquisition.acquired_year": { $gte: 2010 } }
+query: { "acquisition.acquired_year": { $gt: 2010 } }
 projection: { _id: 0, name: 1, acquisition: 1 }
 sort: { "acquisition.price_amount": 1 }
 
@@ -84,11 +84,11 @@ sort: { number_of_employees: 1 } 
 
 ### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
 
-query: { $and: [ { "acquisition.price_amount": { $gte: 10000000 }}, { "acquisition.price_currency_code": "EUR" } ] }
+query: { $and: [ { "acquisition.price_amount": { $gt: 10000000 }}, { "acquisition.price_currency_code": "EUR" } ] }
 
 ### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
 
-query: { "acquisition.acquired_month": { $lte: 6 } }
+query: { "acquisition.acquired_month": { $lte: 4 } }
 projection: { _id: 0, name: 1, acquisition: 1 }
 limit: 10
 
