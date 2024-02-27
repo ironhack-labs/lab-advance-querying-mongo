@@ -118,6 +118,6 @@ Filter: {$and: [{"acquisition.price_amount":{$gt: 10000000}}, {"acquisition.pric
 **5. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.**
 
 <!-- Your Query Goes Here -->
-{$and: [{founded_year:{$gte:2000}}, {founded_year: {$lte:2010}}, {"acquisition.acquired_year":{$gt:2011}}]}
+{$and: [{founded_year:{$gte:2000}}, {founded_year: {$lte:2010}}, {"acquisition.acquired_year":{$gt:2011}}]}git s
 
 <br>
