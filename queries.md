@@ -8,17 +8,27 @@
 
 <!-- Your Query Goes Here -->
 
+{name: "Babelgum"}
+
 <br>
 
 **2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by *number of employees*.**
 
 <!-- Your Query Goes Here -->
 
+
+{number_of_employees: { $gt: 5000 }}
+limit: 20
+sort: {number_of_employees: 1}
+
 <br>
 
 **3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.**
 
 <!-- Your Query Goes Here -->
+
+{$and: [{founded_year: {$gte: 2000}}, {founded_year:{$lte: 2005}}]}
+project: {name: 1, founded_year: 1}
 
 <br>
 
