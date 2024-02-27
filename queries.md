@@ -111,11 +111,13 @@ Sort: {number_of_employees:1}
 **4. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.**
 
 <!-- Your Query Goes Here -->
+Filter: {$and: [{"acquisition.price_amount":{$gt: 10000000}}, {"acquisition.price_currency_code": "EUR"}    ]}
 
 <br>
 
 **5. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.**
 
 <!-- Your Query Goes Here -->
+{$and: [{founded_year:{$gte:2000}}, {founded_year: {$lte:2010}}, {"acquisition.acquired_year":{$gt:2011}}]}
 
 <br>
