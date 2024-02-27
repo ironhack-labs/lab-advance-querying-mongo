@@ -2,78 +2,157 @@
 
 # Answers
 
-### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
+## Iteration 2
 
-<!-- Your Code Goes Here -->
+**1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.**
 
-### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
+query: {name: "Babelgum"}
+projection: {name: 1, _id: 0}
+sort: 
+skip: 
+limit: 
 
-<!-- Your Code Goes Here -->
 
-### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
+<br>
 
-<!-- Your Code Goes Here -->
+**2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by *number of employees*.**
 
-### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
+query: {number_of_employees: {$gt: 5000}}
+projection: 
+sort: 
+skip: 
+limit: 20
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
+**3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.**
 
-<!-- Your Code Goes Here -->
+query: {"founded_year": {"$gte": 2000, "$lte": 2005}}
+projection: {"name": 1, "founded_year": 1, "_id": 0}
+sort: 
+skip: 
+limit: 
 
-### 6. All the companies that don't include the `partners` field.
+<br>
 
-<!-- Your Code Goes Here -->
+**4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.**
 
-### 7. All the companies that have a null type of value on the `category_code` field.
+query: {$and: [{"ipo.valuation_amount": {$gt: 10000000}}, {"founded_year": {$lt: 2010}} ]}
+projection: {"name": 1, "ipo": 1, "_id": 0}
+sort: 
+skip: 
+limit: 
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
+**5. All the companies that don't include the `partners` field.**
 
-<!-- Your Code Goes Here -->
+query: {"partners": {"$exists": false}}
+projection: 
+sort: 
+skip: 
+limit: 
 
-### 9. Order all the companies by their IPO price in a descending order.
+<br>
 
-<!-- Your Code Goes Here -->
+**6. All the companies that have a null value on the `category_code` field.**
 
-### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
+query: {"category_code": null}
+projection: 
+sort: 
+skip: 
+limit: 
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
+**7. Order all the companies by their IPO price in a descending order.**
 
-<!-- Your Code Goes Here -->
+query: 
+projection: 
+sort: {"ipo.valuation_amount": -1}
+skip: 
+limit: 
 
-### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
+<br>
 
-<!-- Your Code Goes Here -->
+**8. Retrieve the 10 companies with most employees, order by the `number of employees`.**
 
-### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
+query: 
+projection: 
+sort: {"number_of_employees": -1}
+skip: 
+limit: 10
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
+**9. All the companies founded on the second semester of the year (July to December). Limit your search to 1000 companies.**
 
-<!-- Your Code Goes Here -->
+query: {"founded_month": { "$gte": 7, "$lte": 12 }}
+projection: 
+sort: 
+skip: 
+limit: 1000
 
-### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
+<br>
 
-<!-- Your Code Goes Here -->
+**10. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.**
 
-### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
+query: {"founded_day": {"$gte": 1, "$lte": 7}}
+projection: 
+sort: {"acquisitions.price_amount": -1}
+skip: 
+limit: 10
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
+## Iteration 3 (Bonus)
 
-<!-- Your Code Goes Here -->
+**1. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.**
 
-### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
+query: 
+projection: 
+sort: 
+skip: 
+limit: 
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
+**2. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.**
 
-<!-- Your Code Goes Here -->
+query: 
+projection: 
+sort: 
+skip: 
+limit: 
+
+<br>
+
+**3. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.**
+
+query: 
+projection: 
+sort: 
+skip: 
+limit: 
+
+<br>
+
+**4. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.**
+
+query: 
+projection: 
+sort: 
+skip: 
+limit: 
+
+<br>
+
+**5. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.**
+
+query: 
+projection: 
+sort: 
+skip: 
+limit: 
+
+<br>
