@@ -23,7 +23,7 @@ Limit: 20
 <!-- Your Query Goes Here -->
 Filter: {$and: [{founded_year:{$gte:2000}},{founded_year:{$gte:2005}}]}
 
-Project: {name: 1, _id:0, founded_year: 1}
+Query: {name: 1, _id:0, founded_year: 1}
 
 <br>
 
@@ -49,13 +49,13 @@ Query: {category_code: {$type: 'null'}}
 **7. Order all the companies by their IPO price in a descending order.**
 
 <!-- Your Query Goes Here -->
-Project: {'ipo.valuation_amount': -1}
+Query: {'ipo.valuation_amount': -1}
 <br>
 
 **8. Retrieve the 10 companies with most employees, order by the `number of employees`.**
 
 <!-- Your Query Goes Here -->
-Project: {number_of_employees: -1}
+Query: {number_of_employees: -1}
 Limit: 10
 <br>
 
@@ -69,7 +69,9 @@ Limit: 1000
 **10. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.**
 
 <!-- Your Query Goes Here -->
-
+Query: {founded_day: {$lte: 7}}
+Sort: {'acquisition.price_amount': -1}
+Limit: 10
 <br>
 
 ## Iteration 3 (Bonus)
