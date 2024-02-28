@@ -37,41 +37,38 @@ Project: {name: 1, _id:0, founded_year: 1}
 **5. All the companies that don't include the `partners` field.**
 
 <!-- Your Query Goes Here -->
-Query: {partners: {$exists: false}}
+{partners: {$exists: false}}
 <br>
 
 **6. All the companies that have a null value on the `category_code` field.**
 
 <!-- Your Query Goes Here -->
-Query: {category_code: {$type: 'null'}}
+{category_code:{$type: "null"}}
 <br>
 
 **7. Order all the companies by their IPO price in a descending order.**
 
 <!-- Your Query Goes Here -->
-Query: {'ipo.valuation_amount': -1}
+Query: {"ipo.valuation_amount": -1}
 <br>
 
 **8. Retrieve the 10 companies with most employees, order by the `number of employees`.**
 
 <!-- Your Query Goes Here -->
-Query: {number_of_employees: -1}
+Query:{number_of_employees: -1}
 Limit: 10
 <br>
 
 **9. All the companies founded on the second semester of the year (July to December). Limit your search to 1000 companies.**
 
 <!-- Your Query Goes Here -->
-Query: {founded_month: {$gte: 7}}
-Limit: 1000
+{$and:[{founded_month:{$gte: 7}}, {founded_month:{$lte: 12}}]} Limit 1000
 <br>
 
 **10. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.**
 
 <!-- Your Query Goes Here -->
-Query: {founded_day: {$lte: 7}}
-Sort: {'acquisition.price_amount': -1}
-Limit: 10
+{founded_day:{$lte: 7}} Sort {"acquisition.price_amount": -1} Limit 10
 <br>
 
 ## Iteration 3 (Bonus)
