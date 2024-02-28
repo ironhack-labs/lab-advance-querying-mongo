@@ -1,0 +1,8 @@
+"homepage": "https://github.com/ironhack-labs/lab-express-mongoose-recipes#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.2.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+  }
