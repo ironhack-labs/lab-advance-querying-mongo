@@ -2,78 +2,118 @@
 
 # Answers
 
-### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
+Query:
+Project:
+Sort: 
+Skip: 
+Limit:
 
-<!-- Your Code Goes Here -->
+## Iteration 2
 
-### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
+**1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.**
 
-<!-- Your Code Goes Here -->
+Query: {name: "Babelgum"}
+Project: {name: 1}
 
-### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
+<br>
 
-<!-- Your Code Goes Here -->
+**2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by *number of employees*.**
 
-### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
+Query: {number_of_employees: {$gt: 5000}}
+Sort: {number_of_employees: 1}
+Limit: 20
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
+**3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.**
 
-<!-- Your Code Goes Here -->
+Query: {founded_year: {$gte: 2000, $lte: 2005}}
+Project: {name: 1, founded_year: 1, _id: 0}
 
-### 6. All the companies that don't include the `partners` field.
+<br>
 
-<!-- Your Code Goes Here -->
+**4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.**
 
-### 7. All the companies that have a null type of value on the `category_code` field.
+Query: {$and: [{founded_year: {$lt: 2010}}, {"ipo.valuation_amount": {$gt: 1000000000}}]}
+Project: {name: 1, ipo: 1, _id: 0}
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
+**5. All the companies that don't include the `partners` field.**
 
-<!-- Your Code Goes Here -->
+Query: {partners: {$exists: false}}
 
-### 9. Order all the companies by their IPO price in a descending order.
+<br>
 
-<!-- Your Code Goes Here -->
+**6. All the companies that have a null value on the `category_code` field.**
 
-### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
+Query: {category_code: null}
+<!-- Preguntar a Jorge porque este query estaría mal. La respuesta correcta es {category_code: {$type: 'null'}}, pero los dos queries me dan el mismo número de resultados -->
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
+**7. Order all the companies by their IPO price in a descending order.**
 
-<!-- Your Code Goes Here -->
+Query: {"ipo.valuation_amount": {$exists: true}} <!-- No tendría que haber hecho este query porque nos pide ordenar todas las compañías, también las que no tienen esta propiedad -->
+Sort: {"ipo.valuation_amount": -1}
 
-### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
+<br>
 
-<!-- Your Code Goes Here -->
+**8. Retrieve the 10 companies with most employees, order by the `number of employees`.**
 
-### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
+Sort: {number_of_employees: -1}
+Limit: 10
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
+**9. All the companies founded on the second semester of the year (July to December). Limit your search to 1000 companies.**
 
-<!-- Your Code Goes Here -->
+Query: {founded_month: {$gte: 7, $lte: 12}}
+Limit: 1000
 
-### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
+<br>
 
-<!-- Your Code Goes Here -->
+**10. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.**
 
-### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
+Query: {founded_day: {$lte: 7}}
+Sort: {"acquisition.price_amount": -1}
+Limit: 10
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
+## Iteration 3 (Bonus)
 
-<!-- Your Code Goes Here -->
+**1. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.**
 
-### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
+Query: {"acquisition.acquired_year": {$gt: 2010}}
+Project: {name: 1, _id: 0, acquisition: 1}
+Sort: {"acquisition.price_amount": -1}
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
+**2. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.**
 
-<!-- Your Code Goes Here -->
+
+Project: {name: 1, founded_year: 1, _id: 0}
+Sort: {founded_year: -1} <!-- cuando no especifica en qué orden hay que ordenar, ¿se entiende siempre que es de menor a mayor? Pregunta para Jorge. Y otra pregunta: en este query ha hecho un filtro para eliminar los documentos cuyo founded year es null, pero en el query 7 no ha hecho lo mismo para eliminar las que tenían ipo null. Qué práctica es mejor, ¿quitar o mantener los documentos que no tienen una propiedad por la que estamos ordenando? -->
+
+<br>
+
+**3. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.**
+
+Query: {$and: [{category_code: "web"}, {number_of_employees: {$gt: 4000}}]}
+Sort: {number_of_employees: 1}
+
+<br>
+
+**4. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.**
+
+Query: {$and: [{"acquisition.price_amount": {$gt: 10000000}}, {"acquisition.price_currency_code": "EUR"}]}
+
+<br>
+
+**5. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.**
+
+Query: {$and: [{founded_year: {$gte: 2000, $lte: 2010}, "acquisition.acquired_year": {$gt: 2011}}]}
+
+<br>
