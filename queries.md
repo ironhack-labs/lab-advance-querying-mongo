@@ -53,6 +53,7 @@
 
 **8. Retrieve the 10 companies with most employees, order by the `number of employees`.**
 
+    filter: {number_of_employees: { $exists: true }}
     sort: {number_of_employees: -1}
     limit:10
 
