@@ -20,7 +20,7 @@ projection: {name:1, founded_year:1, _id:0}
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 
-query: {ipo: {$gt:100000000}, founded_year: {$lt:2010}}
+query: {'ipo.valuation_amount': {$gt:100000000}, founded_year: {$lt:2010}}
 projection: {name: 1, ipo:1, _id:0}
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
@@ -45,7 +45,7 @@ projection: {name:1, number_of_employees:1, _id:0}
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-sort: {ipo: -1}
+sort: {'ipo.valuation_amount': -1}
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
@@ -59,7 +59,7 @@ limit: 1000
 
 ### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
 
-query: {founded_year: {$lt: 2000}, "acquisitions.price_amount": {$gt:10000000}}
+query: {founded_year: {$lt: 2000}, "acquisition.price_amount": {$gt:10000000}}
 
 ### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
 
@@ -95,4 +95,4 @@ projection: {_id:0, name:1, acquisition:1}
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-query: {founded_year: {$gte: 2000, $lte: 2010}, "acquisition.acquired_year": { $not: {$lt:2011}}}
+query: {founded_year: {$gte: 2000, $lte: 2010}, "acquisition.acquired_year": { $not: {$gte:2011}}}
