@@ -1,0 +1,578 @@
+[{
+  "name": "Facebook",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "104000000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2012,
+    "pub_month": 5,
+    "pub_day": 18,
+    "stock_symbol": "NASDAQ:FB"
+  }
+},
+{
+  "name": "Twitter",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "18100000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2013,
+    "pub_month": 11,
+    "pub_day": 7,
+    "stock_symbol": "NYSE:TWTR"
+  }
+},
+{
+  "name": "Yelp",
+  "ipo": {
+    "valuation_amount": 1300000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2012,
+    "pub_month": 3,
+    "pub_day": 2,
+    "stock_symbol": "NYSE:YELP"
+  }
+},
+{
+  "name": "LinkedIn",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "9310000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 7,
+    "pub_day": 20,
+    "stock_symbol": "NYSE:LNKD"
+  }
+},
+{
+  "name": "Amazon",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "100000000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 1997,
+    "pub_month": 5,
+    "pub_day": null,
+    "stock_symbol": "NASDAQ:AMZN"
+  }
+},
+{
+  "name": "Brightcove",
+  "ipo": {
+    "valuation_amount": 290000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2012,
+    "pub_month": 2,
+    "pub_day": 17,
+    "stock_symbol": "NASDAQ:BCOV"
+  }
+},
+{
+  "name": "KIT digital",
+  "ipo": {
+    "valuation_amount": 235000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 7,
+    "pub_day": 27,
+    "stock_symbol": "KITD"
+  }
+},
+{
+  "name": "Nielsen",
+  "ipo": {
+    "valuation_amount": 1600000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 1,
+    "pub_day": 26,
+    "stock_symbol": "NYSE:NLSN"
+  }
+},
+{
+  "name": "OpenTable",
+  "ipo": {
+    "valuation_amount": 1050000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2009,
+    "pub_month": 5,
+    "pub_day": 21,
+    "stock_symbol": "NASDAQ:OPEN"
+  }
+},
+{
+  "name": "ChannelAdvisor",
+  "ipo": {
+    "valuation_amount": 287000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2013,
+    "pub_month": 5,
+    "pub_day": 23,
+    "stock_symbol": "NYSE:ECOM"
+  }
+},
+{
+  "name": "Jive Software",
+  "ipo": {
+    "valuation_amount": 1000000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2012,
+    "pub_month": 2,
+    "pub_day": 3,
+    "stock_symbol": "NASDAQ:JIVE"
+  }
+},
+{
+  "name": "Zillow",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "2550000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 7,
+    "pub_day": 19,
+    "stock_symbol": "NASDAQ:Z"
+  }
+},
+{
+  "name": "Wix",
+  "ipo": {
+    "valuation_amount": 750000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2013,
+    "pub_month": 11,
+    "pub_day": 6,
+    "stock_symbol": "NASDAQ:WIX"
+  }
+},
+{
+  "name": "Vringo",
+  "ipo": {
+    "valuation_amount": 11003200,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 6,
+    "pub_day": 22,
+    "stock_symbol": "VRNG"
+  }
+},
+{
+  "name": "Shutterfly",
+  "ipo": {
+    "valuation_amount": 350000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2006,
+    "pub_month": 9,
+    "pub_day": 29,
+    "stock_symbol": "SFLY"
+  }
+},
+{
+  "name": "TripAdvisor",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "3273770000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 12,
+    "pub_day": 21,
+    "stock_symbol": "TRIP"
+  }
+},
+{
+  "name": "Salesforce",
+  "ipo": {
+    "valuation_amount": 110000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2004,
+    "pub_month": 7,
+    "pub_day": 2,
+    "stock_symbol": "NYSE:CRM"
+  }
+},
+{
+  "name": "HomeAway",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "3000000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 6,
+    "pub_day": 29,
+    "stock_symbol": "NASDAQ:AWAY"
+  }
+},
+{
+  "name": "QuinStreet",
+  "ipo": {
+    "valuation_amount": 140000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 1,
+    "pub_day": 11,
+    "stock_symbol": "NASDAQ:QNST"
+  }
+},
+{
+  "name": "Rackspace",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "5440000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 11,
+    "pub_day": 7,
+    "stock_symbol": "RAX"
+  }
+},
+{
+  "name": "BMC Software",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "6000000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 1988,
+    "pub_month": 8,
+    "pub_day": 12,
+    "stock_symbol": "NASDAQ:BMC"
+  }
+},
+{
+  "name": "Higher One",
+  "ipo": {
+    "valuation_amount": 1060000000,
+    "valuation_currency_code": "USD",
+    "pub_year": null,
+    "pub_month": null,
+    "pub_day": null,
+    "stock_symbol": "NYSE:ONE"
+  }
+},
+{
+  "name": "Infoblox",
+  "ipo": {
+    "valuation_amount": 824000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2012,
+    "pub_month": 4,
+    "pub_day": 20,
+    "stock_symbol": "NYSE:BLOX"
+  }
+},
+{
+  "name": "Tencent",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "11000000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2004,
+    "pub_month": 6,
+    "pub_day": 16,
+    "stock_symbol": "HK:0700"
+  }
+},
+{
+  "name": "Marketo",
+  "ipo": {
+    "valuation_amount": 465000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2013,
+    "pub_month": 4,
+    "pub_day": 2,
+    "stock_symbol": "NASDAQ:MKTO"
+  }
+},
+{
+  "name": "Baidu",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "4000000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2005,
+    "pub_month": 8,
+    "pub_day": 5,
+    "stock_symbol": "NASDAQ:BIDU"
+  }
+},
+{
+  "name": "Geeknet",
+  "ipo": {
+    "valuation_amount": 134000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 11,
+    "pub_day": 2,
+    "stock_symbol": "GKNT"
+  }
+},
+{
+  "name": "Opsware",
+  "ipo": {
+    "valuation_amount": 450000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2001,
+    "pub_month": 3,
+    "pub_day": 9,
+    "stock_symbol": "NASDAQ:LDCL"
+  }
+},
+{
+  "name": "Telenav",
+  "ipo": {
+    "valuation_amount": 337000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 5,
+    "pub_day": 13,
+    "stock_symbol": "TNAV"
+  }
+},
+{
+  "name": "Rally Software",
+  "ipo": {
+    "valuation_amount": 315000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2013,
+    "pub_month": 4,
+    "pub_day": 12,
+    "stock_symbol": "RALY"
+  }
+},
+{
+  "name": "BrightSource Energy",
+  "ipo": {
+    "valuation_amount": 1000000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 4,
+    "pub_day": 22,
+    "stock_symbol": "NASDAQ:BRSE"
+  }
+},
+{
+  "name": "Mixi",
+  "ipo": {
+    "valuation_amount": 970000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2006,
+    "pub_month": 9,
+    "pub_day": 14,
+    "stock_symbol": "JP:2121"
+  }
+},
+{
+  "name": "QlikTech",
+  "ipo": {
+    "valuation_amount": 1000000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 7,
+    "pub_day": 16,
+    "stock_symbol": "QLIK"
+  }
+},
+{
+  "name": "Pironet",
+  "ipo": {
+    "valuation_amount": 44000000,
+    "valuation_currency_code": "EUR",
+    "pub_year": 2000,
+    "pub_month": 2,
+    "pub_day": 22,
+    "stock_symbol": "PNG"
+  }
+},
+{
+  "name": "Inuvo",
+  "ipo": {
+    "valuation_amount": 30000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 2,
+    "pub_day": 10,
+    "stock_symbol": "NYSE:INUV"
+  }
+},
+{
+  "name": "Chegg",
+  "ipo": {
+    "valuation_amount": 1100000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2013,
+    "pub_month": 11,
+    "pub_day": 14,
+    "stock_symbol": "NYSE:CHGG"
+  }
+},
+{
+  "name": "Pironet",
+  "ipo": {
+    "valuation_amount": 44000000,
+    "valuation_currency_code": "EUR",
+    "pub_year": 2000,
+    "pub_month": 2,
+    "pub_day": 22,
+    "stock_symbol": "PNG"
+  }
+},
+{
+  "name": "Inuvo",
+  "ipo": {
+    "valuation_amount": 30000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 2,
+    "pub_day": 10,
+    "stock_symbol": "NYSE:INUV"
+  }
+},
+{
+  "name": "Chegg",
+  "ipo": {
+    "valuation_amount": 1100000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2013,
+    "pub_month": 11,
+    "pub_day": 14,
+    "stock_symbol": "NYSE:CHGG"
+  }
+},
+{
+  "name": "Groupon",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "12800000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 11,
+    "pub_day": 7,
+    "stock_symbol": "NASDAQ:GRPN"
+  }
+},
+{
+  "name": "SolarWinds",
+  "ipo": {
+    "valuation_amount": 803000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2009,
+    "pub_month": 5,
+    "pub_day": 20,
+    "stock_symbol": "SWI"
+  }
+},
+{
+  "name": "GREE",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "108960000000"
+    },
+    "valuation_currency_code": "JPY",
+    "pub_year": 2008,
+    "pub_month": 12,
+    "pub_day": 17,
+    "stock_symbol": "3632"
+  }
+},
+{
+  "name": "Meru Networks",
+  "ipo": {
+    "valuation_amount": 66600000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 3,
+    "pub_day": 31,
+    "stock_symbol": "NASDAQ:MERU"
+  }
+},
+{
+  "name": "Tudou",
+  "ipo": {
+    "valuation_amount": 174000000,
+    "valuation_currency_code": "USD",
+    "pub_year": null,
+    "pub_month": null,
+    "pub_day": null,
+    "stock_symbol": "NASDAQ:TUDO"
+  }
+},
+{
+  "name": "DemandTec",
+  "ipo": {
+    "valuation_amount": 245000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 2,
+    "pub_day": 14,
+    "stock_symbol": "NASDAQ:DMAN"
+  }
+},
+{
+  "name": "Cornerstone OnDemand",
+  "ipo": {
+    "valuation_amount": 900000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2011,
+    "pub_month": 7,
+    "pub_day": 5,
+    "stock_symbol": "CSOD"
+  }
+},
+{
+  "name": "Western Digital",
+  "ipo": {
+    "valuation_amount": {
+      "$numberLong": "9430000000"
+    },
+    "valuation_currency_code": "USD",
+    "pub_year": null,
+    "pub_month": null,
+    "pub_day": null,
+    "stock_symbol": "NYSE:WDC"
+  }
+},
+{
+  "name": "Millennial Media",
+  "ipo": {
+    "valuation_amount": 973500000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2012,
+    "pub_month": 3,
+    "pub_day": 28,
+    "stock_symbol": "NYSE:MM"
+  }
+},
+{
+  "name": "Real Goods Solar",
+  "ipo": {
+    "valuation_amount": 55000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2008,
+    "pub_month": 5,
+    "pub_day": 8,
+    "stock_symbol": "RSOL"
+  }
+},
+{
+  "name": "Energy and Power Solutions",
+  "ipo": {
+    "valuation_amount": 25000000,
+    "valuation_currency_code": "USD",
+    "pub_year": 2010,
+    "pub_month": 3,
+    "pub_day": 31,
+    "stock_symbol": "EPS"
+  }
+}]
