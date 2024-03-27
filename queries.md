@@ -8,17 +8,35 @@
 
 <!-- Your Query Goes Here -->
 
+db.getCollection('companies').find(
+{ name: 'Babelgum' },
+{ name: 1, \_id: 0 }
+);
+
 <br>
 
-**2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by *number of employees*.**
+**2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by _number of employees_.**
 
 <!-- Your Query Goes Here -->
 
+db.getCollection('companies')
+.find({ number_of_employees: { $gt: 5000 } })
+.limit(20);
 <br>
 
 **3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.**
 
 <!-- Your Query Goes Here -->
+
+db.getCollection('companies').find(
+{
+$and: [
+{ founded_year: { $gte: 2000 } },
+{ founded_year: { $lte: 2005 } }
+]
+},
+{ name: 1, \_id: 0, founded_year: 1 }
+);
 
 <br>
 
