@@ -69,6 +69,7 @@ Limit: 10
 <!-- Your Query Goes Here -->
 {founded_month: {$gte: 7}}
 limit: 1000
+******************************
 
 <br>
 
@@ -86,7 +87,7 @@ limit: 10
 **1. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.**
 
 <!-- Your Query Goes Here -->
-
+dont do 
 <br>
 
 **2. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.**
