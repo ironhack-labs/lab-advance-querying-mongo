@@ -2,78 +2,168 @@
 
 # Answers
 
-### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
+## Iteration 2
 
-<!-- Your Code Goes Here -->
+**1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.**
 
-### 2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by **number of employees**.
+query: { name: 'Babelgum' }
+projection: { name: 1, \_id: 0 }
+sort: {}
+skip: 0
+limit: 0
 
-<!-- Your Code Goes Here -->
+<br>
 
-### 3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.
+**2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by _number of employees_.**
 
-<!-- Your Code Goes Here -->
+query: { number_of_employees: { $gt: 5000 } }
+projection: {}
+sort: { number_of_employees: -1 }
+skip: 0
+limit: 20
+<br>
 
-### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
+**3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.**
 
-<!-- Your Code Goes Here -->
+<!-- Your Query Goes Here -->
 
-### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
+query: { founded_year: { $gte: 2000, $lte: 2005 } }
+projection: { name: 1, founded_year: 1, \_id: 0 }
+sort: {}
+skip: 0
+limit: 0
+<br>
 
-<!-- Your Code Goes Here -->
+**4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.**
 
-### 6. All the companies that don't include the `partners` field.
+<!-- Your Query Goes Here -->
 
-<!-- Your Code Goes Here -->
+query: { "ipo.valuation_amount": { $gt: 100000000 }, founded_year: { $lt: 2010 } }
+projection: { name: 1, ipo: 1, \_id: 0 }
+sort: {}
+skip: 0
+limit: 0
+<br>
 
-### 7. All the companies that have a null type of value on the `category_code` field.
+**5. All the companies that don't include the `partners` field.**
 
-<!-- Your Code Goes Here -->
+<!-- Your Query Goes Here -->
 
-### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
+query: { partners: { $exists: false } }
+projection: {}
+sort: {}
+skip: 0
+limit: 0
+<br>
 
-<!-- Your Code Goes Here -->
+**6. All the companies that have a null value on the `category_code` field.**
 
-### 9. Order all the companies by their IPO price in a descending order.
+<!-- Your Query Goes Here -->
 
-<!-- Your Code Goes Here -->
+query: { category_code: null }
+projection: {}
+sort: {}
+skip: 0
+limit: 0
+<br>
 
-### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
+**7. Order all the companies by their IPO price in a descending order.**
 
-<!-- Your Code Goes Here -->
+<!-- Your Query Goes Here -->
 
-### 11. All the companies founded on the second semester of the year. Limit your search to 1000 companies.
+query: {}
+projection: {}
+sort: { "ipo.valuation_amount": -1 }
+skip: 0
+limit: 0
+<br>
 
-<!-- Your Code Goes Here -->
+**8. Retrieve the 10 companies with most employees, order by the `number of employees`.**
 
-### 12. All the companies founded before 2000 that have an acquisition amount of more than 10.000.000
+<!-- Your Query Goes Here -->
 
-<!-- Your Code Goes Here -->
+query: {}
+projection: {}
+sort: { number_of_employees: -1 }
+skip: 0
+limit: 10
+<br>
 
-### 13. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.
+**9. All the companies founded on the second semester of the year (July to December). Limit your search to 1000 companies.**
 
-<!-- Your Code Goes Here -->
+<!-- Your Query Goes Here -->
 
-### 14. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.
+query: { founded_month: { $gte: 7, $lte: 12 } }
+projection: {}
+sort: {}
+skip: 0
+limit: 1000
+<br>
 
-<!-- Your Code Goes Here -->
+**10. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.**
 
-### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
+<!-- Your Query Goes Here -->
 
-<!-- Your Code Goes Here -->
+query: { founded_day: { $gte: 1, $lte: 7 } }
+projection: {}
+sort: { "acquisition.price_amount": -1 }
+skip: 0
+limit: 10
+<br>
 
-### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
+## Iteration 3 (Bonus)
 
-<!-- Your Code Goes Here -->
+**1. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.**
 
-### 17. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.
+<!-- Your Query Goes Here -->
 
-<!-- Your Code Goes Here -->
+query: { "acquisition.acquired_year": { $gt: 2010 } }
+projection: { name: 1, acquisition: 1, \_id: 0 }
+sort: { "acquisition.price_amount": -1 }
+skip: 0
+limit: 0
+<br>
 
-### 18. All the companies that have been acquired on the first trimester of the year. Limit the search to 10 companies, and retrieve only their `name` and `acquisition` fields.
+**2. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.**
 
-<!-- Your Code Goes Here -->
+<!-- Your Query Goes Here -->
 
-### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
+query: {}
+projection: { name: 1, founded_year: 1, \_id: 0 }
+sort: { founded_year: 1 }
+skip: 0
+limit: 0
+<br>
 
-<!-- Your Code Goes Here -->
+**3. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.**
+
+<!-- Your Query Goes Here -->
+
+query: { category_code: 'web', number_of_employees: { $gt: 4000 } }
+projection: {}
+sort: { number_of_employees: 1 }
+skip: 0
+limit: 0
+<br>
+
+**4. All the companies whose acquisition amount is more than 10.000.000, and currency is 'EUR'.**
+
+<!-- Your Query Goes Here -->
+
+query: { "acquisition.price_amount": { $gt: 10000000 }, "acquisition.price_currency_code": 'EUR' }
+projection: {}
+sort: {}
+skip: 0
+limit: 0
+<br>
+
+**5. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.**
+
+<!-- Your Query Goes Here -->
+
+query: { founded_year: { $gte: 2000, $lte: 2010 }, $or: [ { "acquisition.acquired_year": { $gte: 2011 } }, { acquisition: { $exists: false } } ] }
+projection: {}
+sort: {}
+skip: 0
+limit: 0
+<br>
