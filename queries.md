@@ -6,11 +6,56 @@
 
 **1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.**
 
-<!-- Your Query Goes Here -->
+1:
 
+query: {name: 'Babelgum'}
+projection: {name: 1, \_id: 0}
+
+2:
+query: {number_of_employees: {$gte: 5000}}
+sort: {number_of_employees: 1}
+limit: 20
+
+3:
+query: {$and: [{founded_year: {$gte: 2000}}, {founded_year:{$lte: 2005}}]}
+
+projection{name: 1, \_id: 0, founded_year: 1}
+
+4:
+
+query:{"ipo.valuation_amount": {$gte: 100000000}}
+projection:{name: 1, ipo: 1, \_id: 0}
+
+5:
+query:
+{partners: {$exists: false}}
+
+6:
+
+query: {category_code: {$type: "null"}}
+
+7:
+
+query: {"ipo.valuation_amount": {$type: "number"}}
+sort: {"ipo.valuation_amount": -1}
+
+8:
+query: { number_of_employees: { $exists: true } }
+sort: {number_of_employees: -1}
+limit: 10
+
+9:
+
+query:{founded_month: {$gte: 7}}
+limit: 1000
+
+10:
+Query: {founded_day: {$lte: 7}}
+Sort: {'acquisition.price_amount': -1}
+Limit: 10
 <br>
 
-**2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by *number of employees*.**
+**2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by _number of employees_.**
 
 <!-- Your Query Goes Here -->
 
