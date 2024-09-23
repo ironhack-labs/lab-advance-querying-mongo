@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongose": "^0.0.2-security",
+    "morgan": "^1.10.0"
+  }
+}
