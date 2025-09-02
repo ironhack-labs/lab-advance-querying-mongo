@@ -95,7 +95,9 @@
 
 **2. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.**
 
-<!-- Your Query Goes Here -->
+- Options:
+  - Project: `{name: 1, founded_year: 1}`
+  - Sort: `{ founded_year: 1 }`
 
 <br>
 
