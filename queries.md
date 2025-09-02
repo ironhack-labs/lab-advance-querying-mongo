@@ -6,7 +6,8 @@
 
 **1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.**
 
-{name: "Babelgum"}
+query: {name: "Babelgum"}
+projections: {name: 1, _id: 0}
 
 <br>
 
@@ -14,7 +15,7 @@
 
 <!-- Your Query Goes Here -->
 {number_of_employees: {$gt: 5000}}
-sort: {number_of_employees:1}
+sort: {number_of_employees: -1}
 limit: 20
 
 <br>
@@ -23,7 +24,7 @@ limit: 20
 
 <!-- Your Query Goes Here -->
 query: {founded_year: {$gte: 2000, $lte: 2005 }}
-projections: {name:1, founded_year:1}
+projections: {name:1, founded_year:1, _id:0}
 
 <br>
 
@@ -59,7 +60,9 @@ Sort: {"ipo.valuation_amount": -1}
 **8. Retrieve the 10 companies with most employees, order by the `number of employees`.**
 
 <!-- Your Query Goes Here -->
+{ number_of_employees: { $exists: true } }
 sort: {number_of_employees: -1}
+limit: 10
 
 <br>
 
@@ -85,8 +88,8 @@ limit: 10
 **1. All the companies that have been acquired after 2010, order by the acquisition amount, and retrieve only their `name` and `acquisition` field.**
 
 <!-- Your Query Goes Here -->
-query: {founded_year: {$gt:2010}}
-projections: {name:1, founded_year:1, _id:0}
+query: {"acquisition.acquired_year": {$gt:2010}}
+projections: {name:1, "acquisition":1, _id:0}
 sort: {"acquisition.price_amount":-1}
 
 <br>
@@ -95,7 +98,7 @@ sort: {"acquisition.price_amount":-1}
 
 <!-- Your Query Goes Here -->
 query: {founded_year: {$ne: null}}
-projection: {name:1, founded_year:1, _id:0}
+projections: {name:1, founded_year:1, _id:0}
 sort: {founded_year:1}
 
 <br>
