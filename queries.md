@@ -7,7 +7,7 @@
 **1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.**
 
 query: {name: 'Babelgum'}
-project: {name 1, _id: 0}
+project: {name: 1, _id: 0}
 
 <br>
 
