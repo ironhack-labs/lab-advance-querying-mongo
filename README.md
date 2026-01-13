@@ -248,3 +248,4 @@ For an extra challenge and additional practice, try the following queries:
 <br>
 
 Happy Coding! :heart:
+
