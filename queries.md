@@ -8,11 +8,17 @@
 
 <!-- Your Query Goes Here -->
 
+{"name": "Babelgum"}
+{name: 1, \_id:0}
+
 <br>
 
-**2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by *number of employees*.**
+**2. All the companies that have more than 5000 employees. Limit the search to 20 companies and sort them by _number of employees_.**
 
 <!-- Your Query Goes Here -->
+
+{number_of_employees: {$gt: 5000}}
+{number_of_employees: 1}
 
 <br>
 
@@ -20,11 +26,17 @@
 
 <!-- Your Query Goes Here -->
 
+{$and: [{founded_year: {$gte: 2000}}, {founded_year:{$lte: 2005}}]}
+{name: 1, \_id: 0, founded_year: 1}
+
 <br>
 
 **4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.**
 
 <!-- Your Query Goes Here -->
+
+{founded_year: {$lt: 2010}, "ipo.valuation_amount": {$gt: 100000000 }}
+{name: 1, \_id: 0, ipo: 1}
 
 <br>
 
@@ -32,11 +44,15 @@
 
 <!-- Your Query Goes Here -->
 
+{partners: {$exists: false}}
+
 <br>
 
 **6. All the companies that have a null value on the `category_code` field.**
 
 <!-- Your Query Goes Here -->
+
+{category_code: {$type: 'null'}}
 
 <br>
 
@@ -44,11 +60,16 @@
 
 <!-- Your Query Goes Here -->
 
+{'ipo.valuation_amount': -1}
+
 <br>
 
 **8. Retrieve the 10 companies with most employees, order by the `number of employees`.**
 
 <!-- Your Query Goes Here -->
+
+{ number_of_employees: { $exists: true } }
+{number_of_employees: -1}
 
 <br>
 
@@ -56,11 +77,15 @@
 
 <!-- Your Query Goes Here -->
 
+{founded_month: {$gte: 7}}
+
 <br>
 
 **10. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.**
 
 <!-- Your Query Goes Here -->
+
+{founded_day: {$lte: 7}}
 
 <br>
 
